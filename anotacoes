@@ -1,0 +1,13 @@
+Imaginemos uma missão onde um robô autônomo e móvel deve se locomover em um labirinto com destino a um local alvo (já conhecido), partindo de qualquer lugar, e conseguir voltar ao local de partida (desconhecido).
+Métodos de Localização
+	-Utilização de Mapas:
+		Uma das formas é a introdução prévia de um mapa do labirinto no robô. Ou fazendo com que o robô desenhe o mapa caminhando pelo labirinto, porem isto pode demorar muito. 
+	-Utilização de Pontos de Referência:
+		Técnica utilizada por humanos e animais, o robô caminharia até o local alvo registrando todos os pontos de referência importantes para encontrar o caminho de volta.
+	-Localização absoluta com GPS:
+		Uma das formas mais simples, porem com uma margem de erro muito grande, o que inviabiliza a utilização em torneiros de robótica.
+	-Utilização de bússulas:
+		Ajudam bastante para saber para onde seguir, mas acabam sendo muito frágeis a questões externas.. Como magnetismo vindo de materiais no próprio robô, como os motores e etc. E a bússula por si só não ajuda a saber onde o robô está, precisando também da informação da distância percorrida pelo robô.
+	-Odometria:
+		Registro da distância percorrida por cada roda, sabendo assim, qual o ângulo das curvas realizadas e etc. Muito suscetível a erros, derrapagens das rodas e etc.
+	-
