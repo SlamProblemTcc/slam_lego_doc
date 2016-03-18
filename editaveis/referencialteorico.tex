@@ -5,11 +5,8 @@
 	Durante esta seção, questões referentes a todo o contexto abordado neste trabalho serão apresentadas e descritas de forma prática para facilitar o total entendimento do tema trabalhado.
 
 \section{A Robótia e a Auto-Localização}
-	
-	\subsection{O Nascimento da Robótica} % (fold)
-	\label{sub:o_nascimento_da_robotica}
 
-	Grande parte da capacidade do ser humano de se adaptar ao ambiente, sobrevivendo e evoluindo constantemente se dá à utilização, desde os primórdios da humanidade, de ferramentas de auxílio em atividades importantes para o desenvolvimento de uma civilização, ou até mesmo em questões relacionadas à sobrevivência básica, como busca por alimentação e moradia. Devido ao fato do ser humano sempre buscar evolução, as ferramentas utilizadas por nós também possuem uma tendência a serem evoluídas com o tempo.
+	Grande parte da capacidade do ser humano de se adaptar ao meio ambiente, sobrevivendo e evoluindo constantemente se dá à utilização, desde os primórdios da humanidade, de ferramentas de auxílio em atividades importantes para o desenvolvimento de uma civilização, ou até mesmo em questões relacionadas à sobrevivência básica, como busca por alimentação e moradia. Devido ao fato do ser humano sempre buscar evolução, as ferramentas utilizadas por nós também possuem uma tendência a serem evoluídas com o tempo.
 
 	Um exemplo simples que retrata a busca por melhoria nos instrumentos de trabalho pode ser observado em trechos descritos por Aristóteles, em meados do século IV a.c., onde o mesmo discute a possibilidade dos instrumentos realizarem suas próprias tarefas, obedecendo ou, até mesmo, antecipando o desejo das pessoas. Aristóteles ainda não sabia, mas já estava descrevendo o futuro de nossas ferramentas, o nascimento da Robótica.
 
@@ -30,4 +27,23 @@
  conflito com a 1ª e 2ª leis.
 	\end{enumerate}
 
-	% subsection o_nascimento_da_robótica (end)
+	As três leis fundamentais da robótica levam em consideração um robô totalmente autônomo, que seria capaz de realizar qualquer atividade sem o apoio de um humano. Uma das questões mais importantes quando se trata da autonomia dos robôs é referente a mobilidade dos mesmos. Segundo \cite{localizacaoEMapeamentoPaulo} a autonomia de um robô é fortemente condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, segundo \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão com obstáculos. 
+
+	Para que robôs sejam capazes de navegar em um ambiente desconhecido sem que haja colisão em objetos e obstáculos, os mesmos necessitam de informações sobre este ambiente. Estas informações são adquiridas utilizando sensores. Como foi apresentado por \cite{interacaoRoboAmbiente}, no livro de Robótica Industrial, os sensores possuem o dever de fornecer informações ao sistema de controle do robô sobre distâncias de objetos, posição do robô, contato do robô em objetos, força exercida sobre objetos, cor dos objetos, textura dos objetos, entre outras.
+
+	Além de observar e obter informações sobre o ambiente, o robô precisa se auto-localizar no ambiente para processar as informações obtidas e traçar rotas sem colisões até o ponto de destino. Para isso, foram desenvolvidas muitas formas de auto-localização, algumas delas são citadas por \cite{roboBulldozerIV}, como:
+
+	\begin{itemize}
+		\item \textbf{Utilização de Mapas}: O robô conhece o mapa onde realizará a navegação à priori, conhecendo os obstáculos e os caminhos possíveis. Possuindo essas informações, o robô irá traçar as rotas mais eficientes para chegar em seu objetivo.
+
+		\item \textbf{Localização Relativa em Grupos}: Está técnica utiliza a navegação simultânea de muitos robôs, cada robô sabe a posição relativa dos outros robôs, podendo calcular sua posição relativa.
+
+		\item \textbf{Utilização de Pontos de Referência}: Conhecendo pontos de referência que estão distribuídos pelo mapa de navegação, o robô consegue calcular sua posição através da técnica de triangulação.
+
+		\item \textbf{Localização Absoluta com GPS}: A partir desta técnica é fácil obter a posição absoluta do robô em relação a terra. O grande problema desta técnica é a margem de erro presente no sistema de GPS, inviável para navegações internas.
+
+		\item \textbf{Utilização de Bússolas}: É uma técnica interessante para conhecimento da orientação do robô, o que facilita muito na navegação do mesmo. Porém as bússolas são muito frágeis a interferências externas, como por exemplo a proximidade de materiais ferro-magnéticos ou as fugas magnéticas dos motores presentes no próprio robô.
+
+		\item \textbf{Odometria}: Consiste na medição da distância relativa percorrida pelo robô, utilizando sensores presentes nas rodas do mesmo. Necessita do conhecimento do ponto de origem.
+		 
+	\end{itemize}
