@@ -29,9 +29,9 @@
 
 	As três leis fundamentais da robótica levam em consideração um robô totalmente autônomo, que seria capaz de realizar qualquer atividade sem o apoio de um humano. Uma das questões mais importantes quando se trata da autonomia dos robôs é referente a mobilidade dos mesmos. Segundo \cite{localizacaoEMapeamentoPaulo} a autonomia de um robô é fortemente condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, segundo \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão com obstáculos. 
 
-	Para que robôs sejam capazes de navegar em um ambiente desconhecido sem que haja colisão em objetos e obstáculos, os mesmos necessitam de informações sobre este ambiente. Estas informações são adquiridas utilizando sensores. Como foi apresentado por \cite{interacaoRoboAmbiente}, no livro de Robótica Industrial, os sensores possuem o dever de fornecer informações ao sistema de controle do robô sobre distâncias de objetos, posição do robô, contato do robô em objetos, força exercida sobre objetos, cor dos objetos, textura dos objetos, entre outras.
+	Para que robôs sejam capazes de navegar em um ambiente desconhecido sem que haja colisão em objetos e obstáculos, os mesmos necessitam de informações sobre este ambiente. Estas informações são adquiridas utilizando sensores. Como foi apresentado por \cite{interacaoRoboAmbiente}, no livro de Robótica Industrial, os sensores possuem o dever de fornecer informações ao sistema de controle do robô sobre distâncias de objetos, posição do robô, contato do robô com objetos, força exercida sobre objetos, cor e textura dos objetos, entre outras.
 
-	Além de observar e obter informações sobre o ambiente, o robô precisa se auto-localizar no ambiente para processar as informações obtidas e traçar rotas sem colisões até o ponto de destino. Para isso, foram desenvolvidas muitas formas de auto-localização, algumas delas são citadas por \cite{roboBulldozerIV}, como:
+	Além de observar e obter informações sobre o ambiente, o robô precisa se auto-localizar para processar as informações obtidas e traçar rotas sem colisões até o ponto de destino. Para isso, foram desenvolvidas muitas formas de auto-localização, algumas delas são citadas por \cite{roboBulldozerIV}, como:
 
 	\begin{itemize}
 		\item \textbf{Utilização de Mapas}: O robô conhece o mapa onde realizará a navegação à priori, conhecendo os obstáculos e os caminhos possíveis. Possuindo essas informações, o robô irá traçar as rotas mais eficientes para chegar em seu objetivo.
@@ -47,3 +47,7 @@
 		\item \textbf{Odometria}: Consiste na medição da distância relativa percorrida pelo robô, utilizando sensores presentes nas rodas do mesmo. Necessita do conhecimento do ponto de origem.
 		 
 	\end{itemize}
+
+	Levando em consideração a primeira técnica apresentada, a utilização de mapas, \cite{localizacaoEMapeamentoPaulo} mostra a possibilidade do próprio robô construir o mapa do ambiente e utilizá-lo para navegação, simultaneamente. Este problema é conhecido como problema SLAM (da sigla em inglês), que consiste em um robô autônomo iniciar a navegação em uma localização desconhecida e  ambiente desconhecido, construindo um mapa deste ambiente de forma incremental e utilizando-o para calcular sua localização atual.
+
+	A utilização do SLAM é bastante útil quando não exite o conhecimento prévio do ambiente onde se deseja navegar. Segundo \cite{localizacaoEMapeamentoPaulo}, a resolução do problema SLAM pode ocorrer a partir de diferentes técnicas.
