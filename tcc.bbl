@@ -1,0 +1,76 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.2 }
+
+\bibitem[Costa e {Okamoto Jr.} 2002]{interacaoRoboAmbiente}
+\abntrefinfo{Costa e {Okamoto Jr.}}{COSTA; {Okamoto Jr.}}{2002}
+{COSTA, A. H.~R.; {Okamoto Jr.}, J. \emph{Robótica Industrial - Interação de
+  Robô no Ambiente}. [S.l.]: Edgard Blücher Ltda, 2002.
+ISBN 8521203152.}
+
+\bibitem[Dissanayake et al. 2001]{slamProblem}
+\abntrefinfo{Dissanayake et al.}{DISSANAYAKE et al.}{2001}
+{DISSANAYAKE, G. et al. A solution to the simultaneous localization and map
+  building (slam) problem.
+The University of Sydney, Australia, 2001.}
+
+\bibitem[Galvan et al. 2006]{teachingWithRoboticKit}
+\abntrefinfo{Galvan et al.}{GALVAN et al.}{2006}
+{GALVAN, S. et al. Innovative robotics teaching using lego sets.
+University of Verona, Italy, 2006.}
+
+\bibitem[Hámori, Lengyel e Reskó 2011]{drawLegoRobot}
+\abntrefinfo{Hámori, Lengyel e Reskó}{HáMORI; LENGYEL; RESKó}{2011}
+{HáMORI Ákos; LENGYEL, J.; RESKó, B. 3dof drawing robot using lego-nxt.
+Óbuda University, Hungary, 2011.}
+
+\bibitem[Lau et al. 2002]{ciber-rato}
+\abntrefinfo{Lau et al.}{LAU et al.}{2002}
+{LAU, N. et al. Ciber-rato: Uma competição robótica num ambiente virtual.
+2002.}
+
+\bibitem[Maliuk 2009]{roboticaEducacionalAulasMatematica}
+\abntrefinfo{Maliuk}{MALIUK}{2009}
+{MALIUK, K.~D. Robótica educacional como cenário investigativo nas aulas de
+  matemática.
+Universidade Federal do Rio Grande do Sul, Porto Alegre, 2009.}
+
+\bibitem[Oliveira 2011]{metodologiaCientifica}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2011}
+{OLIVEIRA, M.~F. de. Metodologia cientÍfica: um manual para a realização de
+  pesquisas em administração.
+Universidade Federal de Goiás, Catalão GO, 2011.}
+
+\bibitem[Oliveira 2008]{localizacaoEMapeamentoPaulo}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2008}
+{OLIVEIRA, P. R. G.~D. Auto-localização e construção de mapas de ambiente
+  para robôs móveis baseados em visão omnidirecional estéreo.
+São Paulo, Brasil, 2008.}
+
+\bibitem[Romano 2002]{roboticaIndustrial}
+\abntrefinfo{Romano}{ROMANO}{2002}
+{ROMANO, V.~F. \emph{Introdução à Robótica Industrial}. [S.l.]: Edgard
+  Blücher Ltda, 2002.
+ISBN 8521203152.}
+
+\bibitem[Santos, Silva e Almeida 2002]{roboBulldozerIV}
+\abntrefinfo{Santos, Silva e Almeida}{SANTOS; SILVA; ALMEIDA}{2002}
+{SANTOS, F.~M.; SILVA, V.~F.; ALMEIDA, L. Auto-localização em pequenos robôs
+  móveis e autônomos: O caso do robô bulldozer iv.
+2002.}
+
+\bibitem[Wahab1, Azahari2 e Tajuddin1 2015]{evaluationRoboticEducationScale}
+\abntrefinfo{Wahab1, Azahari2 e Tajuddin1}{WAHAB1; AZAHARI2; TAJUDDIN1}{2015}
+{WAHAB1, A. F.~A.; AZAHARI2, M.~H.; TAJUDDIN1, R.~M. An evaluation of robotic
+  education scale in enhancing science achievement.
+Universiti Teknologi MARA, 2015.}
+
+\bibitem[Zhao et al. 2008]{roboticEducationBasedLego}
+\abntrefinfo{Zhao et al.}{ZHAO et al.}{2008}
+{ZHAO, S. et al. Research on robotic education based on lego bricks.
+School of Information Science and Engineering, Northeastern University, 2008.}
+
+\end{thebibliography}
