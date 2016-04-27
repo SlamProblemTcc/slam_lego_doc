@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.2 }
 
+\bibitem[Chew et al. 2009]{simpleMobile}
+\abntrefinfo{Chew et al.}{CHEW et al.}{2009}
+{CHEW, M. et al. Simple mobile robots for introduction into engineering.
+\emph{International Instrumentation and Measurement Technology Conference},
+  2009.}
+
 \bibitem[Costa e {Okamoto Jr.} 2002]{interacaoRoboAmbiente}
 \abntrefinfo{Costa e {Okamoto Jr.}}{COSTA; {Okamoto Jr.}}{2002}
 {COSTA, A. H.~R.; {Okamoto Jr.}, J. \emph{Robótica Industrial - Interação de
@@ -32,11 +38,29 @@ University of Verona, Italy, 2006.}
 {LAU, N. et al. Ciber-rato: Uma competição robótica num ambiente virtual.
 2002.}
 
+\bibitem[Machado 2003]{agenteExploratorioKalman}
+\abntrefinfo{Machado}{MACHADO}{2003}
+{MACHADO, K.~F. Módulo de auto-localização para um agente exploratório
+  usando filtro de kalman.
+Universidade Federal do Rio Grande do Sul - Instituto de Informática, 2003.}
+
+\bibitem[Maimone, Cheng e Matthies 2007]{explore_marte}
+\abntrefinfo{Maimone, Cheng e Matthies}{MAIMONE; CHENG; MATTHIES}{2007}
+{MAIMONE, M.; CHENG, Y.; MATTHIES, L. Two years of visual odometry on the mars
+  exploration rovers.
+\emph{Journal of Field Robotics}, Wiley Online Library, v.~24, n.~3, p.
+  169--186, 2007.}
+
 \bibitem[Maliuk 2009]{roboticaEducacionalAulasMatematica}
 \abntrefinfo{Maliuk}{MALIUK}{2009}
 {MALIUK, K.~D. Robótica educacional como cenário investigativo nas aulas de
   matemática.
 Universidade Federal do Rio Grande do Sul, Porto Alegre, 2009.}
+
+\bibitem[Martins 2008]{melhoramentoServicoLimpeza}
+\abntrefinfo{Martins}{MARTINS}{2008}
+{MARTINS, J. M.~F. Melhoramento do desempenho do robot de serviço de limpeza.
+Faculdade de Engenharia da Universidade do Porto, 2008.}
 
 \bibitem[Oliveira 2011]{metodologiaCientifica}
 \abntrefinfo{Oliveira}{OLIVEIRA}{2011}
@@ -49,6 +73,24 @@ Universidade Federal de Goiás, Catalão GO, 2011.}
 {OLIVEIRA, P. R. G.~D. Auto-localização e construção de mapas de ambiente
   para robôs móveis baseados em visão omnidirecional estéreo.
 São Paulo, Brasil, 2008.}
+
+\bibitem[Pinto 2008]{theCleaningProject}
+\abntrefinfo{Pinto}{PINTO}{2008}
+{PINTO, F. P. V.~F. The cleaning robot project aplicação do filtro de kalman
+  na auto-localização de um sistema robótico autónomo.
+Faculdade de Engenharia da Universidade do Porto, 2008.}
+
+\bibitem[Ramalho 2015]{tccCarol}
+\abntrefinfo{Ramalho}{RAMALHO}{2015}
+{RAMALHO, C.~B. Máquina de raciocínio lógico para tomada de decisões
+  estratégicas em robótica educacional.
+2015.}
+
+\bibitem[Rincon 2015]{tccRodrigo}
+\abntrefinfo{Rincon}{RINCON}{2015}
+{RINCON, R.~L. Traveller: Um framework de definição de trajetórias para
+  robôs móveis.
+2015.}
 
 \bibitem[Romano 2002]{roboticaIndustrial}
 \abntrefinfo{Romano}{ROMANO}{2002}
@@ -67,6 +109,12 @@ ISBN 8521203152.}
 {WAHAB1, A. F.~A.; AZAHARI2, M.~H.; TAJUDDIN1, R.~M. An evaluation of robotic
   education scale in enhancing science achievement.
 Universiti Teknologi MARA, 2015.}
+
+\bibitem[Won et al. 2008]{integrationVisionSLAMnonlinear}
+\abntrefinfo{Won et al.}{WON et al.}{2008}
+{WON, D.~H. et al. Integration of vision based slam and nonlinear filter for
+  simple mobile robot navigation.
+Konkuk University Seoul, Korea, 2008.}
 
 \bibitem[Zhao et al. 2008]{roboticEducationBasedLego}
 \abntrefinfo{Zhao et al.}{ZHAO et al.}{2008}
