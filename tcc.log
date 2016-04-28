@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.2.22)  26 APR 2016 22:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.2.22)  28 APR 2016 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,15 +1088,19 @@ Overfull \hbox (78.13191pt too wide) in paragraph at lines 9--10
 \tf@brf=\write5
 \openout5 = `tcc.brf'.
 
- [10]
-bibitemlist
-[11
 
-])
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+ [10]
+[11] [12
+
+]
+bibitemlist
+[13])
 No file tcc.ind.
 
 AED: lastpage setting LastPage
-[12]
+[14]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Executing hook `AfterLastShipout' on input line 47.
 \BKM@file=\write6
@@ -1106,7 +1110,7 @@ Package atveryend Info: Executing hook `AfterLastShipout' on input line 47.
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 47.
 Package rerunfilecheck Info: File `tcc.brf' has not changed.
-(rerunfilecheck)             Checksum: A0C2D228D3B8FCC1226C5D9AF114531B;2316.
+(rerunfilecheck)             Checksum: E35DBA55344727CFEFC531BB87FB29EE;2529.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
@@ -1114,12 +1118,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 47.
  ) 
 Here is how much of TeX's memory you used:
- 12155 strings out of 493305
- 179091 string characters out of 6139897
- 306207 words of memory out of 5000000
- 15394 multiletter control sequences out of 15000+600000
+ 12161 strings out of 493305
+ 179180 string characters out of 6139897
+ 306989 words of memory out of 5000000
+ 15400 multiletter control sequences out of 15000+600000
  75756 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,13n,51p,1971b,648s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tcc.dvi (14 pages, 77224 bytes).
+Output written on tcc.dvi (16 pages, 84264 bytes).
