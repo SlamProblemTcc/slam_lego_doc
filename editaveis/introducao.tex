@@ -3,9 +3,9 @@
 
 \section{Contextualização}
 	
-	O nascimento da robótica se deu no contexto industrial, onde ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos produzidos e minimizando o custo e tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
+	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
 
-	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é fortemente condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos. 
+	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos. 
 
 	Para que robôs sejam capazes de navegar em um ambiente desconhecido sem que haja colisão em objetos e obstáculos, os mesmos necessitam de informações sobre este ambiente. Estas informações são adquiridas utilizando sensores. Como foi apresentado por \cite{interacaoRoboAmbiente}, no livro de Robótica Industrial, os sensores possuem o dever de fornecer informações ao sistema de controle do robô sobre distâncias de objetos, posição do robô, contato do robô com objetos, força exercida sobre objetos, cor e textura dos objetos, entre outras.
 
@@ -46,13 +46,20 @@
 
 \section{Justificativa}
 
-	A utilização da Robótica como uma forma de ensinar programação em escolas e faculdades, a chamada Robótica Educacional \cite{roboticaEducacionalAulasMatematica}, traz alguns benefícios para o aluno. Conforme colocado pelos autores \cite{teachingWithRoboticKit}, \cite{roboticEducationBasedLego}, \cite{roboticaEducacionalAulasMatematica} e \cite{evaluationRoboticEducationScale}, alguns desses benefícios são: maior interesse pelos conteúdos estudados em aula, capacidade de trabalhar em grupo, aplicação prática do conhecimento teórico e multidisciplinaridade. A Universidade de Brasília utiliza esta abordagem de ensino/aprendizagem durante a disciplina de Introdução à Robótica Educacional, ministrada atualmente pelo professor Dr. Maurício Serrano. Na disciplina, são utilizados os Kits de robótica Mindstorms, da Lego, para desenvolvimento de soluções dos problemas presentes em um tapete de missões. A organização da disciplina se inspira nos campeonatos de robótica, como \cite{ciber-rato} ou \cite{roboBulldozerIV}, por exemplo. Neste tipo de campeonato, a navegação é o quesito mais importante \cite{ciber-rato}, a qual deve possuir a menor margem de erro possível para solucionar as missões.
+	A utilização da Robótica como uma forma de ensinar programação em escolas e faculdades, a chamada Robótica Educacional \cite{roboticaEducacionalAulasMatematica}, traz alguns benefícios para o aluno. Conforme colocado pelos autores \cite{teachingWithRoboticKit}, \cite{roboticEducationBasedLego}, \cite{roboticaEducacionalAulasMatematica} e \cite{evaluationRoboticEducationScale}, alguns desses benefícios são: 
+	\begin{itemize}
+		\item Maior interesse pelos conteúdos estudados em aula;
+		\item capacidade de trabalhar em grupo;
+		\item aplicação prática do conhecimento teórico;
+		\item multidisciplinaridade.
+	\end{itemize}
+	 
+	 A Universidade de Brasília utiliza esta abordagem de ensino/aprendizagem durante a disciplina de Introdução à Robótica Educacional, ministrada, em 2016, pelo professor Dr. Maurício Serrano. A disciplina utiliza os Kits de robótica Mindstorms, da Lego, para desenvolvimento de soluções dos problemas presentes em um tapete de missões. A organização da disciplina se inspira nos campeonatos de robótica, como o \textit{ciber-rato} \cite{ciber-rato} ou \textit{micro-rato} \cite{roboBulldozerIV}. Neste tipo de campeonato, a navegação é o quesito mais importante \cite{ciber-rato}, a qual deve possuir a menor margem de erro para solucionar as missões.
 
-	As missões utilizadas durante a disciplina são referentes a problemas recorrentes no contexto da robótica mundial. Porém, a solução dos mesmos é uma adaptação das técnicas existentes para o contexto limitado da disciplina, onde são utilizadas apenas ferramentas presentes no kit \textit{Mindstorms} da Lego. Esta adaptação exige um conhecimento amplo sobre a técnica, para que o estudante possa identificar características relevantes e adaptá-las de acordo com o \textit{hardware} disponível.
+	As missões utilizadas durante a disciplina da UnB são referentes a problemas recorrentes no contexto da robótica mundial. A solução dos problemas é uma adaptação das técnicas existentes para o contexto limitado da disciplina, onde são utilizadas apenas ferramentas presentes no kit \textit{Mindstorms} da Lego. Esta adaptação exige um conhecimento específico sobre a técnica, para que o estudante possa identificar características relevantes e adaptá-las de acordo com o \textit{hardware} disponível.
 
 	A disciplina já influenciou dois estudantes de Engenharia de Software a se aprofundarem no contexto da robótica e robótica educacional, gerando dois trabalhos de conclusão de curso, \cite{tccRodrigo}, que desenvolveu um \textit{framework} de definição de trajetórias para robôs móveis, e \cite{tccCarol}, que desenvolveu um algorítmo para tomada de decisões estratégicas em robótica educacional. O trabalho atual vem para complementar os trabalhos realizados pelos dois alunos.
 
-	%Boa parte dos problemas encontrados pelos estudantes durante a realização de uma missão da disciplina se refere a auto-localização do robô. Desse modo, a identificação de uma técnica que solucione o problema de auto-localização utilizando as ferramentas disponíveis na disciplina trará novas opções aos alunos, que serão inseridos no contexto do problema de SLAM.
 
 	\section{Objetivos}
 
