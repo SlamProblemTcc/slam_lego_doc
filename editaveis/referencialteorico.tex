@@ -6,9 +6,20 @@
 
 \section{A Robótia e a Auto-Localização}
 
-O nascimento da robótica se deu no contexto industrial, onde a automação de atividades repetitivas garantiu maior eficiência e, consequentemente maior lucro \cite{roboticaIndustrial}. Porém, com o passar dos anos, a robótica vem se expandindo e fazendo parte da vida cotidiana de muitos \cite{teachingWithRoboticKit}. A robótica é uma importante ferramenta que apóia o trabalho humano em diversos contextos, seja para a limpeza de uma casa \cite{melhoramentoServicoLimpeza} ou até para explorar novos planetas, por exemplo \cite{explore_marte}. 
+O nascimento da robótica se deu no contexto industrial, onde a automação de atividades repetitivas garantiu maior eficiência e, consequentemente maior lucro \cite{roboticaIndustrial}. Porém, com o passar dos anos, a robótica vem se expandindo e fazendo parte da vida cotidiana de muitos \cite{teachingWithRoboticKit}. A robótica é uma importante ferramenta que apóia o trabalho humano em diversos contextos, seja para a limpeza de uma casa \cite{melhoramentoServicoLimpeza} ou até para explorar novos planetas, por exemplo \cite{explore_marte}.
 
-Segundo \cite{roboticaIndustrial}, a palavra \textit{automação} traz à mente a noção de que a máquina será capaz de sentir e interagir com o ambiente, conseguindo se localizar e navegar por ele, executando suas atividades. Para que esta navegação seja possível, o robô precisa obter informações sobre o ambiente. Estas informações são obtidas a partir da utilização de sensores \cite{simpleMobile}. Segundo \cite{agenteExploratorioKalman}, existem inúmeros tipos de sensores, desde sensores de toque até sensores de visão ou de som. Os sensores mais utilizados em robôs móveis, segundo \cite{agenteExploratorioKalman}, são:
+No contexto da robótica móvel, existem por exemplo, os robôs de serviço. Os quais vêm sendo largamente evoluídos pela comunidade de robótica \cite{theCleaningProject}. Ainda segundo \cite{theCleaningProject}, estes robôs, geralmente, desempenham ações que contemplam diversas aplicações, como:
+
+\begin{itemize}
+	\item Onde exista risco de vida significativo para humanos \cite{explore_marte};
+	\item Em funções economicamente desvantajosas no uso de trabalhadores humanos \cite{roboticaIndustrial};
+	\item Uso humanitário (cadeiras de rodas autônomas, por exemplo);
+	\item Uso educacional \cite{teachingToolsState-Art};
+\end{itemize} 
+
+Robôs de serviço capazes de se deslocar livremente pelo ambiente, conhecendo-o, poderão realizar suas atividades de forma mais eficiente \cite{theCleaningProject}. Ou seja, eles precisam ser realmente autônomos.
+
+Segundo \cite{roboticaIndustrial}, a palavra \textit{automação} traz à mente a noção de que a máquina será capaz de sentir e interagir com o ambiente, conseguindo se localizar e navegar por ele, executando suas atividades. Para que esta navegação seja possível, o robô precisa obter informações sobre o ambiente, as quais são obtidas a partir da utilização de sensores \cite{simpleMobile}. Segundo \cite{agenteExploratorioKalman}, existem inúmeros tipos de sensores, desde sensores de toque até sensores de visão ou de som. Os sensores mais utilizados em robôs móveis, segundo \cite{agenteExploratorioKalman}, são:
 \begin{itemize}
 	\item \textit{Odômetro}:
 
@@ -34,13 +45,29 @@ Segundo \cite{roboticaIndustrial}, a palavra \textit{automação} traz à mente 
 
 A utilização de cada tipo de sensor se dá de acordo com o contexto em que se deseja navegar, levando em consideração a maneira mais viável de entender o ambiente ao seu redor \cite{agenteExploratorioKalman}. Utilizando os sensores, o robô possuirá informações sobre o ambiente, e precisa processá-las para \textit{entender} o ambiente. A forma como serão processadas essas informações também depende do contexto da navegação, como mostra \cite{roboBulldozerIV}.
 
-Para que a navegação ocorra sem colisões em obstáculos, o robô precisa de informações sobre o ambiente, assim como informações relacionadas a sua posição em relação a este ambiente \textbf{[REFERENCIAR]}. Para solucionar este problema, uma técnica bastante difundida é a utilização de mapas, como mostra \cite{roboBulldozerIV}. Nesta técnica, o robô recebe o mapa do ambiente que se deseja navegar a prióri e, a partir deste mapa, traça sua trajetória sem obstáculos. Utilizando este mapa e informações do ambiente, o robô é capaz de se auto-localizar no ambiente, navegando com maior precisão.
+Para que a navegação ocorra sem colisões em obstáculos, o robô precisa de informações sobre o ambiente, assim como informações relacionadas a sua posição em relação a este ambiente \cite{theCleaningProject}. Para solucionar este problema, uma técnica bastante difundida é a utilização de mapas, como mostra \cite{roboBulldozerIV}. Nesta técnica, o robô recebe o mapa do ambiente que se deseja navegar a prióri e, a partir deste mapa, traça sua trajetória sem obstáculos. Utilizando este mapa e informações do ambiente, o robô é capaz de se auto-localizar no ambiente, navegando com maior precisão.
 
-Porém, esta técnica possui requisitos que, muitas vezes, são inviáveis, como o conhecimento prévio do mapa do ambiente. Caso o objetivo seja navegar em um ambiente desconhecido, onde não há mapa nem pontos de referência já conhecidos, deve-se buscar formas de se auto-localizar e navegar utilizando apenas as informações obtidas pelos sensores. Para isso, vem sendo discutida entre toda a comunidade de pesquisadores em robótica móvel, a resolução do problema de SLAM (Auto-Localização e Mapeamento de Ambientes Simultâneos). Segundo \cite{slamProblem}, SLAM é considerado, pela comunidade, como o \textit{Santo Graal} da robótica móvel. A grande maioria dos algorítmos de auto-localização existentes aplica uma técnica de resolução do problema de SLAM \textbf{[REFERENCIAR]}.
+Porém, esta técnica possui requisitos que, muitas vezes, são inviáveis, como o conhecimento prévio do mapa do ambiente. Caso o objetivo seja navegar em um ambiente desconhecido, onde não há mapa nem pontos de referência já conhecidos, deve-se buscar formas de se auto-localizar e navegar utilizando apenas as informações obtidas pelos sensores. Para isso, vem sendo discutida entre toda a comunidade de pesquisadores em robótica móvel, a resolução do problema de SLAM (Auto-Localização e Mapeamento de Ambientes Simultâneos). Segundo \cite{slamProblem}, SLAM é considerado, pela comunidade, como o \textit{Santo Graal} da robótica móvel.
 
 \section{O Problema de SLAM} % (fold)
 \label{sec:section_name}
 
+Auto-localização e Mapeamento de Ambientes Simultâneos (SLAM) é uma técnica muito utilizada para navegação em diferentes contextos, como na navegação marítima, por exemplo \cite{slamProblem}. Segundo \cite{slamProblem}, uma máquina capaz de partir de um ponto de origem desconhecido em um ambiente desconhecido e, utilizando seus sensores, mapear o ambiente e utilizar este mapa, simultaneamente, para se auto-localizar no ambiente faz juz a palavra \textit{robô}. Desse modo, pesquisadores em robótica móvel vêm buscando soluções elegantes para o problema de SLAM \cite{integrationVisionSLAMnonlinear}.
+
+Inúmeras soluções para o problema de SLAM, em diferentes contextos, já foram desenvolvidas e vêm sendo refinadas, com o intuito de maximizar a efetividade da navegação \cite{theCleaningProject}. Segundo \cite{slamProblem}, a abordagem mais utilizada para resolução do problema de SLAM, é a utilização do filtro de Kalman. \cite{theCleaningProject} descreve o filtro de Kalman como: \textit{"Um algorítmo recursivo de processamento de informações, proporcionando a estimação ótima do estado de um sistema dinâmico com ruído linear"}.
+
+Este filtro utiliza diversas disciplinas, como mostra \cite{theCleaningProject}:
+\begin{itemize}
+	\item mínimos quadrados;
+	\item teoria das probabilidades;
+	\item sistemas dinâmicos;
+	\item sistemas estocásticos;
+	\item álgebra.
+\end{itemize}
+
+Porém, a utilização da abordagem do filtro de Kalman, geralmente, exige requisitos computacionais de alto custo, dificultando sua utilização em um contexto de robôs simples, onde baixo processamento e pouca memória fazem parte da realidade \cite{agenteExploratorioKalman}.
+
+\cite{slamProblem} exemplifica este problema, em seu trabalho, quando quantifica a relação entre o crescimento do requisito computacional necessário para a quantidade de pontos de referência no ambiente, com a utilização do filtro de Kalman. Segundo ele, enquanto a quantidade de pontos de referência aumenta em N, os requisitos computacionais e de armazenamento necessários aumentam em N\textsuperscript{2}. \cite{slamProblem} mostra que este problema pode ser solucionado, em parte, utilizando técnicas de aproximação delimitada, por exemplo. Estas técnicas minimizam o problema, mas não o solucionam completamente \cite{slamProblem}.
 % section section_name (end)
 
 
