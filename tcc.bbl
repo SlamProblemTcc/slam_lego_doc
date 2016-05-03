@@ -17,10 +17,15 @@ IEEE Intelligent transportation systems magazine, 2013.}
 Universidade Federal do Rio Grande do Sul, 2009.}
 
 \bibitem[Chew et al. 2009]{simpleMobile}
-\abntrefinfo{Chew et al.}{CHEW et al.}{2009}
+\abntrefinfo{Chew et al.}{CHEW et al.}{2009a}
 {CHEW, M. et al. Simple mobile robots for introduction into engineering.
 \emph{International Instrumentation and Measurement Technology Conference},
   2009.}
+
+\bibitem[Chew et al. 2009]{simpleRobotsIntroductionEng}
+\abntrefinfo{Chew et al.}{CHEW et al.}{2009b}
+{CHEW, M.~T. et al. Simple mobile robots for introduction into engineering.
+International Instrumentation and Measurement, 2009.}
 
 \bibitem[Costa e {Okamoto Jr.} 2002]{interacaoRoboAmbiente}
 \abntrefinfo{Costa e {Okamoto Jr.}}{COSTA; {Okamoto Jr.}}{2002}
