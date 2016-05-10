@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.2.22)  5 MAY 2016 09:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=latex 2016.2.22)  10 MAY 2016 10:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1078,9 +1078,14 @@ Overfull \hbox (28.51836pt too wide) in paragraph at lines 35--36
 -mi-ta-das ([][][][][][],
  []
 
-[4] [5] [6]) (./editaveis/referencialteorico.tex [7] [8
+[4] [5] [6]
+File: figuras/processo.eps Graphic file (type eps)
+ <figuras/processo.eps>
+Overfull \hbox (256.26447pt too wide) in paragraph at lines 113--115
+ [][] 
+ []
 
-]
+) (./editaveis/referencialteorico.tex [7] [8]
 Overfull \hbox (78.13191pt too wide) in paragraph at lines 9--10
 \T1/lmr/m/n/12 ([][][][][][], [][][][][][][]) ou até para ex-plo-rar no-vos pla
 -ne-tas, por exem-plo ([][][][][][],
@@ -1098,7 +1103,9 @@ Overfull \hbox (8.91231pt too wide) in paragraph at lines 15--16
 lha-do-res hu-ma-nos ([][][][][][],
  []
 
-[9] [10] [11] [12]
+[9
+
+] [10] [11] [12]
 Overfull \hbox (22.9119pt too wide) in paragraph at lines 96--98
 []\T1/lmr/m/n/12 Referente ao aper-fei-ço-a-mento do in-te-resse dos alu-nos so
 -bre o tema, ([][][][][][],
@@ -1156,12 +1163,12 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 12341 strings out of 493305
- 183923 string characters out of 6139897
- 315708 words of memory out of 5000000
- 15571 multiletter control sequences out of 15000+600000
+ 12347 strings out of 493305
+ 184009 string characters out of 6139897
+ 315815 words of memory out of 5000000
+ 15576 multiletter control sequences out of 15000+600000
  75756 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  45i,12n,51p,1717b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tcc.dvi (23 pages, 187476 bytes).
+Output written on tcc.dvi (23 pages, 188640 bytes).

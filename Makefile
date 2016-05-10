@@ -2,6 +2,7 @@ TARGET = TCC_FGA.pdf
 
 BIBTEX = bibtex
 LATEX = latex
+PDFLATEX = pdflatex
 DVIPS = dvips
 PS2PDF = ps2pdf
 
