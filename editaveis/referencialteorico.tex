@@ -134,9 +134,7 @@ Diversas ferramentas já foram desenvolvidas com o objetivo de apoiar a inserç�
 \begin{itemize}
 	\item \textbf{RoboMind}: 
 
-		É um ambiente de desenvolvimento desenvolvido por Arvid Halma, da Universidade de Amsterdam, que tem como objetivo facilitar o ensino de programação para estudantes do ensino básico. Utiliza um robô virtual para exercitar os conceitos de inteligência artificial e lógica de programação. A linguagem utilizada é chamada Robo/Roo, e permite implementação da movimentação do robô em um ambiente 2D (duas dimensões).
-
-		As funções básicas da ferramenta\footnote{http://www.robomind.net/pt/index.html}, são \textit{ver}, \textit{andar}, \textit{pegar}, \textit{pintar}, como mosta a figura \ref{img:funcoesBasicasRoboMind}.
+		É um ambiente de desenvolvimento desenvolvido por Arvid Halma, da Universidade de Amsterdam, que tem como objetivo facilitar o ensino de programação para estudantes do ensino básico. Utiliza um robô virtual para exercitar os conceitos de inteligência artificial e lógica de programação. A linguagem utilizada é chamada Robo/Roo, e permite implementação da movimentação do robô em um ambiente 2D (duas dimensões). As funções básicas da ferramenta\footnote{http://www.robomind.net/pt/index.html}, são \textit{ver}, \textit{andar}, \textit{pegar}, \textit{pintar}, como mosta a figura \ref{img:funcoesBasicasRoboMind}.
 
 		\begin{figure}[H]
 			\centering
@@ -178,16 +176,57 @@ Diversas ferramentas já foram desenvolvidas com o objetivo de apoiar a inserç�
 
 	\item \textbf{Alice}:
 
-		Assim como o Kodu Game, a ferramenta Alice também disponibiliza um ambiente tridimensional para desenvolvimento de animações e jogos interativos. Foi desenvolvida por um grupo de pesquisa liderado por Randy Pausch, da Universidade de Virgínia e Universidade de Carnegie Mellon. Diferentemente do Kodu Game, a ferramenta Alice possui apenas um \textit{Mundo} onde serão implementadas todas as histórias e relações da animação ou jogo. Após análise da ferramenta, \cite{analiseFerramentaEnsinoComputacao} cita problemas de instabilidade e \textit{bugs}.
+		Assim como o Kodu Game, a ferramenta Alice também disponibiliza um ambiente tridimensional para desenvolvimento de animações e jogos interativos. Foi desenvolvida por um grupo de pesquisa liderado por Randy Pausch, da Universidade de Virgínia e Universidade de Carnegie Mellon. Diferentemente do Kodu Game, a ferramenta Alice possui apenas um \textit{Mundo} onde serão implementadas todas as histórias e relações da animação ou jogo. Após análise da ferramenta, \cite{ } cita problemas de instabilidade e \textit{bugs}.
 
 	\item \textbf{Mindstorms Lego}:	
 
 		Os kits de robótica Mindstorms da Lego, diferentemente de todas as ferramentas apresentadas acima, disponibiliza um ambiente real de desenvolvimento. Envolve a implementação de ações do atuadores presentes em cada robô, onde estas ações serão executadas se baseando nas informações advindas dos sensores. 
 \end{itemize}
 
+	Todas estas ferramentas apresentadas são utilizadas em diversos contextos, desde a utilização como apoio ao aprendizado, como mostra \cite{teachingWithRoboticKit}, até a utilização em campeonatos e jogos, como mostra \cite{ciber-rato}. Segundo \cite{analiseFerramentaEnsinoComputacao}, existem abordagens que utilizam ferramentas virtuais para facilitar o aprendizado. Porém, segundo \cite{simpleMobile}, a utilização de ferramentas reais, equipadas com sensores e atuadores garantem maior interesse e introdução do aluno no contexto da engenharia do mundo real. Desse modo, a ferramenta utilizada neste trabalho será o kit de robótica educacional Mindstorm, da Lego, que tem suas características especificadas a seguir.
+
 \subsection{Lego Mindstorms NXT} % (fold)
 \label{sub:kit_mindstorm}
 
-Mindstorms NXT é uma linha de robótica da Lego, composta de um microcontrolador ARM7 com entrada para até quatro sensores e três atuadores. Possuindo uma tela LCD e botões, a interação com o usuário é de fácil entendimento.
+Com o passar dos anos, os componentes de \textit{hardware} vêm sendo evoluídos continuamente \cite{teachingWithRoboticKit}. Esta evolução faz com que o preço de componentes simples tenda a diminuir, como exemplo temos pequenos processadores poderosos e praticamente descartáveis \cite{teachingWithRoboticKit}. Desse modo, esta evolução dos componentes de \textit{hardware}, vem permitindo a utilização dos mesmos em diversos contextos, como educação e entretenimento. 
+
+Com o crescimento de demandas relacionadas a estes comonentes, nascem os kits de robótica que integram diversos componentes simples, porém poderosos para utilização no contexto educacional e de entretenimento \cite{teachingWithRoboticKit}. Entre os kits existentes atualmente no mercado, se destaca o kit de robótica Mindstorm, da Lego, o qual foi desenvolvido na década de 80 por pesquisadores do MIT. O kit utiliza peças de montagem no padrão Lego para construir a estrutura do robô, diversos tipos de sensores e alguns atuadores, para garantir a mobilidade e interação com o ambiente \cite{teachingWithRoboticKit}.
+
+Desde o lançamento do kit, na década de 80, o mesmo é utilizado por diversas instituições de ensino como ferramenta de apoio ao aprendizado. O sucesso do kit o garantiu premiações devivo a sua reusabilidade, modularidade e simplicidade, tudo isso associado ao seu baixo custo \cite{teachingWithRoboticKit}.
+
+O cérebro do kit pode ser observado na imagem \ref{img:cerebro}, onde se encontra um microprocessador disposto de diversos acessos para sensores e atuadores. Em alguns modelos do kit, o cérebro possui uma tela LCD e alguns botões para interação do usuário. Além do cérebro, o kit possui alguns sensores, como o apresentado na figura \ref{img:sensorLego}, e atuadores, como na figura \ref{img:atuadorLego}
+
+\begin{figure}[H]
+	\centering
+	\caption{Microprocessador central}
+	\includegraphics[scale=0.6]{figuras/cerebro.eps}
+	\label{img:cerebro}
+\end{figure}	
+
+\begin{figure}[H]
+	\centering
+	\caption{Sensor RGB - Lego}
+	\includegraphics[scale=0.5]{figuras/sensorLego.eps}
+	\label{img:sensorLego}
+\end{figure}	
+
+\begin{figure}[H]
+	\centering
+	\caption{Atuador - Lego}
+	\includegraphics[scale=0.5]{figuras/atuadorLego.eps}
+	\label{img:atuadorLego}
+\end{figure}
+
+Além da obtenção do kit completo, como mostra na figura \ref{img:kit}, é possível adquirir componentes separados, como sensores e atuadores específicos, o que garante a possibilidade de adquirir apenas os componentes necessários para o contexto de aplicação, minimizando os custos da sua utilização.
+
+\begin{figure}[H]
+	\centering
+	\caption{Kit Mindsotm completo - Lego}
+	\includegraphics[scale=0.7]{figuras/kitLego.eps}
+	\label{img:kit}
+\end{figure}
+
+
+%Mindstorms NXT é uma linha de robótica da Lego, composta de um microcontrolador ARM7 com entrada para até quatro sensores e três atuadores. Possuindo uma tela LCD e botões, a interação com o usuário é de fácil entendimento.
 % subsection kit_mindstorm (end)
 % section robótica_educacional (end)
