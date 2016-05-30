@@ -32,14 +32,17 @@
 	\subsection{Coleta de dados} % (fold)
 	\label{sec:classificação_quanto_à_técnica_de_coleta_de_dados}
 
-		Em relação a coleta de dados, este trabalho pode ser classificado como como uma \textit{pesquisa bibliográfica}, durante a primeira etapa do trabalho, e \textit{observação} durante a etapa de desenvolvimento. Para realizar a pesquisa bibliográfica utilizou-se da técnica de revisão sistemática, a qual está descrita na seção \ref{sec:revisao_sistematica}.
+		Em relação a coleta de dados, este trabalho pode ser classificado como como uma \textit{pesquisa bibliográfica}, durante a primeira etapa do trabalho, e \textit{experimental} durante a etapa de desenvolvimento. Para realizar a pesquisa bibliográfica utilizou-se da técnica de revisão sistemática, a qual está descrita na seção \ref{sec:revisao_sistematica}.
 
-		Segundo 
+		Segundo \cite{metodologiaCientifica}, o experimento busca manipular variáveis específicas verificando seus efeitos e motivos dos mesmos. Como o trabalho busca adaptar técnicas para um contexto de robôs simples, os efeitos da limitação das capacidades tecnológicas são estudados a partir de experimentos realizados durante o desenvolvimento.
 	% section classificação_quanto_à_técnica_de_coleta_de_dados (end)
 
 	\subsection{Análise de dados} % (fold)
 	\label{sec:classificação_quanto_à_técnica_de_análise_de_dados}
 	
+		Em relação a análise de dados, esta pesquisa é definida como análise de conteúdo, já que o trabalho não busca apenas analisar adaptações de técnicas para contextos limitados, como também  analisar e descrever a importância da utilização de problemas recorrentes da comunidade de robótica em atividades educacionais. 
+
+		De acordo com \cite{metodologiaCientifica}, a análise de conteúdo trata de trazer à tona o que está em segundo plano do fenômeno estudado, o que, no caso deste trabalho, é o impacto educacional da utilização da robótica como ferramenta de apoio ao aprendizado.
 	% section classificação_quanto_à_técnica_de_análise_de_dados (end)
 
 	De acordo com a classificação da pesquisa nas diferentes categorias apresentadas acima, a tabela \ref{tab:metodologia} apresenta de maneira resumida a abordagem definida para realização deste trabalho.
@@ -50,18 +53,24 @@
 		\label{tab:metodologia}
 		\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		\textbf{\begin{tabular}[c]{@{}c@{}}Objetivos \\ da pesquisa\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Natureza \\ da pesquisa\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Objeto \\ de estudo\end{tabular}} & \textbf{Coleta de dados}                                          & \textbf{\begin{tabular}[c]{@{}c@{}}Análise de \\ dados\end{tabular}} \\ \hline
-		Exploratória                                                              & Qualitativa                                                              & \begin{tabular}[c]{@{}c@{}}Estudo de caso \\ único\end{tabular}      & \begin{tabular}[c]{@{}c@{}}Experimento/\\ observação\end{tabular} & \begin{tabular}[c]{@{}c@{}}Análise de \\ conteúdo\end{tabular}       \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Objetivos \\ da pesquisa\end{tabular}} & 
+		\textbf{\begin{tabular}[c]{@{}c@{}}Natureza \\ da pesquisa\end{tabular}} & 
+		\textbf{\begin{tabular}[c]{@{}c@{}}Objeto \\ de estudo\end{tabular}} & 
+		\textbf{Coleta de dados}                                          & 
+		\textbf{\begin{tabular}[c]{@{}c@{}}Análise de \\ dados\end{tabular}} \\ \hline
+		Exploratória                                                              & Qualitativa                                                              & \begin{tabular}[c]{@{}c@{}}Estudo de caso \\ único\end{tabular}      & \begin{tabular}[c]{@{}c@{}}Experimento/\\ pesquisa bibliográfica\end{tabular} & \begin{tabular}[c]{@{}c@{}}Análise de \\ conteúdo\end{tabular}       \\ \hline
 		\end{tabular}
 	\end{table}
-	
-	Primeiramente, antes de discutir a metodologia a ser seguida para desenvolvimento desta pesquisa, vale ressaltar o marco teórico que sustenta este trabalho. Dentre as diversas técnicas e maneiras possíveis de realizar a auto-localização no contexto de robôs autônomos, este trabalho se baseia exclusivamente no conjunto de autores que busca solucionar este problema utilizando a técnica de SLAM. Nesta técnica, a auto-localização é o resultado do processamento de um mapa que é construído simultaneamente pelo próprio robô. Desse modo, este trabalho não busca tratar técnicas de auto-localização baseadas em outras abordagens, como a utilização de mapas prévios, por exemplo.
 
-Este trabalho segue uma metodologia de pesquisa exploratória e com uma abordagem qualitativa, onde são selecionadas, comparadas e analisadas técnicas de resolução do problema de SLAM. De acordo com \cite{metodologiaCientifica}, a pesquisa exploratória tem como objetivo ampliar os conhecimentos do pesquisador sobre o tema. O uso da pesquisa exploratória, neste trabalho, se dá pela necessidade do conhecimento sobre as técnicas de resolução do problema de SLAM, com o intuito de realizar adaptações das mesmas para o contexto de robôs simples. Já a abordagem qualitativa, tem como objetivo entender o funcionamento e as técnicas existentes, para buscar uma forma de adaptação para um contexto simplificado, não se importando com dados quantificáveis.
+	A partir da classificação de todas as categorias da pesquisa, deve-se estabelecer o \textit{caminho} a ser seguido para realização do trabalho, que está detalhado na seção \ref{sec:processo_metodológico}.
 
-Com o objetivo de identificar o máximo de técnicas possíveis, com os mais diferentes tipos de \textit{hardwares}, será realizada uma pesquisa bibliográfica sobre os temas \textit{Auto-localização na Robótica, o Problema de SLAM e as características dos robôs simples presentes na Robótica Educacional}. As principais fontes de dados em estudo são as bases da CAPES, IEEE e Scopus.
 
-A primeira fase deste trabalho é focada em estabelecer pilares teóricos que sustentem um projeto de adaptação de técnicas durante a segunda fase. Esta primeira fase pode ser sub-dividida em três atividades: \textit{Realizar Pesquisa Bibliográfica}, \textit{selecionar Técnicas} e \textit{Propor Adaptações}. As mesmas estão distribuídas de acordo com o cronograma disposto na tabela \ref{tab:cronograma}.
+\section{Processo Metodológico} % (fold)
+\label{sec:processo_metodológico}
+
+% section processo_metodológico (end)
+
+A primeira fase deste trabalho é focada em estabelecer pilares teóricos que sustentem um projeto de adaptação de técnicas durante a segunda fase. Esta primeira fase pode ser sub-dividida em oito atividades: \textit{selecionar tema}, \textit{realizar pesquisa bibliográfica}, \textit{definir proposta}, \textit{escrever referencial teórico}, \textit{estabelecer suporte tecnológico}, \textit{evoluir metodologia}, \textit{realizar prova de conceito} e \textit{apresentar TCC 1}. As mesmas estão distribuídas de acordo com o cronograma disposto na tabela \ref{tab:cronograma}.
 
 \begin{table}[H]
 	\centering
@@ -130,8 +139,24 @@ Com o objetivo de definir e acompanhar o processo de desenvolvimento da primeira
 
 As atividades de \textit{levantar bibliografia base} e \textit{realizar pesquisa e análise bibliográfica} são desenvolvidas utilizando a técnica de revisão sistemática, a qual se encontra detalhada na seção \ref{sec:revisão_sistemática}.
 
-\section{Revisão Sistemática} % (fold)
-\label{sec:revisão_sistemática}
+\subsection{Revisão Sistemática} % (fold)
+\label{sec:revisao_sistematica}
+	
+	Com o objetivo de realizar uma ampla pesquisa bibliográfica, buscando conhecer diferentes técnicas de auto-localização e, mais especificamente, o problema de SLAM, utilizou-se da técnica de revisão sistemática. Uma revisão sistemática busca identificar e analisar o máximo de pesquisas relacionadas a um tema em específico, como define \cite{revisaoSistematicaComunicacao}:
 
+	 \begin{quote}
+	 	Uma revisão literária sistemática é um meio de identificar, avaliar e interpretar
+		todas as pesquisas disponíveis relevantes a uma determinada questão de pesquisa,
+		ou área de um tópico, ou fenômeno de interesse. Estudos individuais que contribuem
+		para uma revisão sistemática são chamados estudos primários; uma revisão
+		sistemática é uma forma de estudo secundário.
+	 \end{quote}
+
+	 De acordo com \cite{revisaoSistematicaComunicacao}, a técnica de revisão sistemática é bastante utilizada quando se busca identificar soluções propostas para resolver o problema levantado. Neste trabalho, a revisão sistemática busca identificar técnicas de resolução do problema de SLAM em diferentes contextos.
+
+	 \subsubsection{Processo de Revisão Sistemática}
+
+	 	O processo utilizado durante a pesquisa segue o processo de revisão sistemática apresentado por \cite{Kitchenham}, desse modo, o processo é dividido em três etapas: \textit{planejamento da revisão}, \textit{condução da revisão} e a \textit{documentação da revisão}. As atividades que estão distribuidas entre essas etapas podem ser observadas na figura \ref{img:processo_revisao}.
+	
 % section revisão_sistemática (end)
 %Quanto aos procedimentos de desenvolvimento, durante a fase de adaptação de técnicas de resolução do problema de SLAM, a metodologia seguida será baseada no \textit{Scrum}, utilizando sprints de 2 semanas. O desenvolvimento se dará com base em provas de conceito que buscarão sustentar a viabilidade das adaptações propostas.
