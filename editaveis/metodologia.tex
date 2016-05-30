@@ -1,0 +1,137 @@
+\chapter[Metodologia]{Metodologia}
+
+	De acordo com \cite{metodologiaCientifica}, a metodologia de pesquisa adotada neste trabalho pode ser classificada nas seguintes categorias: classificação quanto aos objetivos da pesquisa, quanto a natureza da pesquisa, quanto a escolha do objeto de estudo, quanto a técnica de coleta de dados e quanto a técnica de análise de dados. A classificação escolhida em cada categoria busca garantir conhecimento amplo sobre diferentes técnicas de solução do problema de SLAM, possibilitando a adaptação de técnicas para um contexto de robôs simples. Nas seções seguintes são apresentadas as categorias e suas respectivas classificações de pesquisa adotadas durante este trabalho. 
+
+	\section{Classificação da Pesquisa} % (fold)
+	\label{sec:classificação_da_pesquisa}
+		
+		De acordo com \cite{metodologiaCientifica}, uma pesquisa científica pode ser classificada nas categorias \textit{objetivos da pesquisa}, \textit{natureza da pesquisa}, \textit{objeto de estudo}, \textit{coleta de dados} e \textit{análise dos dados}, que são apresentadas nas seções \ref{sec:classificação_quanto_aos_objetivos_da_pesquisa}, \ref{sec:classificação_quanto_à_natureza_da_pesquisa}, \ref{sec:classificação_quanto_à_escolha_do_objeto_de_estudo}, \ref{sec:classificação_quanto_à_técnica_de_coleta_de_dados} e \ref{sec:classificação_quanto_à_técnica_de_análise_de_dados}, respectivamente.
+
+	\subsection{Objetivos da pesquisa} % (fold)
+	\label{sec:classificação_quanto_aos_objetivos_da_pesquisa}
+		
+		A classificação deste trabalho em relação aos objetivos da pesquisa é definida como \textit{exploratória}. De acordo com \cite{metodologiaCientifica}, a pesquisa exploratória tem como objetivo ampliar os conhecimentos do pesquisador sobre o tema. A pesquisa exploratória é, normalmente, o primeiro passo quando o pesquisador não conhece suficientemente a área que pretende abordar \cite{metodologiaDaPesquisa}.
+
+		O uso da pesquisa exploratória, neste trabalho, se dá pela necessidade do conhecimento sobre as diversas técnicas de resolução do problema de SLAM, com o objetivo de possibilitar adaptações das mesmas para o contexto de robôs simples.
+	% section classificação_quanto_aos_objetivos_da_pesquisa (end)
+
+	\subsection{Natureza da pesquisa} % (fold)
+	\label{sec:classificação_quanto_à_natureza_da_pesquisa}
+	
+		A classificação deste trabalho em relação à natureza da pesquisa é definida como \textit{qualitativa}. Segundo \cite{metodologiaCientifica}, abordagens de cunho qualitativo buscam o significado dos dados obtidos, capturando, além da aparência do fenômeno estudado, suas essências. Dessa forma, a pesquisa qualitativa envolve a obtenção e análise dos dados descritivos por meio do contato direto entre o pesquisador e o fenômeno estudado \cite{metodologiaCientifica}. 
+
+		A pesquisa de natureza qualitativa é utilizada durante este trabalho com o objetivo de entender detalhadamente o funcionamento de diversas técnicas de resolução do problema de SLAM. Além disso, a proximidade do pesquisador com o fenômeno a ser estudado possibilita um análise descritiva dos dados de forma que viabilize uma adaptação de técnicas para contextos limitados. 
+	% section classificação_quanto_à_natureza_da_pesquisa (end)
+
+	\subsection{Objeto de estudo} % (fold)
+	\label{sec:classificação_quanto_à_escolha_do_objeto_de_estudo}
+	
+		A classificação da pesquisa em relação ao objeto de estudo é definida como \textit{estudo de caso}. Segundo \cite{metodologiaCientifica}, o estudo de caso contempla o estudo profundo e exaustivo do fenômeno, necessitando de proximidade entre o pesquisador e o objeto de estudo. A utilização do estudo de caso, neste trabalho, se dá pela necessidade de estudo detalhado do fenômeno, durante o desenvolvimento, na segunda etapa do trabalho. Como o objeto de estudo será desenvolvido pelo próprio pesquisador, a proximidade entre eles não será problema, viabilizando a utilização do estudo de caso.
+	% section classificação_quanto_à_escolha_do_objeto_de_estudo (end)
+
+	\subsection{Coleta de dados} % (fold)
+	\label{sec:classificação_quanto_à_técnica_de_coleta_de_dados}
+
+		Em relação a coleta de dados, este trabalho pode ser classificado como como uma \textit{pesquisa bibliográfica}, durante a primeira etapa do trabalho, e \textit{observação} durante a etapa de desenvolvimento. Para realizar a pesquisa bibliográfica utilizou-se da técnica de revisão sistemática, a qual está descrita na seção \ref{sec:revisao_sistematica}.
+
+		Segundo 
+	% section classificação_quanto_à_técnica_de_coleta_de_dados (end)
+
+	\subsection{Análise de dados} % (fold)
+	\label{sec:classificação_quanto_à_técnica_de_análise_de_dados}
+	
+	% section classificação_quanto_à_técnica_de_análise_de_dados (end)
+
+	De acordo com a classificação da pesquisa nas diferentes categorias apresentadas acima, a tabela \ref{tab:metodologia} apresenta de maneira resumida a abordagem definida para realização deste trabalho.
+
+	\begin{table}[H]
+		\centering
+		\caption{Classificação da pesquisa}
+		\label{tab:metodologia}
+		\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Objetivos \\ da pesquisa\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Natureza \\ da pesquisa\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Objeto \\ de estudo\end{tabular}} & \textbf{Coleta de dados}                                          & \textbf{\begin{tabular}[c]{@{}c@{}}Análise de \\ dados\end{tabular}} \\ \hline
+		Exploratória                                                              & Qualitativa                                                              & \begin{tabular}[c]{@{}c@{}}Estudo de caso \\ único\end{tabular}      & \begin{tabular}[c]{@{}c@{}}Experimento/\\ observação\end{tabular} & \begin{tabular}[c]{@{}c@{}}Análise de \\ conteúdo\end{tabular}       \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Primeiramente, antes de discutir a metodologia a ser seguida para desenvolvimento desta pesquisa, vale ressaltar o marco teórico que sustenta este trabalho. Dentre as diversas técnicas e maneiras possíveis de realizar a auto-localização no contexto de robôs autônomos, este trabalho se baseia exclusivamente no conjunto de autores que busca solucionar este problema utilizando a técnica de SLAM. Nesta técnica, a auto-localização é o resultado do processamento de um mapa que é construído simultaneamente pelo próprio robô. Desse modo, este trabalho não busca tratar técnicas de auto-localização baseadas em outras abordagens, como a utilização de mapas prévios, por exemplo.
+
+Este trabalho segue uma metodologia de pesquisa exploratória e com uma abordagem qualitativa, onde são selecionadas, comparadas e analisadas técnicas de resolução do problema de SLAM. De acordo com \cite{metodologiaCientifica}, a pesquisa exploratória tem como objetivo ampliar os conhecimentos do pesquisador sobre o tema. O uso da pesquisa exploratória, neste trabalho, se dá pela necessidade do conhecimento sobre as técnicas de resolução do problema de SLAM, com o intuito de realizar adaptações das mesmas para o contexto de robôs simples. Já a abordagem qualitativa, tem como objetivo entender o funcionamento e as técnicas existentes, para buscar uma forma de adaptação para um contexto simplificado, não se importando com dados quantificáveis.
+
+Com o objetivo de identificar o máximo de técnicas possíveis, com os mais diferentes tipos de \textit{hardwares}, será realizada uma pesquisa bibliográfica sobre os temas \textit{Auto-localização na Robótica, o Problema de SLAM e as características dos robôs simples presentes na Robótica Educacional}. As principais fontes de dados em estudo são as bases da CAPES, IEEE e Scopus.
+
+A primeira fase deste trabalho é focada em estabelecer pilares teóricos que sustentem um projeto de adaptação de técnicas durante a segunda fase. Esta primeira fase pode ser sub-dividida em três atividades: \textit{Realizar Pesquisa Bibliográfica}, \textit{selecionar Técnicas} e \textit{Propor Adaptações}. As mesmas estão distribuídas de acordo com o cronograma disposto na tabela \ref{tab:cronograma}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\textbf{Cronograma}             & \textbf{Março} & \textbf{Abril} & \textbf{Maio} & \textbf{Junho} \\ \hline
+		Selecionar Tema                 & X              &                &               &                \\ \hline
+		Realizar pesquisa bibliográfica & X              & X              & X             & X              \\ \hline
+		Definir proposta                & X              &                &               &                \\ \hline
+		Escrever referencial teórico    &                & X              & X             &                \\ \hline
+		Estabelecer suporte tecnológico &                & X              & X             & X              \\ \hline
+		Evoluir metodologia             &                & X              & X             &                \\ \hline
+		Realizar prova de conceito      &                &                &               & X              \\ \hline
+		Apresentar TCC 1                &                &                &               & X              \\ \hline
+	\end{tabular}
+	\caption{Cronograma TCC 1}
+	\label{tab:cronograma}
+\end{table}
+
+Com o objetivo de definir e acompanhar o processo de desenvolvimento da primeira etapa do trabalho de conclusão de curso, foi modelado um processo metodológico, o qual se encontra na figura \ref{img:processo}.
+
+\begin{figure}[H]
+	\centering
+	\caption{Processo Metodológico}
+	\includegraphics[scale=0.6]{figuras/processo.eps}
+	\label{img:processo}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Propor tema}:
+
+		A atividade de propor tema engloba desde a escolha do contexto em que se deseja trabalhar, até a definição dos orientadores do trabalho. Após a escolha do contexto e dos orientadores, busca-se definir um escopo que será atacado durante o trabalho, ou seja, o tema. Os orientadores devem validar o tema escolhido para concluir a atividade.
+
+	\item \textbf{Levantar bibliografia base}:
+
+		Esta atividade se trata da definição de pilares para o estudo proposto, ou seja, grandes estudiosos da área. Este levantamento garante o entendimento do contexto trabalhado e as possibilidades de atuação, especificando melhor o escopo.
+
+	\item \textbf{Definir Proposta}:
+
+		Documentar a proposta de pesquisa para este trabalho. A proposta inclui uma introdução com a contextualização do tema, o objetivo geral e específicos, a justificativa e uma metodologia de pesquisa.
+
+	\item \textbf{Realizar pesquisa e análise bibliográfica}:
+
+		A realização da pesquisa bibliográfica simula uma simples revisão sistemática, com o objetivo de ampliar os conhecimentos em relação ao tema, conhecendo trabalhos relacionados ao tema em diversas bases científicas, como \textit{IEEE, Scopus, Springer} e \textit{CAPES}.
+
+	\item \textbf{Realizar referencial teórico}:
+
+		Trata-se da escrita do capítulo dois do trabalho, onde se encontra o referencial teórico do mesmo. Como input para esta atividade, se encontram todas as pesquisas bibliográficas obtidas durante a atividade de \textit{Realizar pesquisa e análise bibliográfica}. Neste capítulo o tema será especificado com mais detalhe.
+
+	\item \textbf{Definir Suporte Tecnológico}:
+
+		Nesta atividade são definidas todas as ferramentas e tecnologias utilizadas para a execução deste trabalho. 
+
+	\item \textbf{Estabelecer Metodologia de pesquisa}:
+
+		Durante esta a atividade, a metodologia de pesquisa inicial, apresentada durante a \textit{proposta}, deve ser evoluída, com o objetivo de adequar as formas de atuação para garantir a qualidade e efetividade do trabalho proposto. 
+
+	\item \textbf{Realizar prova de conceito}:
+
+		Implementar uma prova de conceito que utilize alguma técnica de mapeamento e auto-localização, utilizando os kits de robótica Mindstorms da Lego.
+
+	\item \textbf{Apresentar TCC 1}:
+
+		Apresentar todo o trabalho realizado durante a primeira etapa do trabalho de conclusao de curso para a banca examinadora.
+\end{itemize}
+
+As atividades de \textit{levantar bibliografia base} e \textit{realizar pesquisa e análise bibliográfica} são desenvolvidas utilizando a técnica de revisão sistemática, a qual se encontra detalhada na seção \ref{sec:revisão_sistemática}.
+
+\section{Revisão Sistemática} % (fold)
+\label{sec:revisão_sistemática}
+
+% section revisão_sistemática (end)
+%Quanto aos procedimentos de desenvolvimento, durante a fase de adaptação de técnicas de resolução do problema de SLAM, a metodologia seguida será baseada no \textit{Scrum}, utilizando sprints de 2 semanas. O desenvolvimento se dará com base em provas de conceito que buscarão sustentar a viabilidade das adaptações propostas.

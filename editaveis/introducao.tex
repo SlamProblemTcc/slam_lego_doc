@@ -5,7 +5,7 @@
 	
 	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
 
-	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos. 
+	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos.
 
 	Para que robôs sejam capazes de navegar em um ambiente desconhecido sem que haja colisão em objetos e obstáculos, os mesmos necessitam de informações sobre este ambiente. Estas informações são adquiridas utilizando sensores. Como foi apresentado por \cite{interacaoRoboAmbiente}, no livro de Robótica Industrial, os sensores possuem o dever de fornecer informações ao sistema de controle do robô sobre distâncias de objetos, posição do robô, contato do robô com objetos, força exercida sobre objetos, cor e textura dos objetos, entre outras.
 
@@ -28,9 +28,9 @@
 
 	As formas apresentadas anteriormente, para se trabalhar com auto-localização, possuem características únicas que as adequam para diferentes contextos de navegação. Por exemplo, segundo \cite{roboBulldozerIV}, a Utilização de Mapas é uma técnica bastante útil quando se está trabalhando com um ambiente conhecido e estático, porém, em ambientes mutáveis e não conhecidos, essa estratégia se torna um problema. A Localização Relativa em Grupos é a técnica adequada quando a navegação envolve muitos robôs, a qual não necessita de conhecimento prévio do mapa. A Utilização de Pontos de Referência é uma técnica comumente utilizada, é útil quando não se conhece o ambiente de navegação. Entretanto, os pontos de referência, nesse caso, precisam ser conhecidos. 
 
-	Quando se têm ambientes abertos e amplos, a técnica de Localização Absoluta com GPS é a mais utilizada. Entretanto, sua margem de erro torna a navegação em ambientes pequenos ou fechados inviável, como apresenta \cite{roboBulldozerIV}. A Navegação com utilização de Bússulas garante um apoio muito útil para orientação do robô. Contudo, essa técnica gera problemas relacionados a interferências externas, como materiais eletromagnéticos próximos à bússula \cite{roboBulldozerIV}.
+	Quando se têm ambientes abertos e amplos, a técnica de Localização Absoluta com GPS é a mais utilizada. Entretanto, sua margem de erro torna a navegação em ambientes pequenos ou fechados inviável, como apresenta \cite{roboBulldozerIV}. A Navegação com utilização de Bússolas garante um apoio muito útil para orientação do robô. Contudo, essa técnica gera problemas relacionados a interferências externas, como materiais eletromagnéticos próximos à bússola \cite{roboBulldozerIV}.
 	
-	A técnica de Odometria é muito utilizada em navegações curtas, em ambientes com o piso regular e plano. Entretando, segundo \cite{roboBulldozerIV}, esta técnica se caracteriza pela adição de erros a cada centímetro percorrido, por meio de derrapagens e falhas no giro das rodas. 
+	A técnica de Odometria é muito utilizada em navegações curtas, em ambientes com o piso regular e plano. Entretanto, segundo \cite{roboBulldozerIV}, esta técnica se caracteriza pela adição de erros a cada centímetro percorrido, por meio de derrapagens e falhas no giro das rodas. 
 
 	Desse modo, é fácil perceber que cada técnica possui características que se adaptam melhor para diferentes situações. Ao longo deste trabalho, o principal foco de interesse é a navegabilidade de robôs simples e baratos, como os Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Tais kits possuem poucas opções de sensores e características bem limitadas \cite{drawLegoRobot}. Os sensores do kit que serão utilizados neste trabalho são: \textit{Sensor de proximidade, sensor RGB, sensor de contato e sensor odométrico}.
 
@@ -58,7 +58,7 @@
 
 	As missões utilizadas durante a disciplina da UnB são referentes a problemas recorrentes no contexto da robótica mundial. A solução dos problemas é uma adaptação das técnicas existentes para o contexto limitado da disciplina, onde são utilizadas apenas ferramentas presentes no kit \textit{Mindstorms} da Lego. Esta adaptação exige um conhecimento específico sobre a técnica, para que o estudante possa identificar características relevantes e adaptá-las de acordo com o \textit{hardware} disponível.
 
-	A disciplina já influenciou dois estudantes de Engenharia de Software a se aprofundarem no contexto da robótica e robótica educacional, gerando dois trabalhos de conclusão de curso, \cite{tccRodrigo}, que desenvolveu um \textit{framework} de definição de trajetórias para robôs móveis, e \cite{tccCarol}, que desenvolveu um algorítmo para tomada de decisões estratégicas em robótica educacional. O trabalho atual vem para complementar os trabalhos realizados pelos dois alunos.
+	A disciplina já influenciou dois estudantes de Engenharia de Software a se aprofundarem no contexto da robótica e robótica educacional, gerando dois trabalhos de conclusão de curso, \cite{tccRodrigo}, que desenvolveu um \textit{framework} de definição de trajetórias para robôs móveis, e \cite{tccCarol}, que desenvolveu um algoritmo para tomada de decisões estratégicas em robótica educacional. O trabalho atual vem para complementar os trabalhos realizados pelos dois alunos.
 
 
 	\section{Objetivos}
@@ -81,78 +81,4 @@
 	
 	% subsection objetivos_específicos (end)
 
-	\section[Metodologia]{Metodologia}
-
-	Primeiramente, antes de discutir a metodologia a ser seguida para desenvolvimento desta pesquisa, vale ressaltar o marco teórico que sustenta este trabalho. Dentre as diversas técnicas e maneiras possíveis de realizar a auto-localização no contexto de robôs autônomos, este trabalho se baseia exclusivamente no conjunto de autores que busca solucionar este problema utilizando a técnica de SLAM. Nesta técnica, a auto-localização é o resultado do processamento de um mapa que é construído simultaneamente pelo próprio robô. Desse modo, este trabalho não busca tratar técnicas de auto-localização baseadas em outras abordagens, como a utilização de mapas prévios, por exemplo.
-
-Este trabalho segue uma metodologia de pesquisa exploratória e com uma abordagem qualitativa, onde são selecionadas, comparadas e analisadas técnicas de resolução do problema de SLAM. De acordo com \cite{metodologiaCientifica}, a pesquisa exploratória tem como objetivo ampliar os conhecimentos do pesquisador sobre o tema. O uso da pesquisa exploratória, neste trabalho, se dá pela necessidade do conhecimento sobre as técnicas de resolução do problema de SLAM, com o intuito de realizar adaptações das mesmas para o contexto de robôs simples. Já a abordagem qualitativa, tem como objetivo entender o funcionamento e as técnicas existentes, para buscar uma forma de adaptação para um contexto simplificado, não se importando com dados quantificáveis.
-
-Com o objetivo de identificar o máximo de técnicas possíveis, com os mais diferentes tipos de \textit{hardwares}, será realizada uma pesquisa bibliográfica sobre os temas \textit{Auto-localização na Robótica, o Problema de SLAM e as características dos robôs simples presentes na Robótica Educacional}. As principais fontes de dados em estudo são as bases da CAPES, IEEE e Scopus.
-
-A primeira fase deste trabalho é focada em estabelecer pilares teóricos que sustentem um projeto de adaptação de técnicas durante a segunda fase. Esta primeira fase pode ser sub-dividida em três atividades: \textit{Realizar Pesquisa Bibliográfica}, \textit{selecionar Técnicas} e \textit{Propor Adaptações}. As mesmas estão distribuídas de acordo com o cronograma disposto na tabela \ref{tab:cronograma}.
-
-\begin{table}[H]
-	\centering
-	\begin{tabular}{|c|c|c|c|c|}
-		\hline
-		\textbf{Cronograma}             & \textbf{Março} & \textbf{Abril} & \textbf{Maio} & \textbf{Junho} \\ \hline
-		Selecionar Tema                 & X              &                &               &                \\ \hline
-		Realizar pesquisa bibliográfica & X              & X              & X             & X              \\ \hline
-		Definir proposta                & X              &                &               &                \\ \hline
-		Escrever referencial teórico    &                & X              & X             &                \\ \hline
-		Estabelecer suporte tecnológico &                & X              & X             & X              \\ \hline
-		Evoluir metodologia             &                & X              & X             &                \\ \hline
-		Realizar prova de conceito      &                &                &               & X              \\ \hline
-		Apresentar TCC 1                &                &                &               & X              \\ \hline
-	\end{tabular}
-	\caption{Cronograma TCC 1}
-	\label{tab:cronograma}
-\end{table}
-
-Com o objetivo de definir e acompanhar o processo de desenvolvimento da primeira etapa do trabalho de conclusão de curso, foi modelado um processo metodológico, o qual se encontra na figura \ref{img:processo}.
-
-\begin{figure}[H]
-	\centering
-	\caption{Processo Metodológico}
-	\includegraphics[scale=0.6]{figuras/processo.eps}
-	\label{img:processo}
-\end{figure}
-
-\begin{itemize}
-	\item \textbf{Propor tema}:
-
-		A atividade de propor tema engloba desde a escolha do contexto em que se deseja trabalhar, até a definição dos orientadores do trabalho. Após a escolha do contexto e dos orientadores, busca-se definir um escopo que será atacado durante o trabalho, ou seja, o tema. Os orientadores devem validar o tema escolhido para concluir a atividade.
-
-	\item \textbf{Levantar bibliografia base}:
-
-		Esta atividade se trata da definição de pilares para o estudo proposto, ou seja, grandes estudiosos da área. Este levantamento garante o entendimento do contexto trabalhado e as possibilidades de atuação, especificando melhor o escopo.
-
-	\item \textbf{Definir Proposta}:
-
-		Documentar a proposta de pesquisa para este trabalho. A proposta inclui uma introdução com a contextualização do tema, o objetivo geral e específicos, a justificativa e uma metodologia de pesquisa.
-
-	\item \textbf{Realizar pesquisa e análise bibliográfica}:
-
-		A realização da pesquisa bibliográfica simula uma simples revisão sistemática, com o objetivo de ampliar os conhecimentos em relação ao tema, conhecendo trabalhos relacionados ao tema em diversas bases científicas, como \textit{IEEE, Scopus, Springer} e \textit{CAPES}.
-
-	\item \textbf{Realizar referencial teórico}:
-
-		Trata-se da escrita do capítulo dois do trabalho, onde se encontra o referencial teórico do mesmo. Como input para esta atividade, se encontram todas as pesquisas bibliográficas obtidas durante a atividade de \textit{Realizar pesquisa e análise bibliográfica}. Neste capítulo o tema será especificado com mais detalhe.
-
-	\item \textbf{Definir Suporte Tecnológico}:
-
-		Nesta atividade são definidas todas as ferramentas e tecnologias utilizadas para a execução deste trabalho. 
-
-	\item \textbf{Estabelecer Metodologia de pesquisa}:
-
-		Durante esta a atividade, a metodologia de pesquisa inicial, apresentada durante a \textit{proposta}, deve ser evoluída, com o objetivo de adequar as formas de atuação para garantir a qualidade e efetividade do trabalho proposto. 
-
-	\item \textbf{Realizar prova de conceito}:
-
-		Implementar uma prova de conceito que utilize alguma técnica de mapeamento e auto-localização, utilizando os kits de robótica Mindstorms da Lego.
-
-	\item \textbf{Apresentar TCC 1}:
-
-		Apresentar todo o trabalho realizado durante a primeira etapa do trabalho de conclusao de curso para a banca examinadora.
-\end{itemize}
-%Quanto aos procedimentos de desenvolvimento, durante a fase de adaptação de técnicas de resolução do problema de SLAM, a metodologia seguida será baseada no \textit{Scrum}, utilizando sprints de 2 semanas. O desenvolvimento se dará com base em provas de conceito que buscarão sustentar a viabilidade das adaptações propostas.
+	
