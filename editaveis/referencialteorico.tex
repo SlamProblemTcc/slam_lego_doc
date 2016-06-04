@@ -57,6 +57,9 @@ Auto-localização e Mapeamento de Ambientes Simultâneos (SLAM) é uma técnica
 
 Inúmeras soluções para o problema de SLAM, em diferentes contextos, já foram desenvolvidas e vêm sendo refinadas, com o intuito de maximizar a efetividade da navegação \cite{theCleaningProject}. Segundo \cite{circumventingAssociationSLAM}, graças a natureza imperfeita presente nos sensores, a falta de previsibilidade em ambientes reais de atuação e a necessidade de aproximações para viabilizar a análise de decisões computacionais, a robótica é uma ciência dependente de algoritmos probabilísticos. E por esse motivo, diversas  abordagens de análise probabilística podem ser seguidas \cite{circumventingAssociationSLAM}.
 
+\subsection{Filtro de Kalman} % (fold)
+\label{sub:kalman}
+
 De acordo com \cite{slamProblem}, a abordagem mais utilizada para resolução do problema de SLAM, é a utilização do filtro de Kalman. \cite{theCleaningProject} descreve o filtro de Kalman como: \textit{"Um algoritmo recursivo de processamento de informações, proporcionando a estimação ótima do estado de um sistema dinâmico com ruído linear"}.
 
 Este filtro utiliza diversas disciplinas, como mostra \cite{theCleaningProject}:
@@ -72,6 +75,11 @@ Porém, a utilização da abordagem do filtro de Kalman, geralmente, exige requi
 
  Em seu trabalho, \cite{slamProblem} exemplifica este problema, quando quantifica a relação entre o crescimento do requisito computacional necessário para a quantidade de pontos de referência no ambiente, com a utilização do filtro de Kalman. Segundo ele, enquanto a quantidade de pontos de referência aumenta em N, os requisitos computacionais e de armazenamento necessários aumentam em N\textsuperscript{2}. \cite{slamProblem} mostra que este problema pode ser solucionado, em parte, utilizando técnicas de aproximação delimitada, por exemplo. Entretando, estas técnicas minimizam o problema, mas não o solucionam completamente \cite{slamProblem}.
 
+ % subsection subsection_name (end)
+
+ \subsection{Filtro de Partículas} % (fold)
+ \label{sub:filtro_de_partículas}
+
 Outra abordagem bastante utilizada para resoluçao do problema de SLAM envolve a utilização do filtro de Partículas, que é uma técnica para implementação de um \textit{Filtro Bayesiano} de forma recursiva utilizando o método de \textit{Monte Carlo} \cite{integrationVisionSLAMnonlinear}. O método de Monte Carlo baseia-se em amostragens aleatórias em grande quantidade com o objetivo de estabelecer o valor de uma grandeza que não é disponível através de uma expressão matemática \cite{mooney1997monte} e \cite{comparacaoKalmanParticulas}.
 
 O funcionamento desta abordagem se baseia em subdividir o ambiente em partículas espalhas uniformemente, que representam o robô munido de seus sensores \cite{comparacaoKalmanParticulas}. Cada partícula é uma hipótese da posição atual do robô \cite{dp-slam}. O robô e as partículas obtém informações do ambiente, o robô utilizando seus sensores e as partículas utilizando equações matemáticas para geração destes dados \cite{comparacaoKalmanParticulas}. As informações obtidas pelo robô real são comparadas com as informações de cada partícula, excluindo as partículas que não oferecem informações semelhantes às do robô real \cite{comparacaoKalmanParticulas}. Com o passar dos ciclos, as partículas que ainda continuam no ambiente representam a posição atual do robô \cite{comparacaoKalmanParticulas}.
@@ -80,6 +88,12 @@ A partir da comparação entre estas duas abordagens (filtro de Kalman e filtro 
 
 Já o filtro de Partículas permite sua utilização em sistemas sem ruído gaussiano, e soluciona o problema do sequestro do robô \cite{filtroParticulasComLEGO}. Entre suas desvantagens se encontra o alto custo computacional e a dificuldade da definição da quantidade ideal de partículas a serem utilizadas \cite{comparacaoKalmanParticulas}.
 
+% subsection filtro_de_partículas (end)
+
+\subsection{Sequestro do Robô} % (fold)
+\label{sub:sequestro_do_robô}
+
+% subsection sequestro_do_robô (end)
 O sequestro do robô, citado acima, é um problema especial de localização global no campo da robótica móvel, onde o desafio deste problema, segundo \cite{sequestroRobo}, é fazer com que o robô seja capaz de se localizar em um mapa após ser sequestrado (ser retirado de sua posição e colocado em uma posição desconhecida no mapa).
 
 As duas grandes abordagens apresentadas acima são amplamente utilizadas em diversos contextos do mundo real, contemplando questões importantes a serem estudadas e refinadas por estudiosos de engenharia de todo o mundo, desde estudantes que buscam ingressar nesta área até profissionais da área \cite{simpleRobotsIntroductionEng}. Desse modo, vê-se a necessidade da adaptação de técnicas de resolução do problema de SLAM, seja a partir de uma abordagem baseada no filtro de Kalman, ou de uma abordagem baseada no filtro de Partículas, para um contexto Educacional. Onde sensores, capacidades de processamento e memória são bastante limitados \cite{roboticEducationBasedLego}.
