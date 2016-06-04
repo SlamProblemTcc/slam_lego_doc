@@ -1,9 +1,13 @@
 \chapter[Introdução]{Introdução}
 %\addcontentsline{toc}{chapter}{Introdução}
 
+	A robótica é um termo que gera bastante curiosidade para qualquer pessoa, desde uma criança aprendendo a ler, até idosos surpresos com as novidades. Por esse e outros motivos, a robótica vem sendo pesquisada e evoluída em diversos contextos, como a robótica educacional, por exemplo. 
+
+	Entre as diversas áreas de pesquisa que se enquadram na robótica, uma delas merece atenção especial: a robótica móvel. A mobilidade robótica é um dos grandes desafios para a comunidade devido a complexidade e imprecisão dos dados obtidos, o que será apresentado durante este trabalho de conclusão de curso. As próximas seções deste capítulo buscam apresentar a contextualização da pesquisa, a questão de pesquisa a ser atacada, a justificativa para realização da mesma e os objetivos a serem alcançados. 
+
 \section{Contextualização}
 	
-	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
+	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e o tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
 
 	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos.
 
@@ -26,17 +30,17 @@
 		 
 	\end{itemize}
 
-	As formas apresentadas anteriormente, para se trabalhar com auto-localização, possuem características únicas que as adequam para diferentes contextos de navegação. Por exemplo, segundo \cite{roboBulldozerIV}, a Utilização de Mapas é uma técnica bastante útil quando se está trabalhando com um ambiente conhecido e estático, porém, em ambientes mutáveis e não conhecidos, essa estratégia se torna um problema. A Localização Relativa em Grupos é a técnica adequada quando a navegação envolve muitos robôs, a qual não necessita de conhecimento prévio do mapa. A Utilização de Pontos de Referência é uma técnica comumente utilizada, é útil quando não se conhece o ambiente de navegação. Entretanto, os pontos de referência, nesse caso, precisam ser conhecidos. 
+	As formas apresentadas anteriormente, para se trabalhar com auto-localização, possuem características únicas que as adequam para diferentes contextos de navegação. Por exemplo, segundo \cite{roboBulldozerIV}, a Utilização de Mapas é uma técnica bastante útil quando se está trabalhando com um ambiente conhecido e estático, porém, em ambientes mutáveis e não conhecidos, essa estratégia se torna um problema. A Localização Relativa em Grupos é a técnica adequada quando a navegação envolve muitos robôs, a qual não necessita de conhecimento prévio do mapa. A Utilização de Pontos de Referência é uma técnica comumente utilizada, sendo útil quando não se conhece o ambiente de navegação. Entretanto, os pontos de referência, nesse caso, precisam ser conhecidos. 
 
 	Quando se têm ambientes abertos e amplos, a técnica de Localização Absoluta com GPS é a mais utilizada. Entretanto, sua margem de erro torna a navegação em ambientes pequenos ou fechados inviável, como apresenta \cite{roboBulldozerIV}. A Navegação com utilização de Bússolas garante um apoio muito útil para orientação do robô. Contudo, essa técnica gera problemas relacionados a interferências externas, como materiais eletromagnéticos próximos à bússola \cite{roboBulldozerIV}.
 	
 	A técnica de Odometria é muito utilizada em navegações curtas, em ambientes com o piso regular e plano. Entretanto, segundo \cite{roboBulldozerIV}, esta técnica se caracteriza pela adição de erros a cada centímetro percorrido, por meio de derrapagens e falhas no giro das rodas. 
 
-	Desse modo, é fácil perceber que cada técnica possui características que se adaptam melhor para diferentes situações. Ao longo deste trabalho, o principal foco de interesse é a navegabilidade de robôs simples e baratos, como os Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Tais kits possuem poucas opções de sensores e características bem limitadas \cite{drawLegoRobot}. Os sensores do kit que serão utilizados neste trabalho são: \textit{Sensor de proximidade, sensor RGB, sensor de contato e sensor odométrico}.
+	Desse modo, é fácil perceber que cada técnica possui características que se adaptam melhor para diferentes situações. Ao longo deste trabalho, o principal foco de interesse é a navegabilidade de robôs simples e baratos, como os Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Tais kits possuem poucas opções de sensores e características limitadas \cite{drawLegoRobot}. Os sensores do kit que serão utilizados neste trabalho são: \textit{Sensor de proximidade, sensor RGB, sensor de contato e sensor odométrico}.
 
 \section{Problema de Pesquisa}
 
-	Todas as técnicas de auto-localização apresentadas na seção anterior já foram testadas, comparadas e refatoradas em diferentes contextos, desde a navegação marítima até questões relacionadas à tecnologia aeroespacial \cite{localizacaoEMapeamentoPaulo}. Porém, sabe-se que, nestes contextos, o \textit{hardware} utilizado para navegação era de alta tecnologia, possuindo processadores de altíssimo desempenho e sensores bem precisos.
+	Todas as técnicas de auto-localização apresentadas na seção anterior já foram testadas, comparadas e refatoradas em diferentes contextos, desde a navegação marítima até questões relacionadas à tecnologia aeroespacial \cite{localizacaoEMapeamentoPaulo}. Porém, sabe-se que, nestes contextos, o \textit{hardware} utilizado para navegação era de alta tecnologia, possuindo processadores de alto desempenho, com a utilização de processamento paralelo \cite{processamentoParalelo}, por exemplo, e sensores precisos.
 
 	Já em um contexto educacional, a infraestrutura disponível nem sempre engloba os critérios necessários para aplicação das técnicas de auto-localização. Um exemplo disso é a utilização, por \cite{localizacaoEMapeamentoPaulo}, de uma câmera omnidirecional para obter informações sobre o ambiente.
 
@@ -48,9 +52,9 @@
 
 	A utilização da Robótica como uma forma de ensinar programação em escolas e faculdades, conhecida como Robótica Educacional \cite{roboticaEducacionalAulasMatematica}, traz alguns benefícios para o aluno. Conforme colocado pelos autores \cite{teachingWithRoboticKit}, \cite{roboticEducationBasedLego}, \cite{roboticaEducacionalAulasMatematica} e \cite{evaluationRoboticEducationScale}, alguns desses benefícios são: 
 	\begin{itemize}
-		\item Maior interesse pelos conteúdos estudados em aula;
+		\item maior interesse pelos conteúdos estudados em aula;
 		\item capacidade de trabalhar em grupo;
-		\item aplicação prática do conhecimento teórico;
+		\item aplicação prática do conhecimento teórico, e
 		\item multidisciplinaridade.
 	\end{itemize}
 	 
@@ -74,8 +78,8 @@
 	\label{sub:objetivos_específicos}
 		 
 	\begin{itemize}
-		\item Solucionar o problema de SLAM;
-		\item Propor adaptação pro contexto de robôs simples, na robótica educacional;
+		\item Identificar uma solução para o problema de SLAM em um contexto simplificado;
+		\item Propor adaptação para o contexto de robôs simples, na robótica educacional;
 		\item Implementar adaptação.
 	\end{itemize}
 	
