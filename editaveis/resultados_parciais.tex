@@ -6,12 +6,21 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 \section{Revisão Sistemática} % (fold)
 \label{sec:revisão_sistemática}
 
-	Com o objetivo de detalhar a revisão sistemática realizada durante esse trabalho de forma clara e objetiva, esta seção está divida nas seções de \ref{sub:planejamentoRevisao}, \ref{sub:conducaoRevisao} e \ref{sub:publicacaoRevisao}, seguindo o conceito apresentado por \cite{Kitchenham}.
+	Com o objetivo de detalhar a revisão sistemática realizada durante esse trabalho de forma clara e objetiva, esta seção está divida nas seções de \ref{sub:planejamentoRevisao}, \ref{sub:conducaoRevisao} e \ref{sub:publicacaoRevisao}, seguindo o conceito apresentado por \cite{Kitchenham}, como mostra a figura \ref{img:processoGeralRevisao}.
+
+	\begin{figure}[H]
+			\centering
+			\caption{Processo geral de revisão sistemática, segundo \cite{Kitchenham}}
+			\includegraphics[scale=0.7]{figuras/ambienteLogo.eps}
+			\label{img:processoGeralRevisao}
+		\end{figure}
 
 	\subsection{Planejamento da Revisão} % (fold)
 	\label{sub:planejamentoRevisao}
 
-		Esta revisão sistemática se deu entre os meses de março e junho de 2016, utilizando como fonte de busca as bases \textit{IEEE}, \textit{CAPES}, \textit{Springer} e \textit{Scopus}.
+		Esta revisão sistemática se deu entre os meses de março e junho de 2016, utilizando como fonte de busca as bases \textit{IEEE}, \textit{CAPES}, \textit{Springer} e \textit{Scopus}. A partir dos modelos de revisão sistemática apresentados por \cite{Kitchenham} e \cite{exemploRevisaoSistematica}, foi desenvolvido um protocolo de revisão, o qual possibilita, a outros pesquisadores, repetir a pesquisa.
+
+		\subsubsection{Objetivos e questão de pesquisa}
 		
 		O objetivo inicial do trabalho é estudar a problemática da auto-localização na robótica, identificando diferentes soluções em diversos contextos. Afirmado isso, foi possível realizar uma pesquisa bibliográfica com o objetivo de identificar diferentes linhas de pesquisa nesta área. Após uma análise superficial de cada linha de pesquisa, foi selecionada a linha de pesquisa que adota, como solução para a auto-localização, a utilização da técnica de SLAM, o que pode ser considerado como o marco teórico do trabalho. 
 
@@ -20,6 +29,9 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 		A definição deste objetivo da revisão se dá pela necessidade de conhecimento amplo em relação a diferentes técnicas para solucionar o problema de SLAM. Como este trabalho buscará adaptar técnicas para um contexto simplificado, ou educacional, adicionou-se aos objetivos da revisão itens relacionados a robótica educacional e robôs simples.
 
 		Segundo \cite{Kitchenham}, o primeiro passo para se realizar uma revisão sistemática é definir a sua questão de pesquisa. Desse modo, a partir da realização de uma pesquisa bibliográfica inicial, a questão de pesquisa foi definida como: \textit{"Como tratar o problema de SLAM no contexto de robôs simples?"}, de acordo com os objetivos da revisão, já apresentados acima.
+
+
+		\subsubsection{Estratégias de pesquisa}
 
 		A partir da definição da questão de pesquisa e dos objetivos da revisão, desenvolveu-se uma \textit{string} de busca inicial, a qual é apresentada no tópico \ref{sub:string_inicial}.
 
@@ -42,6 +54,12 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 			\end{table}
 		% subsection subsection_name (end)
 
+		\subsubsection{Procedimento de seleção}
+
+		\subsubsection{Avaliação da Qualidade}
+
+		\subsubsection{Extração de dados}
+
 		Entre os resultados relevantes obtidos com a busca, se encontram alguns artigos que foram classificados como artigos base para a realização da revisão sistemática, \textbf{como mostra a tabela} \ref{tab:artigos_base}. A partir destes artigos, foi possível identificar parte dos pilares que sustentam as pesquisas na área.  Com a identificação destes artigos, foi possível aplicar o conceito de \textit{quasi-gold standard}, como apresenta o tópico \ref{sub:quasi-gold}.
 
 		\subsubsection{\textit{Quasi-gold standard}} % (fold)
@@ -57,7 +75,7 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 
 				\item $sensitividade = \frac{ERO}{TER}$,
 			\end{itemize}
-			
+
 			onde \textit{ERO} = número de estudos relevantes obtidos,
 			
 			\textit{EO} = número de estudos obtidos e
@@ -92,5 +110,7 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 
 \section{Ações futuras} % (fold)
 \label{sec:acoes_futuras}
+
+	Durante a segunda etapa do trabalho, pretende-se evoluir a prova de conceito apresentada durante esta primeira etapa, buscando solucionar, de maneira simplificada, o problema de SLAM. A partir dos ciclos de desenvolvimento, serão realizadas análises referentes às peculiaridades encontradas ao implementar uma técnica de auto-localização em robôs simples, assim como o impácto desta implementação em um contexto educacional.
 
 % section section_name (end)
