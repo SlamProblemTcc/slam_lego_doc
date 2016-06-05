@@ -11,7 +11,7 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 	\begin{figure}[H]
 			\centering
 			\caption{Processo geral de revisão sistemática, segundo \cite{Kitchenham}}
-			\includegraphics[scale=0.7]{figuras/ambienteLogo.eps}
+			\includegraphics[scale=0.7]{figuras/processoGeralRevisao.eps}
 			\label{img:processoGeralRevisao}
 		\end{figure}
 
@@ -28,16 +28,63 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 
 		A definição deste objetivo da revisão se dá pela necessidade de conhecimento amplo em relação a diferentes técnicas para solucionar o problema de SLAM. Como este trabalho buscará adaptar técnicas para um contexto simplificado, ou educacional, adicionou-se aos objetivos da revisão itens relacionados a robótica educacional e robôs simples.
 
-		Segundo \cite{Kitchenham}, o primeiro passo para se realizar uma revisão sistemática é definir a sua questão de pesquisa. Desse modo, a partir da realização de uma pesquisa bibliográfica inicial, a questão de pesquisa foi definida como: \textit{"Como tratar o problema de SLAM no contexto de robôs simples?"}, de acordo com os objetivos da revisão, já apresentados acima.
+		Segundo \cite{Kitchenham}, o primeiro passo para se realizar uma revisão sistemática é definir a sua questão de pesquisa. Desse modo, a partir da realização de uma pesquisa bibliográfica inicial, foram identificadas as seguintes questões de pesquisa: 
 
+		\begin{itemize}
+			\item \textbf{Q1}. \textit{Quais técnicas são mais utilizadas para solucionar o problema de SLAM?} e
+			\item \textbf{Q2}. \textit{"Como tratar o problema de SLAM no contexto de robôs simples?"}
+		\end{itemize}
+
+		Além das questões de pesquisa, de acordo com \cite{exemploRevisaoSistematica}, alguns outros itens devem ser detacados, como:
+
+		\begin{itemize}
+			\item \textbf{População}: comunidade acadêmica e de robótica.
+			\item \textbf{Intervenção}: adaptação de técnicas para um contexto de robótica simplificado (educacional).
+			\item \textbf{Controle}: utilização do Quasi-gold standard.
+			\item \textbf{Resultados}: obtenção de técnicas adaptáveis ao contexto simplificado.
+			\item \textbf{Aplicação}: servir de base para a implementação da segunda etapa deste trabalho de conclusão de curso, onde técnicas serão adaptadas buscando solucionar, de maneira simplificada, o problema de SLAM.
+
+		\end{itemize} 
+
+		A partir da definição da questão de pesquisa e dos objetivos da revisão, buscou-se definir a estratégia de pesquisa, apresentada no tópico \ref{sub:estrategias_pesquisa}.
 
 		\subsubsection{Estratégias de pesquisa}
+		\label{sub:estrategias_pesquisa}
 
-		A partir da definição da questão de pesquisa e dos objetivos da revisão, desenvolveu-se uma \textit{string} de busca inicial, a qual é apresentada no tópico \ref{sub:string_inicial}.
+		A estratégia de pesquisa adotada para esta revisão segue recomendações de diversos autores, como \cite{Kitchenham} e \cite{systematicReviewEngSoft}, utilizando o conceito de \textit{quasi-gold standard}.
 
-		\subsubsection{\textit{String} de busca inicial} % (fold)
-		\label{sub:string_inicial}
+		Segundo \cite{quasi_goldES}, \textit{gold standard} representa o conjunto completo de estudos primários referentes a uma questão de pesquisa, com máxima precisão e sensitividade. Já o \textit{quasi-gold standard}, representa um subconjunto do \textit{gold standard}, o qual vai sendo evoluído ao longo dos ciclos de busca, com o objetivo de se aproximar do \textit{gold standard}. 
+
+		É utilizado para definir os valores de precisão e sensitividade da busca, o que possibilita a avaliação da busca realizada, verificando a necessidade de refinamento da \textit{string}, por exemplo. \cite{quasi_goldES} define precisão e sensitividade da busca da seguinte forma:
+
+		\begin{itemize}
+
+			\item $precisão = \frac{ERO}{EO}$ e
+
+			\item $sensitividade = \frac{ERO}{TER}$,
+		\end{itemize}
+
+		onde \textit{ERO} = número de estudos relevantes obtidos,
 		
+		\textit{EO} = número de estudos obtidos e
+
+		\textit{TER} = número total de estudos relevantes.
+
+		Esta definição possibilita a criação de critérios que avaliem a qualidade da busca, ou seja, da \textit{string} de busca utilizada. Porém, a seleção dos materiais deve seguir critérios relacionados a qualidade do material, os quais são divididos em \textit{critério de inclusão (CI)} e \textit{critério de exclusão (CE)}, como pode-se observar a seguir:
+
+		\begin{itemize}
+			\item CI 1 - Os artigos devem estar escritos em inglês ou português;
+			\item CI 2 - Artigos referentes a auto-localização e mapeamento de ambientes simultâneos (SLAM);
+			\item CI 3 - Artigos gratúitos e disponíveis na \textit{web} para \textit{download} ou leitura;
+			\item CE 1 - Artigos que buscam solucionar o problema de auto-localização sem a utilização da técnica de SLAM;
+			\item CE 2 - Artigos que tratem o tema de forma superficial. 
+		\end{itemize}
+
+		Foram realizadas buscas manuais com o intuito de identificar trabalhos que poderiam compor o \textit{quasi-gold standard}, chegando a uma conclusão de \textbf{X ARTIGOS, QUE SAO ESSES AQUI:}. A inclusão destes artigos foi avaliada por dois professores relacionados ao tema de pesquisa, buscando garantir a qualidade do \textit{quasi-gold standard}.
+
+		A partir da definição da questão de pesquisa e dos objetivos da revisão, assim como a construção do \textit{quasi-gold standard}, foi possível desenvolver uma \textit{string} de busca inicial. O idioma escolhido para a \textit{string} de busca foi o inglês, devido a sua ampla utilização nas bases de conhecimento selecionadas. Buscou-se utilizar a mesma \textit{string} de busca em todas as bases de dados pesquisadas, exceto em alguns casos em que houve a necessidade da adaptação da \textit{string} de acordo com os padrões adotados pela base.
+
+
 			Com o objetivo de identificar pesquisas relacionadas a auto-localização utilizando mapeamento de ambientes simultaneamente, a \textit{string} de busca definida foi: \textit{auto-localization AND environment mapping}. Na tabela \ref{tab:string_inicial} são apresentados os resultados obtidos a partir desta busca.
 
 			\begin{table}[H]
@@ -52,38 +99,49 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 			\textit{\begin{tabular}[c]{@{}c@{}}Auto-localization \\ AND\\ environment \\ mapping\end{tabular}} & 36                                                    & 12                                                                 \\ \hline
 			\end{tabular}
 			\end{table}
+
+		Este primeiro ciclo de busca foi de extrema importância para avaliar e refinar o \textit{quasi-gold standard}, assim como dar inicio aos ciclos de busca.
+
+
 		% subsection subsection_name (end)
 
 		\subsubsection{Procedimento de seleção}
 
+			As buscas foram realizadas com a mesma \textit{string} de busca (na maioria dos casos, como já foi explicado anteriormente) nas quatro bases de conhecimento científico utilizadas. A cada busca realizada, os artigos foram registrados, para que, posteriormente, os mesmos pudessem ser submetidos à avaliação da qualidade e, se comprovada a relevância do mesmo, à extração de dados.
+
+			A seleção dos artigos se deu a partir da leitura dos títulos, resumos e palavras-chave, classificando o artigo como relevante ou não, em um primeiro momento. Caso fosse confirmada a relevância do mesmo, o artigo passaria por uma avaliação mais profunda, a \textit{avaliação da qualidade}.
+
+
 		\subsubsection{Avaliação da Qualidade}
+
+			A avaliação da qualidade do artigo se dava a partir da análise do conteúdo do mesmo, focando principalmente na introdução e nos resultados e conclusões dos artigos. A avaliação positiva do artigo significa uma resposta positiva para as seguintes perguntas:
+
+			\begin{itemize}
+				\item O estudo é interessante? (Em relação aos objetivos da pesquisa)
+				\item As evidências apresentadas são válidas?
+				\item As evidências apresentadas são importantes?
+				\item As evidências apresentadas não contradizem nenhum autor selecionado como pilar da pesquisa?
+			\end{itemize}
+
+			Com a confirmação da qualidade do material, o mesmo foi exposto à extração de dados, ou seja, a leitura completa e detalhada do artigo.
 
 		\subsubsection{Extração de dados}
 
-		Entre os resultados relevantes obtidos com a busca, se encontram alguns artigos que foram classificados como artigos base para a realização da revisão sistemática, \textbf{como mostra a tabela} \ref{tab:artigos_base}. A partir destes artigos, foi possível identificar parte dos pilares que sustentam as pesquisas na área.  Com a identificação destes artigos, foi possível aplicar o conceito de \textit{quasi-gold standard}, como apresenta o tópico \ref{sub:quasi-gold}.
+			Com o objetivo de organizar os dados obtidos, facilitando o manuseio das informações, os dados extraídos de cada artigo foram registrados a partir da utilização do padrão apresentado no exemplo da tabela \ref{tab:padrao_dados_extraidos}, além do detalhamento mais aprofundado do material a partir da criação de um resumo do artigo.
 
-		\subsubsection{\textit{Quasi-gold standard}} % (fold)
-		\label{sub:quasi-gold}
-
-			Segundo \cite{quasi_goldES}, \textit{gold standard} representa o conjunto completo de estudos primários referentes a uma questão de pesquisa, com máxima precisão e sensitividade. Já o \textit{quasi-gold standard}, representa um subconjunto do \textit{gold standard}, o qual vai sendo evoluído ao longo dos ciclos de busca, com o objetivo de se aproximar do \textit{gold standard}. 
-
-			É utilizado para definir os valores de precisão e sensitividade da busca, o que possibilita a avaliação da busca realizada, verificando a necessidade de refinamento da \textit{string}, por exemplo. \cite{quasi_goldES} define precisão e sensitividade da busca da seguinte forma:
-
-			\begin{itemize}
-
-				\item $precisão = \frac{ERO}{EO}$ e
-
-				\item $sensitividade = \frac{ERO}{TER}$,
-			\end{itemize}
-
-			onde \textit{ERO} = número de estudos relevantes obtidos,
-			
-			\textit{EO} = número de estudos obtidos e
-
-			\textit{TER} = número total de estudos relevantes
+			\begin{table}[H]
+				\centering
+				\caption{Exemplo de registro de material}
+				\label{tab:padrao_dados_extraidos}
+				\begin{tabular}{|c|c|c|c|l|}
+					\hline
+					\rowcolor[HTML]{C0C0C0} 
+					\textbf{Título}                                                                                                                                    & \textbf{Autor(es)}                                                                                    & \textbf{\begin{tabular}[c]{@{}c@{}}Data de\\ publicação\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Fonte da\\ publicação\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{\begin{tabular}[c]{@{}c@{}}Listagem das\\ informações\\ importantes\end{tabular}}} \\ \hline
+					\textit{\begin{tabular}[c]{@{}c@{}}Integration of Vision\\ based SLAM and \\ Nonlinear Filter for\\ Simple Mobile Robot\\ Navigation\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Dae Hee Won,\\ Young Jae Lee,\\ Sangkyung Sung,\\ Taesam Kang\end{tabular} & 2008                                                                  & IEEE                                                                   & \begin{tabular}[c]{@{}l@{}}-Utilização de\\ sensor de visão\\ e encoders.\\ -Filtro de \\ partículas\end{tabular}                      \\ \hline
+				\end{tabular}
+			\end{table}
 
 		
-		% subsection textit_quasi_gold_standard (end)
 	% subsection planejamento_da_revisão (end)
 
 	\subsection{Condução da Revisão} % (fold)
