@@ -80,9 +80,7 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 			\item CE 2 - Artigos que tratem o tema de forma superficial. 
 		\end{itemize}
 
-		Foram realizadas buscas manuais com o intuito de identificar trabalhos que poderiam compor o \textit{quasi-gold standard}, chegando a uma conclusão de \textbf{X ARTIGOS, QUE SAO ESSES AQUI:}. A inclusão destes artigos foi avaliada por dois professores relacionados ao tema de pesquisa, buscando garantir a qualidade do \textit{quasi-gold standard}.
-
-		A partir da definição da questão de pesquisa e dos objetivos da revisão, assim como a construção do \textit{quasi-gold standard}, foi possível desenvolver uma \textit{string} de busca inicial. O idioma escolhido para a \textit{string} de busca foi o inglês, devido a sua ampla utilização nas bases de conhecimento selecionadas. Buscou-se utilizar a mesma \textit{string} de busca em todas as bases de dados pesquisadas, exceto em alguns casos em que houve a necessidade da adaptação da \textit{string} de acordo com os padrões adotados pela base.
+		A partir da definição da questão de pesquisa e dos objetivos da revisão, assim como a definição dos critérios de inclusão e exclusão, foi possível desenvolver uma \textit{string} de busca inicial. O idioma escolhido para a \textit{string} de busca foi o inglês, devido a sua ampla utilização nas bases de conhecimento selecionadas. Buscou-se utilizar a mesma \textit{string} de busca em todas as bases de dados pesquisadas, exceto em alguns casos em que houve a necessidade da adaptação da \textit{string} de acordo com os padrões adotados pela base.
 
 
 			Com o objetivo de identificar pesquisas relacionadas a auto-localização utilizando mapeamento de ambientes simultaneamente, a \textit{string} de busca definida foi: \textit{auto-localization AND environment mapping}. Na tabela \ref{tab:string_inicial} são apresentados os resultados obtidos a partir desta busca.
@@ -127,7 +125,7 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 
 		\subsubsection{Extração de dados}
 
-			Com o objetivo de organizar os dados obtidos, facilitando o manuseio das informações, os dados extraídos de cada artigo foram registrados a partir da utilização do padrão apresentado no exemplo da tabela \ref{tab:padrao_dados_extraidos}, além do detalhamento mais aprofundado do material a partir da criação de um resumo do artigo.
+			Com o objetivo de organizar os dados obtidos, facilitando o manuseio das informações, os dados extraídos de cada artigo foram registrados a partir da utilização do padrão apresentado no exemplo da tabela \ref{tab:padrao_dados_extraidos}, além do detalhamento mais aprofundado do material a partir da criação de um resumo informal do artigo.
 
 			\begin{table}[H]
 				\centering
@@ -147,8 +145,39 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 	\subsection{Condução da Revisão} % (fold)
 	\label{sub:conducaoRevisao}
 		
-		Durante a condução da revisão, a busca efetiva dos materiais é realizada, os ciclos de busca são documentados e a \textit{string} de busca é refinada, como mostra \cite{estudoPrimarioSecundario}.
-	% subsection condução_da_revisão (end)
+		Durante a condução da revisão, a busca efetiva dos materiais é realizada, os ciclos de busca são documentados e a \textit{string} de busca é refinada, como afirma \cite{estudoPrimarioSecundario}.
+
+		Esta pesquisa foi realizada entre os meses de março e junho de 2016. A \textit{string} de busca apresentada no tópico \ref{sub:estrategias_pesquisa} resultou em uma visão considerada fraca, pelo pesquisador e seus orientadores, sobre a auto-localização e o mapeamento de ambientes, peças chave da técnica de SLAM. Além disso, essa busca possibilitou a criação do \textit{quasi-gold standard} inicial, com apenas um artigo: \textit{Auto-localização e construção de de mapas de ambiente para robôs móveis baseados em visão omnidirecional estéreo} \cite{localizacaoEMapeamentoPaulo}. 
+
+		Desse modo, foi necessária a realização de uma pesquisa manual para obter maior conhecimento sobre o tema e as palavras-chave a serem usadas para garantir maior qualidade dos resultados obtidos. Com a realização desta pesquisa, os seguintes artigos foram adicionados ao \textit{quasi-gold standard}:
+
+		\begin{itemize}
+			\item \textit{The Cleaning Robot Project: Aplicação do Filtro de Kalman na Auto-Localização de um Sistema Robótico Autônomo} \cite{theCleaningProject},
+			\item \textit{Integration of Vision based SLAM and Nonlinear Filter for Simple Mobile Robot Navigation} \cite{integrationVisionSLAMnonlinear} e
+			\item \textit{A Solution to the Simultaneous Localization and Map Building (SLAM) Problem} \cite{slamProblem}.
+		\end{itemize}
+
+		A partir da análise destes artigos inciais, foi possível identificar diversas palavras-chave que levavam à pesquisa desejada, possibilitando refinamento da \textit{string} de busca. Adicionando à mesma novos termos, como \textit{"SLAM problem"} e \textit{"simultaneous"}, evoluindo a \textit{string} e obtendo o seguinte resultado: \textit{"simultaneous AND auto-localization AND environment mapping AND SLAM problem"}.
+		
+		O ciclo de busca utilizando esta \textit{string} gerou poucos resultados, selecionando apenas um para análise: \textit{Improved global localization of an indoor mobile robot via fuzzy extended information filtering} \cite{ROB:1764504}. Com o objetivo ampliar abrangência da busca, optou-se por modificar a palavra-chave \textit{auto-localization} por apenas \textit{localization}, obtendo a seguinte \textit{string} de busca: \textit{"simultaneous AND localization AND environment mapping AND SLAM problem"}.
+
+		Com a realização deste novo ciclo de busca, diversos artigos relevantes foram identificados e adicionados ao \textit{quasi-gold standard}. Os artigos presentes no \textit{quasi-gold} corrente foram encontrados com esta nova busca, evidenciando uma certa qualidade da \textit{string} de busca. Os artigos adicionados ao \textit{quasi-gold standard} durante este ciclo são:
+
+		\begin{itemize}
+			\item \textit{A Simultaneous Localization and Mapping Algorithm in Complex Environments: SLASEM} \cite{slasem},
+			\item \textit{A Neuro-Fuzzy Assisted Extended Kalman Filter-Based Approach for Simultaneous Localization  and  Mapping (SLAM) Problems} \cite{neurofuzzi},
+			\item \textit{Map Management for Efficient Simultaneous Localization and Mapping (SLAM)} \cite{mapManagement} e
+			\item \textit{Simultaneous Localization and Map Building by Integrating a Cache of Features} \cite{integratingCacheFeat}.
+		\end{itemize}
+
+		Com o intúito de especificar mais a busca, foi adicionada, devido a uma dica do orientador prof. Dr. Maurício Serrano, a palavra-chave \textit{simple robots} à \textit{string} de busca, chegando a seguinte \textit{string}: \textit{"simultaneous AND localization AND environment mapping AND SLAM problem AND simple robots"}
+
+		Com esta mudança, obteve-se uma outra visão desta pesquisa como um todo, foram identificadas diversas pesquisas que buscam solucionar o problema de SLAM em contextos limitados, da mesma forma que objetivo geral deste trabalho. Dessa forma, foram adicionados ao \textit{quasi-gold standard}, os seguintes artigos:
+
+		\begin{itemize}
+			\item \textit{}
+		\end{itemize}
+		% subsection condução_da_revisão (end)
 
 	\subsection{Publicação dos Resultados} % (fold)
 	\label{sub:publicacaoRevisao}
