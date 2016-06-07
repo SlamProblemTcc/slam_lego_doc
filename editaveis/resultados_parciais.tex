@@ -238,9 +238,9 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 		Com o objetivo de documentar os resultados diretos desta revisão sistemática, estes foram registrados como as técnicas utilizadas atualmente para solucionar o problema de SLAM em diferentes contextos. 
 
-		Após a realização desta revisão sistemática, foi possível identificar \textit{áreas} mutáveis nas diferentes soluções do problema de SLAM. As áreas identificadas são \textit{"arquitetura da solução"} \ref{sub:arquitetura_solucao}, \textit{"técnica probabilística utilizada"} \ref{sub:prob_usada} e \textit{"informações disponíveis"} \ref{sub:infos_disponiveis}. Em cada solução, os autores buscaram se adequar ao contexto trabalhado, seja a partir da disponibilidade de sensores específicos ou da capacidade computacional disponível.
+		Com a realização desta revisão, foi possível identificar \textit{áreas} mutáveis nas diferentes soluções do problema de SLAM. As áreas identificadas são \textit{"arquitetura da solução"} \ref{sub:arquitetura_solucao}, \textit{"técnica probabilística utilizada"} \ref{sub:prob_usada} e \textit{"informações disponíveis"} \ref{sub:infos_disponiveis}. Em cada solução, os autores buscaram se adequar ao contexto trabalhado, seja a partir da disponibilidade de sensores específicos ou da capacidade computacional disponível.
 
-		Como uma forma de organizar os resultados obtidos, os mesmos serão sub-divididos nas áreas apresentadas acima, apresentando conceitos, vantagens e desvantagens da utilização de cada técnica.
+		Como uma forma de organizar os resultados obtidos, os mesmos serão sub-divididos nas áreas citadas acima, apresentando conceitos, vantagens e desvantagens da utilização de cada técnica.
 
 		\subsubsection{Arquitetura da solução}
 		\label{sub:arquitetura_solucao}
@@ -249,19 +249,25 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			\begin{figure}[H]
 				\centering
-				\caption{Exemplo da arquitetura mais utilizada}
+				\caption{Arquitetura de comunicação}
 				\includegraphics[scale=0.9]{figuras/arquitetura_mais_utilizada.eps}
 				\label{img:arquitetura_mais_utilizada}
 			\end{figure}
 
-			De acordo com a figura \ref{img:arquitetura_mais_utilizada}, o robô será responsável apenas por obter informações e obedecer as decisões geradas pelo computador. Alguns autores buscaram modificar um pouco esta arquitetura, porém, na maioria dos casos, a mesma foi respeitada. 
+			De acordo com a figura \ref{img:arquitetura_mais_utilizada}, o robô será responsável apenas por obter informações do ambiente, ou seja, recuperar os dados obtidos a partir dos sensores disponíveis. O computador, em posse das informações sobre o ambiente, ou seja, os pontos de referência, a quantidade de rotações em cada roda, a distância e cores de objetos, por exemplo, será responsável por processar toda a informação, construindo um mapa lógico para possibilitar a localização do robô em relação ao ambiente, como apresenta \cite{redeComunicacaoIndustria}.
 
-			Os artigos que trabalharam com a utilização de multiplos robôs ou aplicações, como o caso de \cite{redeComunicacaoIndustria}, \cite{neuralNetwork} e \cite{multiRobots} também seguiram a mesma arquitetura de comunicação, porém, nestes casos, a obtenção das informações é realizada a partir de múltiplos robôs. Neste tipo de trabalho, os robôs colaboram entre si, pois, como a informação obtida é centralizada em um computador único, as decisões referentes à navegação de um determinado robô são resultados do processamento das informações obtidas por todos os robôs.
+			Geralmente, são utilizados dois mapas simultâneos, um presente no robô (local) e outro, mais completo, presente no computador (remoto). O mapa local é, basicamente, um vetor de pontos \textit{'p'} em relação a um tempo \textit{'t'}, como explica \cite{circumventingAssociationSLAM}. O computador utiliza este mapa local, que é disponibilizado pelo robô, para completar, corrigir e atualizar o mapa remoto, mesclando informações e utilizando, geralmente, filtros probabilísticos para maximizar sua precisão \cite{localizacaoEMapeamentoPaulo}.
 
-			A utilização de múltiplos robôs garante maior eficiência na exploração do ambiente, como afirma \cite{redeComunicacaoIndustria}. Desse modo, a utilização da arquitetura apresentada na figura \ref{img:arquitetura_mais_utilizada} possibilita uma economia computacional, já que apenas uma máquina será responsável por processar todas as informações obtidas, ou seja, viabilizando a utilização de robôs simplificados para obtenção destas informações.
+			As decisões referentes à navegação são geradas a partir da análise do mapa remoto, já que o mapa local é incompleto e inconsistente, como afirma \cite{redeComunicacaoIndustria}. A utilização desta arquitetura de mapeamento remoto e local torna prática a realização de navegações com múltiplos robôs, como apresenta, \cite{redeComunicacaoIndustria}, em seu trabalho sobre rede de comunicação sem fio para navegação de múltiplos robôs. 
+
+			Seguindo esta arquitetura, \cite{neuralNetwork} e \cite{multiRobots} também desenvolveram sistemas de resolução do problema de SLAM com a utilização de múltiplos robôs, mostrando a viabilidade da sua utilização. Neste tipo de trabalho, os robôs colaboram entre si, pois, como a informação obtida é centralizada em um computador único, as decisões referentes à navegação de um determinado robô são resultados do processamento das informações obtidas por todos os robôs, maximizando a vizão global de cada robô \cite{redeComunicacaoIndustria}.
+
+			De qualquer forma, independente da arquitetura da solução utilizada, os erros advindos dos sensores sempre serão um problema sério a ser resolvido \cite{circumventingAssociationSLAM}. Com o objetivo de solucionar este problema, a comunidade de robótica se vê presa à utilização de estruturas matemáticas probabilísticas, como afirma \cite{circumventingAssociationSLAM}. As seções \ref{sub:kalman}, \ref{sub:filtro_de_partículas} e \ref{sub:prob_usada} apresentam as estruturas probabilísticas mais utilizadas atualmente, assim como suas vantagens e desvantagens.
 
 		\subsubsection{Técnica probabilistica utilizada}
 		\label{sub:prob_usada}
+
+			
 
 			Qualquer técnica que busque solucionar o problema de SLAM precisa, assim como praticamente toda a robótica, de filtros probabilísticos para minimizar o erro das informações obtidas pelos sensores. Entre estes filtros, estão o filtro de Kalman, apresentado na seção \ref{sub:kalman}, e o filtro de partículas, apresentado na seção \ref{sub:filtro_de_partículas}. 
 
@@ -270,7 +276,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Na robótica móvel, existem diversas maneiras de se obter informações sobre o ambiente, a partir da utilização de sensores específicos para informações específicas. Entre os sensores mais utilizados, se encontram os \textit{sonares, sensores de infra-vermelho, câmeras de vídeo, sensores de distância, sensores RGB e sensores odométricos}. A partir do ambiente em que se deseja navegar, faz-se necessária a seleção dos sensores adequados para o contexto.
 
-			Porém, como foi explicado no tópico \ref{sub:prob_usada}, os sensores possuem margens de erro que muitas vezes podem prejudicar a navegação. Em busca de tentar solucionar este problema, além da utilização de filtros probabilísticos, diversos autores utilizaram múltiplos sensores, integrando as informações dos mesmos para que cada sensor colaborasse na calibração do outro sensor.
+			Porém, como foi explicado no tópico \ref{sub:prob_usada}, os sensores possuem margens de erro que muitas vezes podem prejudicar a navegação. Em busca de tentar solucionar este problema, além da utilização de filtros probabilísticos, diversos autores utilizaram múltiplos sensores, integrando as informações dos mesmos para que cada sensor colaborasse na calibração do outro sensor. 
 	% subsection publicação_dos_resultados (end)
 
 % section revisão_sistemática (end)
