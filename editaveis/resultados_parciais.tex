@@ -267,9 +267,17 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 		\subsubsection{Técnica probabilistica utilizada}
 		\label{sub:prob_usada}
 
-			
+			Para a realização de uma navegação específica, primeiramente, o robô deverá obter informações sobre o ambiente \cite{roboticaIndustrial}. Para isso, é necessária a utilização de sensores que captem estas informações, a partir de odometria, infra-vermelho ou vídeo, entre outros. Entretanto, estes sensores são munidos de uma margem de erro que, muitas vezes, prejudica a navegação e a auto-localização como um todo \cite{interacaoRoboAmbiente}. De acordo com \cite{circumventingAssociationSLAM}:
 
-			Qualquer técnica que busque solucionar o problema de SLAM precisa, assim como praticamente toda a robótica, de filtros probabilísticos para minimizar o erro das informações obtidas pelos sensores. Entre estes filtros, estão o filtro de Kalman, apresentado na seção \ref{sub:kalman}, e o filtro de partículas, apresentado na seção \ref{sub:filtro_de_partículas}. 
+			\begin{quote}
+				\textit{Devido a natureza imperfeita dos sensores, a falta da previsibilidade em ambientes reais e a necessidade de aproximações para alcançar decisões computacionais, a robótica é uma ciência que depende de algorítmos probabilisticos}.
+			\end{quote}
+
+			Desse modo, a comunidade de robótica vem buscando, na matemática, soluções probabilísticas que minimizem esta margem de erro, como afirma \cite{surveyLocalization}. Entre as soluções mais utilizadas, se encontram, no topo da lista, os filtros de \textit{Kalman} e \textit{partículas}, como pode ser observado nas seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}, respectivamente.
+
+			Alguns autores, como, por exemplo, \cite{comparacaoKalmanParticulas}, vêm estudando as duas técnicas e comparando-as com o intúito de selecionar a \textit{melhor} técnica. Entretando, o termo \textit{"melhor"} é relativo, neste caso, a depender do contexto em que será aplicado o filtro probabilistico, como afirma \cite{comparacaoKalmanParticulas}.
+
+			O estudo de \cite{comparacaoKalmanParticulas} exemplifica com clareza as comparações entre os filtros de partícula e de Kalman, ao utilizar as duas técnicas para solucionar o problema de SLAM com um robô móvel munido de sensores a laser. De acordo com a relatividade do termo \textit{melhor}, nesta ocasião, o autor buscou apresentar apenas algumas vantagens e desvantagens dos dois filtros. As quais podem ser visualizadas nas seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}. 
 
 		\subsubsection{Informações disponíveis}
 		\label{sub:infos_disponiveis}
