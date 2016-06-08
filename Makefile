@@ -2,7 +2,6 @@ TARGET = TCC_FGA.pdf
 
 BIBTEX = bibtex
 LATEX = latex
-PDFLATEX = pdflatex
 DVIPS = dvips
 PS2PDF = ps2pdf
 
@@ -19,7 +18,7 @@ EDITAVEIS_DIR = editaveis
 EDITAVEIS_SOURCES = informacoes.tex errata.tex dedicatoria.tex \
 					agradecimentos.tex epigrafe.tex resumo.tex abstract.tex \
 					abreviaturas.tex simbolos.tex introducao.tex \
-					referencialteorico.tex consideracoes.tex textoepostexto.tex \
+					consideracoes.tex textoepostexto.tex \
 					elementosdotexto.tex elementosdopostexto.tex \
 					apendices.tex anexos.tex
 
@@ -50,7 +49,7 @@ $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
 clean:
 	rm -f *~ *.dvi *.ps *.backup *.aux *.log
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx
-	rm -f tcc.pdf
+	rm -f *.pdf
 	
 dist: clean
 	tar vczf tcc-fga-latex-$(VERSION).tar.gz *
