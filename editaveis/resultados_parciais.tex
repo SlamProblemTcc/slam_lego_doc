@@ -240,7 +240,6 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 		Com a realização desta revisão, foi possível identificar \textit{áreas} mutáveis nas diferentes soluções do problema de SLAM. As áreas identificadas são \textit{"arquitetura da solução"} \ref{sub:arquitetura_solucao}, \textit{"técnica probabilística utilizada"} \ref{sub:prob_usada} e \textit{"informações disponíveis"} \ref{sub:infos_disponiveis}. Em cada solução, os autores buscaram se adequar ao contexto trabalhado, seja a partir da disponibilidade de sensores específicos ou da capacidade computacional disponível.
 
-		Como uma forma de organizar os resultados obtidos, os mesmos serão sub-divididos nas áreas citadas acima, apresentando conceitos, vantagens e desvantagens da utilização de cada técnica.
 
 		\subsubsection{Arquitetura da solução}
 		\label{sub:arquitetura_solucao}
@@ -267,7 +266,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 		\subsubsection{Técnica probabilistica utilizada}
 		\label{sub:prob_usada}
 
-			Para a realização de uma navegação específica, primeiramente, o robô deverá obter informações sobre o ambiente \cite{roboticaIndustrial}. Para isso, é necessária a utilização de sensores que captem estas informações, a partir de odometria, infra-vermelho ou vídeo, entre outros. Entretanto, estes sensores são munidos de uma margem de erro que, muitas vezes, prejudica a navegação e a auto-localização como um todo \cite{interacaoRoboAmbiente}. De acordo com \cite{circumventingAssociationSLAM}:
+			Para a realização de uma navegação específica, primeiramente, o robô deverá obter informações sobre o ambiente \cite{roboticaIndustrial}. Para isso, é necessária a utilização de sensores que captem estas informações, seja a partir de odometria, infra-vermelho ou vídeo. Entretanto, estes sensores são munidos de uma margem de erro que, muitas vezes, prejudica a navegação e a auto-localização como um todo \cite{interacaoRoboAmbiente}. De acordo com \cite{circumventingAssociationSLAM}:
 
 			\begin{quote}
 				\textit{Devido a natureza imperfeita dos sensores, a falta da previsibilidade em ambientes reais e a necessidade de aproximações para alcançar decisões computacionais, a robótica é uma ciência que depende de algorítmos probabilisticos}.
@@ -286,13 +285,17 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Além do tipo de sensor escolhido, deve-se levar em consideração algumas características do mesmo, como o alcance, performance e precisão, por exemplo. Conhecer a margem de erro dos sensores é essencial, como afirma \cite{wall_following}. 
 
-			Como foi explicado no tópico \ref{sub:prob_usada}, os sensores possuem margens de erro que podem prejudicar a navegação e a auto-localização do robô. Em busca de tentar solucionar este problema, além da utilização de filtros probabilísticos, diversos autores buscaram utilizar múltiplos sensores, integrando as informações dos mesmos para minimizar a margem de erro na informação, como mostram \cite{fusingSensorsParallel}, \cite{neuralNetwork} e \cite{slamProblem}. 
+			Como foi explicado no tópico \ref{sub:prob_usada}, os sensores possuem margens de erro que podem prejudicar a navegação e a auto-localização do robô. Em busca de tentar solucionar este problema, além da utilização de filtros probabilísticos, diversos autores buscam utilizar múltiplos sensores, integrando as informações dos mesmos para minimizar a margem de erro na informação, como mostram \cite{fusingSensorsParallel}, \cite{neuralNetwork} e \cite{slamProblem}. 
 
-			Entre os sensores citados anteriormente, o sensor odométrico, geralmente, é utilizado em qualquer sistema de navegação sobre eixos, de acordo com \cite{explore_marte}. Este sensor recupera os dados sobre rotações realizadas nas rodas em que o mesmo se encontra, possibilitando a mensuração da distância percorrida, assim como a realização de curvas, por exemplo \cite{ROB:1764504}. 
+			Entre os sensores citados anteriormente, o sensor odométrico, geralmente, é utilizado em qualquer sistema de navegação sobre eixos, de acordo com \cite{explore_marte}. Este sensor recupera os dados sobre rotações realizadas nas rodas em que o mesmo se encontra, possibilitando a mensuração da distância percorrida, assim como a identificação de curvas, por exemplo \cite{ROB:1764504}. 
 
-			Entretanto, como afirma \cite{iterated_Dslam}, sensores odométricos geram erros acumulativos, ou seja, quanto maior for a navegação, maior será o erro total do sensor. Trabalhar com sensores assim geram uma certa dificuldade, porém com a utilização de filtros probabilísticos, como apresentado na seção \ref{sub:prob_usada}, este erro pode ser reduzido, viabilizando sua utilização.
+			Entretanto, como afirma \cite{iterated_Dslam}, sensores odométricos geram erros acumulativos, ou seja, quanto maior for a navegação, maior será o erro total do sensor. Trabalhar com sensores assim geram uma certa dificuldade, porém, com a utilização de filtros probabilísticos, como apresentado na seção \ref{sub:prob_usada}, este erro pode ser reduzido, viabilizando sua utilização.
 
 	% subsection publicação_dos_resultados (end)
+
+	De acordo com as \textit{áreas} destacadas, e com o objetivo de registrar as informações pertinentes obtidas na revisão sistemática, desenvolveu-se a tabela \ref{tab:resultadosRevisao}, onde é apresentada uma contabilização dos resultados.
+
+	Agora só colocar uma tabela aqui listando os tipos de arquitetura, filtros, informações e os artigos que se encaixam com cada conjunto.
 
 % section revisão_sistemática (end)
 
