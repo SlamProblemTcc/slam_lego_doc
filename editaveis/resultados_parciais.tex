@@ -287,15 +287,84 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Como foi explicado no tópico \ref{sub:prob_usada}, os sensores possuem margens de erro que podem prejudicar a navegação e a auto-localização do robô. Em busca de tentar solucionar este problema, além da utilização de filtros probabilísticos, diversos autores buscam utilizar múltiplos sensores, integrando as informações dos mesmos para minimizar a margem de erro na informação, como mostram \cite{fusingSensorsParallel}, \cite{neuralNetwork} e \cite{slamProblem}. 
 
+			De acordo com \cite{agenteExploratorioKalman}, há três tipos de integração entre sensores: \textit{complementar}, onde os sensores têm apenas uma visão parcial do ambiente, unindo as informações para obter uma visão mais completa; \textit{competitiva}, onde dois ou mais sensores competem para obter a informação com maior precisão, como a medição da distância de um único objeto utilizando sonar e sensor a laser, por exemplo; e \textit{cooperativa}, quando os sensores cooperam entre si para obter informações que não seriam possíveis com a utilização de apenas um, como a geração de informações em três dimensões, por exemplo.
+
 			Entre os sensores citados anteriormente, o sensor odométrico, geralmente, é utilizado em qualquer sistema de navegação sobre eixos, de acordo com \cite{explore_marte}. Este sensor recupera os dados sobre rotações realizadas nas rodas em que o mesmo se encontra, possibilitando a mensuração da distância percorrida, assim como a identificação de curvas, por exemplo \cite{ROB:1764504}. 
 
 			Entretanto, como afirma \cite{iterated_Dslam}, sensores odométricos geram erros acumulativos, ou seja, quanto maior for a navegação, maior será o erro total do sensor. Trabalhar com sensores assim geram uma certa dificuldade, porém, com a utilização de filtros probabilísticos, como apresentado na seção \ref{sub:prob_usada}, este erro pode ser reduzido, viabilizando sua utilização.
 
+			Já a utilização de câmeras de vídeo, segundo \cite{agenteExploratorioKalman}, além de necessitar de \textit{landmarks} verificáveis através do processamento de imagens, as mesmas exigem requisitos computacionais que, muitas vezes, acabam por inviabilizar sua utilização.
+
+			O sonar, que será utilizado durante a segunda etapa deste trabalho, diferentemente das câmeras de vídeo, são simples, rápidos e baratos, de acordo com \cite{agenteExploratorioKalman}. Entretanto, sua utilização acaba por limitar o contexto de navegação, devido ao seu limite de alcance. Ou seja, em um ambiente aberto, o sonar não será capaz de identificar nenhum obstáculo. Além da sua limitação de alcance, \cite{agenteExploratorioKalman} apresenta algumas características que podem problematizar sua utilização:
+
+			\begin{itemize}
+				\item \textit{pobre direcionalidade}: não são capazes de identificar a direção do obstáculo identificado, apenas sua distância;
+				\item \textit{passíveis de ruídos}: ruídos são comuns durante a utilização de sonares, seja devido a interferências de outros sensores, ou a partir da sua margem de erro padrão, por exemplo.
+				\item \textit{reflexão especular}: O sensor emite o sinal sonoro em formato de cone, possibilitando a obtenção de erros relacionados a angulação de incidência, como ilustra a figura \ref{img:cone}. 
+			\end{itemize}
+
+			\begin{figure}[H]
+				\centering
+				\caption{Emissão do sinal sonoro - sonar}
+				\includegraphics[scale=0.6]{figuras/cone.eps}
+				\label{img:cone}
+			\end{figure}
+
+			Outro detalhe importante a ser analisado, segundo \cite{agenteExploratorioKalman}, é a velocidade de emissão do sinal. Esta deve ser de acordo com a velocidade atual do robô, ou seja, se o robô se movimenta rapidamente, devem ser gerados sinais a uma frequência alta, possibilitando a reação do robô a eventos inesperados \cite{agenteExploratorioKalman}.
+
+			Com a emissão de sinais sonoros enquanto o robô se movimenta, deve-se levar em consideração o atraso no mapeamento, já que, ao obter o retorno do sinal, o robô já não se encontra no mesmo local \cite{agenteExploratorioKalman}.
+
 	% subsection publicação_dos_resultados (end)
 
-	De acordo com as \textit{áreas} destacadas, e com o objetivo de registrar as informações pertinentes obtidas na revisão sistemática, desenvolveu-se a tabela \ref{tab:resultadosRevisao}, onde é apresentada uma contabilização dos resultados.
+	De acordo com as \textit{áreas} destacadas, e com o objetivo de registrar as informações pertinentes obtidas na revisão sistemática, desenvolveu-se a tabela \ref{tab:resultadosRevisao}, onde é apresentada uma contabilização dos resultados obtidos.
 
 	Agora só colocar uma tabela aqui listando os tipos de arquitetura, filtros, informações e os artigos que se encaixam com cada conjunto.
+
+
+	%CAPES:
+		%Planning exploration strategies for simultaneous localization and mapping
+			%Arquitetura: processamento remoto + multiplos robos
+			%Filtro: Algoritmo dele baseado em kalman
+			%input: video (imagens) e odometria
+		%Módulo de Auto-localização para um agente exploratório usando filtro de kalman
+			%Arquitetura: processamento remoto
+			%Filtro: Kalman
+			%input: 8 sensores infra-vermelho e odometria
+		%Autonomous Multisensor Calibration and Closed-loop fusion for SLAM
+			%Arquitetura: Processamento remoto
+			%Filtro: Kalman
+			%input: camera de vídeo, sonar, odometria, SICK laser (sonar 360º), kinect RGB, sensor a laser e câmera térmica
+		%BatSLAM: Simultaneous Localization and Mapping Using Biomimetic Sonar
+			%Arquitetura: processamento remoto
+			%filtro: partículas
+			%input: sonar biomimético (criaram um sonar que imita o sonar dos morcegos)
+		%Melhoramento do Desempenho do Robot de Serviço de Limpeza
+			%Arquitetura: processamento remoto
+			%filtro: Kalman e partícula (comparando)
+			%input: câmera de vídeo, sonar e odometria
+		%GPU based real-time SLAM of six-legged robot
+			%Arquitetura: processamento remoto
+			%filtro: adaptação Kalman
+			%input: Vídeo e odometria
+		%A Robust Regression Model for Simultaneous Localization and Mapping in Autonomous Mobile Robot
+			%Arquitetura: processamento remoto
+			%filtro: Kalman
+			%input: sensor de distância (laser) e odometria 
+		%The Cleaning Robot Project Aplicação do Filtro de Kalman na Auto-Localização de um Sistema Robótico Autónomo
+			%Arquitetura: processamento remoto
+			%filtro: Kalman
+			%input: câmera de vídeo, sonar, sharps (parecido com sonar, mas direcionado e mais precisos) e odometria
+		%Absolute localization for a mobile robot using place cells
+			%Arquitetura: processamento remoto
+			%filtro: Kalman
+			%input: Sonar, vídeo e odometria
+		%Integration of Vision based SLAM and Nonlinear Filter for Simple Mobile Robot Navigation
+			%Arquitetura: processamento remoto
+			%filtro: partículas
+			%input: vídeo e odometria
+	%------------------------------------------------------------------
+	%IEEE:
+		
 
 % section revisão_sistemática (end)
 
