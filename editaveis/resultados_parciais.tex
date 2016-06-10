@@ -316,9 +316,25 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 	% subsection publicação_dos_resultados (end)
 
-	De acordo com as \textit{áreas} destacadas, e com o objetivo de registrar as informações pertinentes obtidas na revisão sistemática, desenvolveu-se a tabela \ref{tab:resultadosRevisao}, onde é apresentada uma contabilização dos resultados obtidos.
+	A tabela \ref{tab:resultadosRevisao} apresenta de maneira organizada a contabilização dos resultados da revisão, de acordo com as áreas destacadas anteriormente. Se encontram nesta tabela apenas os artigos que solucionaram, de alguma maneira, o problema de SLAM.
 
-	Agora só colocar uma tabela aqui listando os tipos de arquitetura, filtros, informações e os artigos que se encaixam com cada conjunto.
+\begin{table}[H]
+\centering
+\caption{Contabilização de estratégias (SLAM)}
+\label{tab:resultadosRevisao}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Arquitetura\\ de processamento\end{tabular}}                    & \textbf{Filtro} & \textit{\textbf{Inputs}}                                                                                                                         & \textbf{\begin{tabular}[c]{@{}c@{}}Nº.\\ Artigos\end{tabular}} \\ \hline
+                                                                                                   & Kalman          & \begin{tabular}[c]{@{}c@{}}laser, vídeo, odometria,\\ sonar, infra-vermelho,\\ câmera términa, \\ kinect RGB, \\ sonar biomimético.\end{tabular} & 12                                                             \\ \cline{2-4} 
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Processamento\\ remoto\end{tabular}}                   & Partículas      & \begin{tabular}[c]{@{}c@{}}Câmera de vídeo,odometria, \\ laser, sonar,magnetômetro, \\ sensor de rádio.\end{tabular}                             & 5                                                              \\ \hline
+                                                                                                   & Kalman          & \begin{tabular}[c]{@{}c@{}}sensor de distância (laser),\\ odometria, identificador de\\ landmarks (simulado) e sonar.\end{tabular}               & 3                                                              \\ \cline{2-4} 
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Processamento\\ local\end{tabular}}                    & Partículas      & Sonar e odometria                                                                                                                                & 1                                                              \\ \hline
+                                                                                                   & Kalman          & \begin{tabular}[c]{@{}c@{}}laser (range),\\ vídeo e\\ odometria\end{tabular}                                                                     & 3                                                              \\ \cline{2-4} 
+\multirow{-2}{*}{\begin{tabular}[c]{@{}c@{}}Processamento\\ remoto + múltiplos robôs\end{tabular}} & Partículas      & 0                                                                                                                                                & 0                                                              \\ \hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{3}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{Total}}                                                                                                                                                                                                            & 24                                                             \\ \hline
+\end{tabular}
+\end{table}
 
 
 	%CAPES:
@@ -378,7 +394,90 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 			%Arquitetura: processamento remoto
 			%Filtro: Kalman
 			%Input: sensor distância - laser
-		%
+		%Simultaneous Localization and Mapping: A Pseudolinear Kalman Filter (PLKF) Approach
+			%Arquitetura: não disse
+			%Filtro: Kalman
+			%Input: Sensor laser (distância) e odometria
+		%Simultaneous Localization and Mapping with Stereo Vision
+			%Arquitetura: não comentou
+			%Filtros: partículas
+			%Input: câmera de vídeo
+		%Unmanned Autonomous Vehicle Control & SLAM Problem in 2-D environment
+			%Arquitetura: processamento local (simulado)
+			%Filtros: Kalman
+			%Input: sensor de distância (simulado), odomeria (simulado)
+		%Neural Network-Based Multiple Robot Simultaneous Localization and Mapping
+			%Arquitetura: Processamento remoto
+			%Filtro:Kalman
+			%Inputs: câmeras de vídeo, sensor a laser (distância) e odometria
+		%Multi-robot simultaneous localization and mapping using D-SLAM framework
+			%Arquitetura: processamento remoto + multiplos robos
+			%Filtros: kalman
+			%Inputs: sensor a laser (distancia)
+		%Indoor Mobile Robot Localization and Mapping Based on Ambient Magnetic Fields and Aiding Radio Sources
+			%Arquitetura:Processamento remoto
+			%Filtros:Partículas
+			%Inputs:ambiente magnético e sensor de rádio
+		%Detection Strategy for Kidnapped Robot Problem In Landmark-Based Map Monte Carlo Localization
+			%Arquitetura: processamento remoto
+			%Filtros: Partículas
+			%Inputs: câmera de vídeo
+		%A Simple and Parallel Algorithm for Real-Time Robot Localization by Fusing Monocular Vision and Odometry/AHRS Sensors
+			%Arquitetura:não disse
+			%Filtros:Kalman
+			%Inputs:câmera de vídeo, AHRS(Giroscópio, acelerômetro e magnetrômetro) e odometria 
+		%A Neuro-Fuzzy Assisted Extended Kalman Filter-Based Approach for Simultaneous Localization and Mapping (SLAM) Problems
+			%Arquitetura:não comentado
+			%Filtros:Kalman
+			%Inputs:sensor a laser(distância), odometria
+		%A Computationally Efficient Solution to the Simultaneous Localisation and Map Building (SLAM) Problem
+			%Arquitetura:não comentou
+			%Filtros:Kalman
+			%Inputs:sensor de distância e odometria (encoders)
+		%Wireless Mesh Network Infrastructure for Industrial Applications – A Case Study of Tele-operated Mobile Robots
+			%Arquitetura:processamento remoto +multiplos robôs
+			%Filtros: não comenta
+			%Inputs:câmeras de vídeo
+		%Cost-effective Active Localization Technique for Mobile Robots
+			%Arquitetura: não comenta
+			%Filtros:Partículas
+			%Inputs: sonar e odometria (encoders)
+		%A Solution to the Simultaneous Localization and Map Building (SLAM) Problem
+			%Arquitetura: processamento local(simulado)
+			%Filtros:Kalman
+			%Inputs: identificador de landmarks (simulado)
+		%A Hybrid Bayesian-Frequentist Approach to SLAM
+			%Arquitetura: não comentado
+			%Filtros:kalman e partículas
+			%Inputs:sensor de distância (laser) e odometria
+		%An evidential approach to SLAM, path planning, and active exploration
+			%Arquitetura:processamento local (simulado)
+			%Filtros: partículas
+			%Inputs: sonar e odometria (simulado)
+		%Human Collaborative Localization and Mapping in Indoor Environments with Non-Continuous Stereo
+			%Arquitetura: não comentado
+			%Filtros: kalman
+			%Inputs:câmera de vídeo e odometria
+		%Large-scalemappingincomplexfieldscenariosusinganautonomouscar
+			%Arquitetura:processamento local
+			%Filtro:Kalman 
+			%Inputs: câmera de vídeo, GPS e odometria
+		%Multiple-Robot Simultaneous Localization and Mapping: A Review
+			%Arquitetura:não comentou
+			%Filtro:particulas
+			%Inputs:sensor de distância (laser), câmera de vídeo e odometria
+		%Experimental Study of Iterated Kalman Filters for Simultaneous Localization and Mapping of Autonomous Mobile Robots
+			%Arquitetura:não comenta
+			%Filtro:kalman
+			%Inputs:sonar, laser e odometria
+
+
+
+
+
+
+
+
 % section revisão_sistemática (end)
 
 \section{Desenvolvimento prático} % (fold)
@@ -390,6 +489,8 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 \section{Ações futuras} % (fold)
 \label{sec:acoes_futuras}
 
-	Durante a segunda etapa do trabalho, pretende-se evoluir a prova de conceito apresentada durante esta primeira etapa, buscando solucionar, de maneira simplificada, o problema de SLAM. A partir dos ciclos de desenvolvimento, serão realizadas análises referentes às peculiaridades encontradas ao implementar uma técnica de auto-localização em robôs simples, assim como o impácto desta implementação em um contexto educacional.
+	Durante a segunda etapa do trabalho, pretende-se evoluir a prova de conceito apresentada durante esta primeira etapa, buscando solucionar, de maneira simplificada, o problema de SLAM. A partir dos ciclos de desenvolvimento, serão realizadas análises referentes às peculiaridades encontradas ao implementar técnicas de auto-localização em robôs simples, assim como o impácto desta implementação em um contexto educacional.
+
+	A escolha da técnica que será utilizada será feita durante a realização da segunda etapa do trabalho, a partir de análises de eficiência, exigência computacional e complexidade de implementação.
 
 % section section_name (end)
