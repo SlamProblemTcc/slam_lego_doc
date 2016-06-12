@@ -5,28 +5,69 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante a primeira 
 \section{Obtenção da base teórica} % (fold)
 \label{sec:obtenção_da_base_teórica}
 	
-	Como qualquer trabalho científico, para alcançar os objetivos da pesquisa, faz-se necessária a realização de uma pesquisa bibliográfica buscando obter uma base teórica suficiente para sustentar o trabalho realizado. Durante este trabalho de conclusão de curso, como uma forma de obtenção da base teórica, será utilizada a técnica de revisão sistemática.
+	Como qualquer trabalho científico, para alcançar os objetivos da pesquisa, faz-se necessária a realização de uma pesquisa bibliográfica buscando obter uma base teórica suficiente para sustentar o trabalho realizado. Durante este trabalho de conclusão de curso, como uma forma de obtenção da base teórica, foi utilizada a técnica de revisão sistemática.
 
-	O grande foco da revisão sistemática deverá ser as técnicas de resolução do problema de SLAM utilizadas atualmente, em diferentes contextos. Levando sempre em consideração a utilização das mesmas em um contexto simplificado e educacional. A identificação destas técnicas possibilita a seleção e adaptação das mesmas para viabilizar sua implementação no contexto simplificado.
+	O grande foco da revisão sistemática foram as técnicas de resolução do problema de SLAM utilizadas atualmente, em diferentes contextos. Levando sempre em consideração a utilização das mesmas em um contexto simplificado e educacional. A identificação destas técnicas possibilita a seleção e adaptação das mesmas para viabilizar sua implementação no contexto simplificado.
 % section obtenção_da_base_teórica (end)
 
 \section{Adaptação e implementação} % (fold)
 \label{sec:adaptação_e_implementação}
 
-	Após a identificação e análise de diferentes técnicas de resolução do problema de SLAM, nos mais variados contextos, o trabalho selecionará as mais viáveis para realizar uma adaptação ao contexto simplificado da robótica educacional. 
-	Com a seleção das mesmas, integrações entre técnicas poderão ser utilizadas para maximizar a qualidade da solução.
+	Com a identificação e análise das diferentes técnicas de resolução do problema de SLAM, fruto da revisão sistemática, serão realizadas provas de conceito ao início da segunda etapa do trabalho. Estas provas de conceito têm como objetivo selecionar, primeiramente, qual filtro probabilístico será utilizado neste trabalho.
 
-	O contexto que será aplicado envolve o kit de robótica Mindstorms, da Lego, e a utilização dos seguintes sensores:
+	De acordo com o resultado obtido com a revisão sistemática, a grande maioria das soluções do problema de SLAM identificadas utilizam o filtro de Kalman, como mostra a tabela \ref{tab:resultadosRevisao}. Por outro lado, a utilização do filtro de partículas possibilita a implementação, com maior facilidade, do problema do sequestro do robô, como foi apresentado na seção \ref{sec:section_name}.
 
-	\begin{itemize}
-		\item sonar,
-		\item odometria e, possivelmente,
-		\item bússola.
-	\end{itemize}
+	Desse modo, a escolha do filtro a ser utilizado ainda depende de estudos mais específicos da implementação dos mesmos, levando em consideração sua complexidade e suas vantagens em relação ao concorrente.
 
-	Ou seja, as técnicas obtidas, se utilizarem sensores diferentes dos listados acima, deverão ser adaptadas buscando a implementação da mesma com apenas estes sensores.
+	Ao final deste trabalho, espera-se obter uma solução onde o robô seja inserido em um ambiente desconhecido, em um ponto desconhecido e, a partir das informações obtidas pelos sensores, o mesmo construa um mapa do local, utilizando este mesmo mapa, simultaneamente para se auto-localizar no ambiente. Para isso, estarão disponíveis os sensores de distância (sonar), odométricos e, possivelmente, uma bússola.
+
+	Como as técnicas identificas durante a revisão sistemátia utilizam, em sua maioria, sensores como \textit{câmera de vídeo} e sensores a \textit{laser}, adaptações serão necessárias para viabilizar a resolução do problema com a utilização dos sensores citados anteriormente (sonar, odometria e bússola).
+
+	A resolução do problema será realizada de maneira simplificada, possibilitando sua conclusão durante o período previsto para o desenvolvimento da segunda etapa deste trabalho de conclusão de curso. Desse modo, questões referentes à performance e máxima precisão não fazem parte do foco deste trabalho.
+
+	A arquitetura da solução que será desenvolvida durante este trabalho segue o resultado da revisão sistemática, como apresenta a figura \ref{img:arquitetura_mais_utilizada}. Nesta arquitetura, o robô é responsável apenas por obter as informações do ambiente, a partir de seus sensores, e \textit{odebecer} as ordens do computador. Já o computador será responsável por processar as informações obtidas pelo robô e, a partir deste processamento, enviar decisões referentes à movimentação e localização ao robô. Esta arquitetura foi destacada, durante a revisão sistemática, como uma arquitetura de processamento remoto, onde nenhum processamento é feito localmente (no próprio robô).
+
+	Durante as seções a seguir, serão apresentadas informações referentes à solução e desenvolvimento durante a segunda etapa deste trabalho.
+
+	\subsection{Arquitetura do Robô} % (fold)
+	\label{sub:arquitetura_do_robô}
+		
+		De acordo com \cite{vieira}, a arquitetura de robôs móveis pode ser sub-dividida cinco camadas: \textit{percepção}, \textit{decisão}, \textit{planejamento de caminho}, \textit{geração de trajetória} e \textit{sistema de controle}.
+
+		A primeira camada, denominada \textit{camada de percepção}, será o grande foco deste trabalho. Onde a identificação de obstáculos para mapeamento do ambiente é uma atividade essencial para a resolução do problema de SLAM. Esta camada é responsável por adquirir informações sobre o ambiente ao seu redor, viabilizando a navegação e auto-localização no mesmo.
+
+		Já a segunda camada, \textit{decisão}, que foi o foco de trabalho de \cite{tccCarol}, tem como responsabilidade processar decisões do robô. Nesta camada se encontra o verdadeiro cérebro do robo, como afirma \cite{vieira}. Este trabalho também atuará nesta camada, para realização do processamento das informações e geração das decisões referentes a auto-localização do robô.
+
+		Na terceira camada, \textit{planejamento de caminho}, será utilizado, como ferramenta de apoio, o \textit{framework} Traveller, desenvolvido por \cite{tccRodrigo}. Sua utilização se refere ao planejamento da navegação no ambiente após o mapeamento, mesmo que parcial, do ambiente. Ou seja, enquanto o robô navega e mapeia o ambiente, os locais já percorridos (conhecidos e mapeados) possibilitarão a utilização do \textit{framework}. Por outro lado, em locais ainda desconhecidos, o planejamento do caminho será feito de forma aleatória, buscando mapear o ambiente como um todo.
+
+		A quarta camada, \textit{geração da trajetória}, utiliza o planejamento realizado na camada anterior para definir quais açoes devem ser realizadas no \textit{hardware} do robô, levando em consideração as características físicas do mesmo. Com isso, a quinta camada, \textit{sistema de controle}, é chamada para verificar o recebimento adequado dos sinais, assim como sua execução nos atuadores. 
+
+		A figura \ref{img:camadas} apresenta as cinco camadas, destacando as camadas que são o principal foco deste trabalho.
+
+		\begin{figure}[H]
+			\centering
+			\caption{Arquitetura do robô. Fonte \cite{vieira}.}
+			\includegraphics[scale=0.5]{figuras/camadas.eps}
+			\label{img:camadas}
+		\end{figure}
+
+	\subsection{Montagem do robô} % (fold)
+	\label{sub:montagem_do_robô}
+		Apresentar aqui a montagem utilizada durante o trabalho, tirar um foto do robô e tal.
+	% subsection montagem_do_robô (end)
+
+	\subsection{Ambiente utilizado} % (fold)
+	\label{sub:ambiente_utilizado}
+		Falar aqui sobre o tapete de missões, mostrar uma foto dele e alegria.
+	% subsection ambiente_utilizado (end)
+
+	\subsection{Condução do trabalho} % (fold)
+	\label{sub:condução_do_trabalho}
+		Falar aqui sobre a condução do trabalho, que vai utilizar a metodologia ágil, com sprints sendo representadas por milestones e histórias sendo representadas por issues do github. Utilizando o waffle.io integrado com o github para organização das atividades.
+
+	% subsection condução_do_trabalho (end)
+	% subsection arquitetura_do_robô (end)
 	
-
 % section adaptação_e_implementação (end)
 
 \section{Considerações parciais} % (fold)
