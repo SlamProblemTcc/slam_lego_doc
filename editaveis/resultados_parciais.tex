@@ -89,10 +89,9 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 			\centering
 			\caption{Resultados obtidos com a \textit{string} inicial}
 			\label{tab:string_inicial}
-			\begin{tabular}{|c|c|c|}
+			\begin{tabular}{@{}ccc@{}}
 			\hline
-			\rowcolor[HTML]{C0C0C0} 
-			\textbf{String}                                                                                    & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{IEEE, Springer e CAPES}}                                       \\ \hline
+			\textbf{String}                                                                                    & \multicolumn{2}{c|}{\textbf{IEEE, Springer e CAPES}}                                       \\ \hline
 			                                                                                                   & \begin{tabular}[c]{@{}c@{}}Nº.\\ Artigos\end{tabular} & \begin{tabular}[c]{@{}c@{}}Nº.\\ Artigos\\ relevantes\end{tabular} \\ \hline
 			\textit{\begin{tabular}[c]{@{}c@{}}Auto-localization \\ AND\\ environment \\ mapping\end{tabular}} & 29                                                    & 6                                                                 \\ \hline
 			\end{tabular}
@@ -132,10 +131,9 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 				\centering
 				\caption{Exemplo de registro de material}
 				\label{tab:padrao_dados_extraidos}
-				\begin{tabular}{|c|c|c|c|l|}
+				\begin{tabular}{@{}ccccc@{}}
 					\hline
-					\rowcolor[HTML]{C0C0C0} 
-					\textbf{Título}                                                                                                                                    & \textbf{Autor(es)}                                                                                    & \textbf{\begin{tabular}[c]{@{}c@{}}Data de\\ publicação\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Fonte da\\ publicação\end{tabular}} & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}\textbf{\begin{tabular}[c]{@{}c@{}}Listagem das\\ informações\\ importantes\end{tabular}}} \\ \hline
+					\textbf{Título} & \textbf{Autor(es)} & \textbf{\begin{tabular}[c]{@{}c@{}}Data de\\ publicação\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Fonte da\\ publicação\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Listagem das\\ informações\\ importantes\end{tabular}} \\ \hline
 					\textit{\begin{tabular}[c]{@{}c@{}}Integration of Vision\\ based SLAM and \\ Nonlinear Filter for\\ Simple Mobile Robot\\ Navigation\end{tabular}} & \begin{tabular}[c]{@{}c@{}}Dae Hee Won,\\ Young Jae Lee,\\ Sangkyung Sung,\\ Taesam Kang\end{tabular} & 2008                                                                  & IEEE                                                                   & \begin{tabular}[c]{@{}l@{}}-Utilização de\\ sensor de visão\\ e encoders.\\ -Filtro de \\ partículas\end{tabular}                      \\ \hline
 				\end{tabular}
 			\end{table}
@@ -214,8 +212,8 @@ Com a conclusão da primeira etapa da pesquisa, algumas informações referentes
 \centering
 \caption{Comparação das \textit{strings} inicial e final}
 \label{tab:string_final}
-\begin{tabular}{|c|c|c|c|c|}
-\hline
+\begin{tabular}{@{}c|c|c|c|c@{}}
+
 \multirow{2}{*}{\textbf{String}} & \multirow{2}{*}{\textbf{\begin{tabular}[c]{@{}c@{}}Fonte de \\ busca\end{tabular}}} & \multicolumn{2}{c|}{\textbf{Resultados}} & \multirow{2}{*}{\textbf{Observações}}                                                                                                                                                        \\ \cline{3-4}
                                  &                                                                                     & \textbf{Total}   & \textbf{Relevantes}   &                                                                                                                                                                                              \\ \hline
 \multirow{3}{*}{Inicial}         & \textit{IEEEXplore}                                                                 & 2                & 1                     & \multirow{3}{*}{\begin{tabular}[c]{@{}c@{}}String construída sem o conhecimento\\ necessário para utilização das palavras-\\ chave que representam a pesquisa.\end{tabular}}                 \\ \cline{2-4}
@@ -322,7 +320,8 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 \centering
 \caption{Contabilização de estratégias (SLAM)}
 \label{tab:resultadosRevisao}
-\begin{tabular}{|c|c|c|c|}
+
+\begin{tabular}{@{}cccc@{}}
 \hline
 \textbf{\begin{tabular}[c]{@{}c@{}}Arquitetura\\ de processamento\end{tabular}}                    & \textbf{Filtro} & \textit{\textbf{Inputs}}                                                                                                                         & \textbf{\begin{tabular}[c]{@{}c@{}}Nº.\\ Artigos\end{tabular}} \\ \hline
                                                                                                    & Kalman          & \begin{tabular}[c]{@{}c@{}}laser, vídeo, odometria,\\ sonar, infra-vermelho,\\ câmera términa, \\ kinect RGB, \\ sonar biomimético.\end{tabular} & 12                                                             \\ \cline{2-4} 
