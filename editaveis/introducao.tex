@@ -3,11 +3,11 @@
 
 	A robótica é um termo que gera bastante curiosidade para qualquer pessoa, desde uma criança aprendendo a ler, até idosos surpresos com as novidades. Por esse e outros motivos, a robótica vem sendo pesquisada e evoluída em diversos contextos, como a robótica educacional, por exemplo. 
 
-	Entre as diversas áreas de pesquisa que se enquadram na robótica, uma delas merece atenção especial: a robótica móvel. A mobilidade robótica é um dos grandes desafios para a comunidade devido a complexidade e imprecisão dos dados obtidos, o que será apresentado durante este trabalho de conclusão de curso. As próximas seções deste capítulo buscam apresentar a contextualização da pesquisa, a questão de pesquisa a ser atacada, a justificativa para realização da mesma e os objetivos a serem alcançados. 
+	Entre as áreas de pesquisa que se enquadram na robótica, uma delas merece atenção especial: a robótica móvel. A mobilidade robótica é um dos grandes desafios para a comunidade devido à complexidade e à imprecisão dos dados obtidos, o que será apresentado durante este trabalho de conclusão de curso. As próximas seções deste capítulo buscam apresentar a contextualização da pesquisa, a questão de pesquisa a ser investigada, a justificativa para realização da mesma, e os objetivos a serem alcançados. 
 
 \section{Contextualização}
 	
-	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e o tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apoiam o trabalho humano. 
+	O nascimento da robótica se deu no contexto industrial, no qual ferramentas autônomas foram desenvolvidas para executar atividades de forma repetitiva e incansável, maximizando a qualidade dos produtos e minimizando o custo e o tempo para produção dos mesmos \cite{roboticaIndustrial}. Segundo \cite{roboticaIndustrial}, a palavra robô é derivada da palavra \textit{robota}, de origem eslava, que significa \textit{trabalho forçado}, ou seja, robôs podem ser considerados ferramentas incansáveis que apóiam o trabalho humano. 
 
 	Segundo \cite{localizacaoEMapeamentoPaulo}, a autonomia de um robô é condicionada pela sua capacidade de perceber o ambiente de navegação, interagindo com o meio e realizando tarefas com o mínimo de precisão. Este mínimo, de acordo com \cite{localizacaoEMapeamentoPaulo}, seria a navegação sem colisão em obstáculos.
 
@@ -38,7 +38,7 @@
 
 	Desse modo, é fácil perceber que cada técnica possui características que se adaptam melhor para diferentes situações. Ao longo deste trabalho, o principal foco de interesse é a navegabilidade de robôs simples e baratos, como os Kit Lego Mindstorms\footnote{mindstorms.lego.com}. Tais kits possuem poucas opções de sensores e características limitadas \cite{drawLegoRobot}. Os sensores do kit que serão utilizados neste trabalho são: \textit{Sensor de proximidade, sensor RGB, sensor de contato e sensor odométrico}.
 
-\section{Problema de Pesquisa}
+\section{Problema de pesquisa}
 
 	Todas as técnicas de auto-localização apresentadas na seção anterior já foram testadas, comparadas e refatoradas em diferentes contextos, desde a navegação marítima até questões relacionadas à tecnologia aeroespacial \cite{localizacaoEMapeamentoPaulo}. Porém, sabe-se que, nestes contextos, o \textit{hardware} utilizado para navegação era de alta tecnologia, possuindo processadores de alto desempenho, com a utilização de processamento paralelo \cite{processamentoParalelo}, por exemplo, e sensores precisos.
 
@@ -62,24 +62,24 @@
 
 	As missões utilizadas durante a disciplina da UnB são referentes a problemas recorrentes no contexto da robótica mundial. A solução dos problemas é uma adaptação das técnicas existentes para o contexto limitado da disciplina, onde são utilizadas apenas ferramentas presentes no kit \textit{Mindstorms} da Lego. Esta adaptação exige um conhecimento específico sobre a técnica, para que o estudante possa identificar características relevantes e adaptá-las de acordo com o \textit{hardware} disponível.
 
-	A disciplina já influenciou dois estudantes de Engenharia de Software a se aprofundarem no contexto da robótica e robótica educacional, gerando dois trabalhos de conclusão de curso, \cite{tccRodrigo}, que desenvolveu um \textit{framework} de definição de trajetórias para robôs móveis, e \cite{tccCarol}, que desenvolveu um algoritmo para tomada de decisões estratégicas em robótica educacional. O trabalho atual vem para complementar os trabalhos realizados pelos dois alunos.
+	A disciplina já influenciou dois estudantes de Engenharia de Software a se aprofundarem no contexto da Robótica e Robótica Educacional, gerando dois trabalhos de conclusão de curso, \cite{tccRodrigo}, que desenvolveu um \textit{framework} de definição de trajetórias para robôs móveis, e \cite{tccCarol}, que desenvolveu um algoritmo para tomada de decisões estratégicas em robótica educacional. O trabalho atual vem para complementar os trabalhos realizados pelos dois alunos.
 
 
 	\section{Objetivos}
 
-	\subsection{Objetivo Geral} % (fold)
+	\subsection{Objetivo geral} % (fold)
 	\label{sub:objetivos_gerais}
 	
 		Adaptar técnicas de resolução do problema de SLAM para o contexto de robôs simples, utilizando os kits de robótica \textit{Mindstorms} da Lego, em um primeiro momento.
 
 	% subsection objetivos_gerais (end)
 
-	\subsection{Objetivos Específicos} % (fold)
+	\subsection{Objetivos específicos} % (fold)
 	\label{sub:objetivos_específicos}
 		 
 	\begin{itemize}
 		\item Identificar uma solução para o problema de SLAM em um contexto simplificado;
-		\item Propor adaptação para o contexto de robôs simples, na robótica educacional;
+		\item Propor adaptação para o contexto de robôs simples, na Robótica Educacional;
 		\item Implementar adaptação.
 	\end{itemize}
 	
@@ -89,14 +89,16 @@
 	\label{sec:organização_do_trabalho}
 		Este trabalho de conclusão de curso está organizado nos capítulos:
 		\begin{itemize}
-			\item Introdução: Capítulo referente a contextualização, levantamento da questão de pesquisa, justificativa e definição dos objetivos do trabalho.
+			\item Introdução: Capítulo referente à contextualização, levantamento da questão de pesquisa, justificativa e definição dos objetivos do trabalho;
 
-			\item Referencial teórico: O objetivo deste capítulo é, fornecer, ao leitor, o conhecimento necessário para compreender a pesquisa realizada. O capítulo é sub-dividido nas seções \textit{robótica e a auto-localização},  \textit{o problema de SLAM} e \textit{robótica educacional}.
+			\item Referencial teórico: O objetivo deste capítulo é fornecer ao leitor o conhecimento necessário para compreender a pesquisa realizada. O capítulo é sub-dividido nas seções \textit{robótica e a auto-localização},  \textit{o problema de SLAM} e \textit{robótica educacional};
 
-			\item Suporte tecnológico: Apresenta as ferramentas e tecnologias utilizadas para auxiliar o desenvolvimento desta pesquisa, deste a pesquisa bibliográfica e documentação, até o desenvolvimento da prova de conceito e apresentação.
+			\item Suporte tecnológico: Apresenta as ferramentas e tecnologias utilizadas para auxiliar o desenvolvimento desta pesquisa, deste a pesquisa bibliográfica e documentação, até o desenvolvimento da prova de conceito e apresentação;
 
-			\item Metodologia: Este capítulo busca apresentar as técnicas utilizadas para a realização da pesquisa, definindo todo o \textit{caminho} percorrido durante este processo.
+			\item Metodologia: Este capítulo busca apresentar as técnicas utilizadas para a realização da pesquisa, definindo as atividades a serem desempenhadas para conclusão do trabalho, e
 
-			\item Resultados parciais: Neste capítulo são apresentados os resultados obtidos durante o desenvolvimento da primeira etapa deste trabalho de conclusão de curso.
+			\item Resultados parciais: Neste capítulo, são apresentados os resultados obtidos durante o desenvolvimento da primeira etapa deste trabalho de conclusão de curso.
+
+			\item Consiferações finais: Capítulo final do TCC\_1 que tem como objetivo apresentar o status atual do trabalho, assim como o que se espera para a próxima etapa do trabalho.
 		\end{itemize}
 	% section organização_do_trabalho (end)
