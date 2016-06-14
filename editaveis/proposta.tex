@@ -53,17 +53,43 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 	\subsection{Montagem do robô} % (fold)
 	\label{sub:montagem_do_robô}
-		Apresentar aqui a montagem utilizada durante o trabalho, tirar um foto do robô e tal.
+		
+		A montagem utilizada durante o início deste trabalho, mais especificamente durante a realização da prova de conceito, é baseada em esteiras. O robô é equipado com um sonar, para identificar a distância de obstáculos, e um sensor de toque. Para movimentação, foram utilizados dois motores, A e B, dispostos na direita e esquerda, respectivamente. A Figura \ref{img:fotoRobo} apresenta a montagem utilizada.
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.25]{figuras/fotoRobo.eps}
+			\caption[Montagem do robô]{Montagem do robô.}
+			\label{img:fotoRobo}
+		\end{figure}
 	% subsection montagem_do_robô (end)
 
 	\subsection{Ambiente utilizado} % (fold)
 	\label{sub:ambiente_utilizado}
-		Falar aqui sobre o tapete de missões, mostrar uma foto dele e alegria.
+		
+		O ambiente utilizado para navegação do robô é o tapete de missões \textit{Nature's Fury}, utilizado como um dos desafios do torneio \textit{First Lego League}\footnote{http://www.firstlegoleague.org/}. Como já existem alguns locais pré-definidos para possuírem obstáculos, o tapete será utilizado, ao longo deste trabalho, para teste, avaliando a qualidade da geração do mapa por parte do robô. O mapa pode ser visualizado na Figura \ref{img:tapete}.
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{figuras/tapete.eps}
+			\caption[Ambiente utilizado]{Ambiente utilizado.}
+			\label{img:tapete}
+		\end{figure}
+
+		Serão adicionados obstáculos neste tapete, os quais deverão ser mapeados pelo robô possibilitando sua auto-localização no ambiente, mesmo que de maneira simplista. A validação será a partir da comparação entre o verdadeiro mapa e o mapa gerado, levando em consideração a margem de erro comum nesse tipo de navegação.
+
 	% subsection ambiente_utilizado (end)
 
 	\subsection{Condução do trabalho} % (fold)
 	\label{sub:condução_do_trabalho}
-		Falar aqui sobre a condução do trabalho, que vai utilizar a metodologia ágil, com sprints sendo representadas por milestones e histórias sendo representadas por issues do github. Utilizando o waffle.io integrado com o github para organização das atividades.
+
+		O desenvolvimento deste trabalho terá como base, durante o TCC\_2, a metodologia ágil, utilizando o conceito de \textit{releases}, \textit{sprints} e \textit{histórias} para apoiar o mapeamento e gerenciamento dos requisitos, assim como o acompanhamento da evolução do trabalho ao longo do tempo. Para representar as \textit{releases}, \textit{sprints} e \textit{histórias}, serão utilizadas, respectivamente, as ferramentas de criação de \textit{tags}, \textit{milestones} e \textit{issues} presentes no GitHub\footnote{https://github.com}.
+
+		Com o objetivo de acompanhar o desenvolvimento, a ferramenta \textit{waffle.io}\footnote{https://waffle.io} em integração com o GitHub será utilizada. Possibilitando maior visibilidade e organização do \textit{status} do trabalho.
+
+		Ao início de cada \textit{sprint}, serão analisadas as histórias que farão parte da mesma, levando em consideração o \textit{velocity} do pesquisador e o período fixo para cada \texti{sprint} de duas semanas. Ao final de cada \textit{sprint}, o \textit{velocity} deverá ser atualizado para melhor acompanhamento do projeto.
+
+		De acordo com a utilização do conceito de \textit{velocity}, as histórias deverão ser pontuadas a partir de sua complexidade de implementação, em relação ao conhecimento do desenvolvedor. A pontuação será realizada ao início de cada \textit{sprint}.
 
 	% subsection condução_do_trabalho (end)
 	% subsection arquitetura_do_robô (end)
