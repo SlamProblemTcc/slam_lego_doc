@@ -17,15 +17,15 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 	De acordo com o resultado obtido com a revisão sistemática, a grande maioria das soluções do problema de SLAM identificadas utilizam o filtro de Kalman, como mostra a tabela \ref{tab:resultadosRevisao}. Por outro lado, a utilização do filtro de partículas possibilita a implementação, com maior facilidade, do problema do sequestro do robô, como foi apresentado na seção \ref{sec:section_name}.
 
-	Desse modo, a escolha do filtro a ser utilizado ainda depende de estudos mais específicos da implementação dos mesmos, levando em consideração sua complexidade e suas vantagens em relação ao concorrente.
+	Desse modo, a escolha do filtro a ser utilizado ainda depende de estudos mais específicos sobre a implementação dos mesmos, levando em consideração sua complexidade e suas vantagens em relação ao concorrente.
 
 	Ao final deste trabalho, espera-se obter uma solução onde o robô seja inserido em um ambiente desconhecido, em um ponto desconhecido e, a partir das informações obtidas pelos sensores, o mesmo construa um mapa do local, utilizando este mesmo mapa, simultaneamente para se auto-localizar no ambiente. Para isso, estarão disponíveis os sensores de distância (sonar), odométricos e, possivelmente, uma bússola.
 
 	Como as técnicas identificas durante a revisão sistemátia utilizam, em sua maioria, sensores como \textit{câmera de vídeo} e sensores a \textit{laser}, adaptações serão necessárias para viabilizar a resolução do problema com a utilização dos sensores citados anteriormente (sonar, odometria e bússola).
 
-	A resolução do problema será realizada de maneira simplificada, possibilitando sua conclusão durante o período previsto para o desenvolvimento da segunda etapa deste trabalho de conclusão de curso. Desse modo, questões referentes à performance e máxima precisão não fazem parte do foco deste trabalho.
+	A resolução do problema será realizada de maneira simplificada, possibilitando sua conclusão durante o período previsto para o desenvolvimento da segunda etapa deste trabalho de conclusão de curso. Desse modo, questões referentes ao desempenho e máxima precisão não fazem parte do foco deste trabalho.
 
-	A arquitetura da solução que será desenvolvida durante este trabalho segue o resultado da revisão sistemática, como apresenta a figura \ref{img:arquitetura_mais_utilizada}. Nesta arquitetura, o robô é responsável apenas por obter as informações do ambiente, a partir de seus sensores, e \textit{odebecer} as ordens do computador. Já o computador será responsável por processar as informações obtidas pelo robô e, a partir deste processamento, enviar decisões referentes à movimentação e localização ao robô. Esta arquitetura foi destacada, durante a revisão sistemática, como uma arquitetura de processamento remoto, onde nenhum processamento é feito localmente (no próprio robô).
+	A arquitetura da solução que será desenvolvida durante este trabalho segue o apresentado ao percorrer da revisão sistemática, como apresenta a figura \ref{img:arquitetura_mais_utilizada}. Nesta arquitetura, o robô é responsável apenas por obter as informações do ambiente, a partir de seus sensores, e \textit{odebecer} as ordens do computador. Já o computador, será responsável por processar as informações obtidas pelo robô e, a partir deste processamento, enviar decisões referentes à movimentação e localização ao robô. Esta arquitetura foi destacada, durante a revisão sistemática, como uma arquitetura de processamento remoto, onde nenhum processamento é feito localmente (no próprio robô).
 
 	Durante as seções a seguir, serão apresentadas informações referentes à solução e desenvolvimento durante a segunda etapa deste trabalho.
 
@@ -67,7 +67,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 	\subsection{Ambiente utilizado} % (fold)
 	\label{sub:ambiente_utilizado}
 		
-		O ambiente utilizado para navegação do robô é o tapete de missões \textit{Nature's Fury}, utilizado como um dos desafios do torneio \textit{First Lego League}\footnote{http://www.firstlegoleague.org/}. Como já existem alguns locais pré-definidos para possuírem obstáculos, o tapete será utilizado, ao longo deste trabalho, para teste, avaliando a qualidade da geração do mapa por parte do robô. O mapa pode ser visualizado na Figura \ref{img:tapete}.
+		O ambiente utilizado para navegação do robô é o tapete de missões \textit{Nature's Fury}, utilizado como um dos desafios do torneio \textit{First Lego League}\footnote{http://www.firstlegoleague.org/}. Como já existem alguns locais pré-definidos para possuírem obstáculos, o tapete será utilizado, ao longo deste trabalho para teste, avaliando a qualidade da geração do mapa por parte do robô. O mapa pode ser visualizado na Figura \ref{img:tapete}.
 
 		\begin{figure}[H]
 			\centering
@@ -85,7 +85,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 		O desenvolvimento deste trabalho terá como base, durante o TCC\_2, a metodologia ágil, utilizando o conceito de \textit{releases}, \textit{sprints} e \textit{histórias} para apoiar o mapeamento e gerenciamento dos requisitos, assim como o acompanhamento da evolução do trabalho ao longo do tempo. Para representar as \textit{releases}, \textit{sprints} e \textit{histórias}, serão utilizadas, respectivamente, as ferramentas de criação de \textit{tags}, \textit{milestones} e \textit{issues} presentes no GitHub\footnote{https://github.com}.
 
-		Com o objetivo de acompanhar o desenvolvimento, a ferramenta \textit{waffle.io}\footnote{https://waffle.io} em integração com o GitHub será utilizada. Possibilitando maior visibilidade e organização do \textit{status} do trabalho.
+		Com o objetivo de acompanhar o desenvolvimento, a ferramenta \textit{waffle.io}\footnote{https://waffle.io}, em integração com o GitHub, será utilizada. Possibilitando maior visibilidade e organização do \textit{status} do trabalho.
 
 		Ao início de cada \textit{sprint}, serão analisadas as histórias que farão parte da mesma, levando em consideração o \textit{velocity} do pesquisador e o período fixo para cada \textit{sprint} de duas semanas. Ao final de cada \textit{sprint}, o \textit{velocity} deverá ser atualizado para melhor acompanhamento do projeto.
 
@@ -95,7 +95,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.55]{figuras/github.eps}
+			\includegraphics[scale=0.44]{figuras/github.eps}
 			\caption[Página utilizada para versionamento do trabalho]{Página utilizada para versionamento do trabalho}
 			\label{img:github}
 		\end{figure}
@@ -107,6 +107,11 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 \section{Considerações parciais} % (fold)
 \label{sec:considerações_parciais}
 
+A proposta deste trabalho é baseada na identificação e adaptação de técnicas de resolução do problema de SLAM. Para isso foi realizada uma revisão sistemática para encontrar e registrar diferentes técnicas de SLAM utilizadas atualmente. Com a identificação destas técnicas, durante o TCC\_2, o foco do trabalho será adaptar algumas destas técnicas para o contexto simplificado da robótica educacional.
+
+Este contexto simplipicado é baseado no kit de robótica Midstorm, que, como já foi explicado, possui características bastante limitadas, como diversidade de sensores e capacidade de memória e processamento. A adaptação será implementada utilizando a linguagem Java, a partir da ferramenta \textit{Lejos}\footnote{http://www.lejos.org/nxj.php}.
+
+Esta solução busca complementar uma sequência de soluções relacionadas à robótica educacional que vêm sendo desenvolvidas na Universidade de Brasília, como \cite{tccCarol} e \cite{tccRodrigo}. O \textit{framework} Traveller, desenvolvido por \cite{tccRodrigo}, será utilizado para navegação em ambientes já mapeados pelo algoritmo desenvolvido durante este trabalho. Desse modo, este trabalho tem como objetivo incorporar um módulo novo do \textit{framework}, possibilitando sua construção de mapas e auto-localização nos mesmos.
 
 
 % section considerações_parciais (end)
