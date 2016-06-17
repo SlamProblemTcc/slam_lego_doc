@@ -1,7 +1,7 @@
 \chapter[Resultados parciais]{Resultados Parciais}
 \label{sec:resultados_parciais}
 
-Dado o cronograma de atividades planejado para este trabalho, algumas atividades já foram realizadas. Neste capítulo apresentam-se o emprego da \textit{Revisão sistemática} e o \textit{Desenvolvimento prático}, com a realização da prova de conceito.
+Dado o cronograma de atividades planejado para este trabalho, algumas atividades já foram realizadas. Neste capítulo apresentam-se o emprego da \textit{Revisão sistemática} e os ganhos referentes ao  \textit{Desenvolvimento prático}, com a realização da prova de conceito.
 
 \section{Revisão sistemática} % (fold)
 \label{sec:revisão_sistemática}
@@ -484,7 +484,37 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 \section{Desenvolvimento prático} % (fold)
 \label{sec:desenvolvimento_prático}
 
-	Apresentar detalhes sobre a utilização de ferramentas, conhecimentos obtidos com a prova de conceito, problemas encontrados, soluções e etc.
+	Com o objetivo de obter conhecimento referente à solução prática proposta durante este trabalho, foi desenvolvida uma pequena prova de conceito durante a primeira etapa deste trabalho (TCC\_1). Nesta seção estão apresentadas as informações sobre o planejamento e condução da prova de conceito, assim como as informações importantes obtidas com a realização da prova de conceito, caracterizadas como \textit{resultados da prova de conceito}.
+
+	Esta seção está dividida entre \textit{planejamento e condução} da prova de conceito, \ref{sub:planCond}, e \textit{características técnicas} \ref{sub:caracTec}.
+
+	\subsection{Planejamento e condução} % (fold)
+	\label{sub:planejamento_e_condução}
+	
+		Esta prova de coneito foi pensada com o objetivo de identificar algumas características básicas sobre a implementação de sistemas de navegação inteligente utilizando os kits de robótica Mindstorm, da Lego. Com este objetivo, a prova de conceito envolveu a análise de ferramentas utilizadas, como sensores e atuadores, o estudo e seleção da linguagem de programação a ser utilizada e alguns detalhes referentes à localização relativa de obstáculos.
+
+		Para isso, buscou-se simular uma atividade básica na navegação e auto-localização na robótica. Atividade esta, que tem como objetivo identificar obstáculos ao redor do robô, levando em consideração a margem de erro, assim como todas as características presentes nos sensores e atuadores do kit. Ou seja, o robô é colocado em um ambiente desconhecido, onde o mesmo busca identificar obstáculos à sua volta, com o objetivo de definir uma saída, onde não se encontra nenhum obstáculo.
+
+		O ambiente utilizado para a prova de conceito pode ser observado na Figura \ref{img:ambienteProva}. A montagem do robô utilizada nesta prova seguiu o estabelecido na seção \ref{sub:montagem_do_robô}, utilizando esteiras, um sonar para identificar a distância de obstáculos, um sensor de toque e sensores odométricos em cada motor.
+
+	% subsection planejamento_e_condução (end)
+
+	\subsection{Características técnicas} % (fold)
+	\label{sub:características_técnicas}
+	
+		Neste tópico serão apresentadas algumas das características importantes identificadas durante a realização da prova de conceito, como pode ser observado nos sub-tópicos a seguir.
+
+		\subsubsection{Seleção da linguagem e ambiente de desenvolvimento}
+
+		Para realização desta prova de conceito, assim como o desenvolvimento de toda a solução proposta, ao longo do TCC\_2, optou-se pela utilização da linguagem Java. Esta escolha se deu não só devido à possibilidade, com mais facilidade, da integração desta solução com o \textit{framework} desenvolvido por \cite{tccRodrigo}, como também por todo o apoio técnico advindo da utilização da ferramenta \textit{leJOS NXJ}\footnote{http://www.lejos.org/nxj.php}.
+
+		A ferramenta leJOS NXJ engloba, basicamente, uma máquina virtual Java (JVM) desenvolvida em C, sendo multiplataforma, ou seja, é portável para sistemas Linux, Windows e Macintosh \cite{legonxj}. O material de estudo sobre a ferramenta leJOS NXJ se encontra disponível em toda a \textit{web}, de maneira livre, e no livro \cite{legonxj}, que foi utilizado como fonte de informação durante toda a prova de conceito.
+
+		O sistema operacional utilizado para realização desta prova de conceito foi o \textit{windows}, devido a sua facilidade de configuração da comunicação entre robô/PC, diferentemente do observado em sistemas Linux. O \textit{passo-a-passo} para instalação e configuração do ambiente utilizado para desenvolvimento se encontra em \cite[p. 6]{legonxj}.
+
+		A seleção desta ferramenta se deu, além dos motivos apresentados anteriormente, pelo fato da existência de uma \textit{API} que disponibiliza diversas funcionalidades referentes à navegação dos robôs. A \textit{API} do leJOS NXJ engloba desde funções referentes ao controle de motores, até o apoio a criação de mapas e sistemas complexos de navegação.
+
+	% subsection características_técnicas (end)
 % section desenvolvimento_prático (end)
 
 \section{Considerações parciais} % (fold)
