@@ -36,13 +36,13 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 		A primeira camada, denominada \textit{camada de percepção}, será o grande foco deste trabalho. Onde a identificação de obstáculos para mapeamento do ambiente é uma atividade essencial para a resolução do problema de SLAM. Esta camada é responsável por adquirir informações sobre o ambiente ao seu redor, viabilizando a navegação e auto-localização no mesmo.
 
-		Já a segunda camada, \textit{decisão}, que foi o foco de trabalho de \cite{tccCarol}, tem como responsabilidade processar decisões do robô. Nesta camada se encontra o verdadeiro cérebro do robo, como afirma \cite{vieira}. Este trabalho também atuará nesta camada, para realização do processamento das informações e geração das decisões referentes a auto-localização do robô.
+		Já a segunda camada, \textit{decisão}, que foi o foco de trabalho de \cite{tccCarol}, tem como responsabilidade processar decisões do robô. Nesta camada se encontra o verdadeiro cérebro do robo, como afirma \cite{vieira}.
 
 		Na terceira camada, \textit{planejamento de caminho}, será utilizado, como ferramenta de apoio, o \textit{framework} Traveller, desenvolvido por \cite{tccRodrigo}. Sua utilização se refere ao planejamento da navegação no ambiente após o mapeamento, mesmo que parcial, do ambiente. Ou seja, enquanto o robô navega e mapeia o ambiente, os locais já percorridos (conhecidos e mapeados) possibilitarão a utilização do \textit{framework}. Por outro lado, em locais ainda desconhecidos, o planejamento do caminho será feito de forma aleatória, buscando mapear o ambiente como um todo.
 
 		A quarta camada, \textit{geração da trajetória}, utiliza o planejamento realizado na camada anterior para definir quais açoes devem ser realizadas no \textit{hardware} do robô, levando em consideração as características físicas do mesmo. Com isso, a quinta camada, \textit{sistema de controle}, é chamada para verificar o recebimento adequado dos sinais, assim como sua execução nos atuadores. 
 
-		A figura \ref{img:camadas} apresenta as cinco camadas, destacando as camadas que são o principal foco deste trabalho.
+		A figura \ref{img:camadas} apresenta as cinco camadas, onde, no nível mais alto, se encontra a camada de percepção, que é o foco deste trabalho. 
 
 		\begin{figure}[H]
 			\centering
