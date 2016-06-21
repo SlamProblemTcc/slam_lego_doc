@@ -298,19 +298,23 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 			\begin{enumerate}
 				\item \textit{pobre direcionalidade}: não são capazes de identificar a direção do obstáculo identificado, apenas sua distância;
 				\item \textit{passíveis de ruídos}: ruídos são comuns durante a utilização de sonares, seja devido a interferências de outros sensores, ou a partir da sua margem de erro padrão, por exemplo.
-				\item \textit{reflexão especular}: O sensor emite o sinal sonoro em formato de cone, possibilitando a obtenção de erros relacionados à angulação de incidência, como ilustra a Figura \ref{img:cone}. 
+				\item \textit{reflexão especular}: O sensor emite o sinal sonoro em formato de cone, possibilitando a obtenção de erros relacionados à angulação de incidência. 
 			\end{enumerate}
+
+			Com foi definido por \cite{agenteExploratorioKalman}, umas das características importantes da utilização do sonar é a reflexão especular, devido a sua emissão em formato de cone, como é apresentado de forma clara na Figura \ref{img:cone}.
 
 			\begin{figure}[H]
 				\centering
-				\includegraphics[scale=0.6]{figuras/cone.eps}
+				\includegraphics[scale=0.65]{figuras/cone.eps}
 				\caption[Emissão do sinal sonoro - sonar]{Emissão do sinal sonoro - sonar}
 				\label{img:cone}
 			\end{figure}
 
-			Outro detalhe importante a ser analisado, segundo \cite{agenteExploratorioKalman}, é a velocidade de emissão do sinal. Esta deve ser de acordo com a velocidade atual do robô, ou seja, se o robô se movimenta rapidamente, devem ser gerados sinais a uma frequência alta, possibilitando a reação do robô a eventos inesperados \cite{agenteExploratorioKalman}.
+			Outro detalhe importante a ser analisado, segundo \cite{agenteExploratorioKalman}, é a velocidade de emissão do sinal. Esta deve ser relacionada a necessidade de obtenção das informações, ou seja, dependendo da velocidade de navegação atual do robô, a velocidade de emissão deve ser atualizada. Desse modo, se o robô se movimenta rapidamente, devem ser gerados sinais a uma frequência alta, possibilitando a reação do robô a eventos inesperados \cite{agenteExploratorioKalman}.
 
-			Com a emissão de sinais sonoros enquanto o robô se movimenta, deve-se levar em consideração o atraso no mapeamento, já que, ao obter o retorno do sinal, o robô já não se encontra no mesmo local \cite{agenteExploratorioKalman}.
+			Com a emissão de sinais sonoros enquanto o robô se movimenta, como foi sugerido anteriormente, deve-se levar em consideração o atraso no mapeamento, já que, ao obter o retorno do sinal, o robô já não se encontra no mesmo local \cite{agenteExploratorioKalman}, inserindo erros na navegação, o que pode prejudicá-la. 
+
+			Outro problema bastante recorrente com a utilização de sonares é a identificação de cantos em paredes, por exemplo. Como a emissão do sinal é feita no formato de cone, quando a extremidade do cone alcança a parede, a mesma é refletida fornecendo a informação ao robô. O mesmo acontece do outro lado do cone, deixando o centro invisível ao sinal sonoro. O impacto deste problema é proporcional a distância entre o robô e o objeto, como já foi explicado ao longo do trabalho.
 
 	% subsection publicação_dos_resultados (end)
 
