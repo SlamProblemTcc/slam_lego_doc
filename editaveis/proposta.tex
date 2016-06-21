@@ -7,7 +7,10 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 	
 	Como qualquer trabalho científico, para alcançar os objetivos da pesquisa, faz-se necessária a realização de uma pesquisa bibliográfica buscando obter uma base teórica suficiente para sustentar o trabalho realizado. Durante este trabalho de conclusão de curso, como uma forma de obtenção da base teórica, foi utilizada a técnica de revisão sistemática.
 
-	O grande foco da revisão sistemática tem sido as técnicas de resolução do problema de SLAM utilizadas atualmente, em diferentes contextos. Vale ressaltar que o foco será na utilização das mesmas em um contexto simplificado e educacional. A identificação destas técnicas possibilita a seleção e adaptação das mesmas para viabilizar sua implementação no contexto simplificado.
+	O grande foco da revisão sistemática tem sido as técnicas de resolução do problema de SLAM utilizadas atualmente, em diferentes contextos. Vale ressaltar que o foco será na utilização das mesmas em um contexto simplificado e educacional. A identificação destas técnicas possibilita a seleção e adaptação das mesmas para viabilizar sua implementação no contexto simplificado da robótica educacional.
+
+	A revisão sistemática desenvolvida durante esta etapa se encontra detalhada na seção \ref{sec:revisão_sistemática}, onde são apresentados deste o planejamento da revisão ate a condução e divulgação dos resultados da mesma. A seção \ref{sec:adaptação_e_implementação} irá apresentar detalhes referentes ao objetivo prático deste trabalho. Para alcançar estes objetivos, serão utilizados insumos obtidos durante a obtenção da base teórica, a partir da revisão sistemática.
+
 % section obtenção_da_base_teórica (end)
 
 \section{Adaptação e implementação} % (fold)
@@ -25,7 +28,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 	A resolução do problema será realizada de maneira simplificada, possibilitando sua conclusão durante o período previsto para o desenvolvimento da segunda etapa deste trabalho de conclusão de curso. Desse modo, questões referentes ao desempenho e máxima precisão não fazem parte do foco deste trabalho.
 
-	A arquitetura da solução que será desenvolvida durante este trabalho segue o apresentado ao percorrer da revisão sistemática, como apresenta a figura \ref{img:arquitetura_mais_utilizada}. Nesta arquitetura, o robô é responsável apenas por obter as informações do ambiente, a partir de seus sensores, e \textit{odebecer} as ordens do computador. Já o computador, será responsável por processar as informações obtidas pelo robô e, a partir deste processamento, enviar decisões referentes à movimentação e localização ao robô. Esta arquitetura foi destacada, durante a revisão sistemática, como uma arquitetura de processamento remoto, onde nenhum processamento é feito localmente (no próprio robô).
+	A arquitetura da solução que será desenvolvida durante este trabalho segue o apresentado ao percorrer da revisão sistemática, como apresenta a figura \ref{img:arquitetura_mais_utilizada}. Nesta arquitetura, o robô é responsável apenas por obter as informações do ambiente, a partir de seus sensores, e \textit{odebecer} as ordens do computador. Já o computador, será responsável por processar as informações obtidas pelo robô e, a partir deste processamento, enviar decisões referentes à movimentação e localização ao robô. Esta arquitetura foi destacada, durante a revisão sistemática, como uma arquitetura de processamento remoto, onde nenhum processamento é feito localmente (no próprio robô), como apresenta a seção \ref{sub:arquitetura_solucao}.
 
 	Durante as seções a seguir, serão apresentadas informações referentes à solução e desenvolvimento durante a segunda etapa deste trabalho.
 
@@ -46,7 +49,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{figuras/camadas.eps}
+			\includegraphics[scale=0.6]{figuras/camadas.eps}
 			\caption[Arquitetura do robô]{Arquitetura do robô. Fonte \cite{vieira}.}
 			\label{img:camadas}
 		\end{figure}
