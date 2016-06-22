@@ -274,7 +274,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Alguns autores, como, por exemplo, \cite{comparacaoKalmanParticulas}, vêm estudando as duas técnicas e comparando-as com o intúito de selecionar a \textit{"melhor"} técnica. Entretando, o termo \textit{"melhor"} é relativo, neste caso, a depender do contexto em que será aplicado o filtro probabilístico, como afirma \cite{comparacaoKalmanParticulas}.
 
-			O estudo de \cite{comparacaoKalmanParticulas} exemplifica, com clareza, as comparações entre os filtros de partícula e de Kalman, ao utilizar as duas técnicas para solucionar o problema de SLAM com um robô móvel munido de sensores a laser. De acordo com a relatividade do termo \textit{"melhor"}, nesta ocasião, o autor buscou apresentar apenas algumas vantagens e desvantagens dos dois filtros. As quais podem ser visualizadas nas seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}. 
+			O estudo de \cite{comparacaoKalmanParticulas} exemplifica, com clareza, as comparações entre os filtros de partícula e de Kalman, ao utilizar as duas técnicas para solucionar o problema de SLAM com um robô móvel munido de sensores a laser. De acordo com a relatividade do termo \textit{"melhor"}, nesta ocasião, o autor buscou apresentar apenas algumas vantagens e desvantagens dos dois filtros, como pode-se observar nas seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}. 
 
 		\subsubsection{Informações disponíveis}
 		\label{sub:infos_disponiveis}
@@ -493,7 +493,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 	\subsection{Planejamento e condução} % (fold)
 	\label{sub:planejamento_e_condução}
 	
-		Esta prova de coneito foi pensada com o objetivo de identificar algumas características básicas sobre a implementação de sistemas de navegação inteligente utilizando os kits de robótica Mindstorm, da Lego. Com este objetivo, a prova de conceito envolveu a análise de ferramentas utilizadas, como sensores e atuadores, o estudo e seleção da linguagem de programação a ser utilizada e alguns detalhes referentes à localização relativa de obstáculos.
+		Esta prova de conceito foi pensada com o objetivo de identificar algumas características básicas sobre a implementação de sistemas de navegação inteligente utilizando os kits de robótica Mindstorms, da Lego. Com este objetivo, a prova de conceito envolveu a análise de ferramentas utilizadas, como sensores e atuadores, o estudo e seleção da linguagem de programação a ser utilizada e alguns detalhes referentes à localização relativa de obstáculos.
 
 		Para isso, buscou-se simular uma atividade básica na navegação e auto-localização na robótica. Atividade esta, que tem como objetivo identificar obstáculos ao redor do robô, levando em consideração a margem de erro, assim como todas as características presentes nos sensores e atuadores do kit. Ou seja, o robô é colocado em um ambiente desconhecido, onde o mesmo busca identificar obstáculos à sua volta, com o objetivo de definir uma saída, onde não se encontra nenhum obstáculo.
 
@@ -523,7 +523,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 		O sistema operacional utilizado para realização desta prova de conceito foi o \textit{windows}, devido a sua facilidade de configuração da comunicação entre robô/PC, diferentemente do observado em sistemas Linux. O \textit{passo-a-passo} para instalação e configuração do ambiente utilizado para desenvolvimento se encontra em \cite[p. 6]{legonxj}.
 
-		A seleção desta ferramenta se deu, além dos motivos apresentados anteriormente, pelo fato da existência de uma \textit{API} que disponibiliza diversas funcionalidades referentes à navegação dos robôs. A \textit{API} do leJOS NXJ engloba desde funções referentes ao controle de motores, até o apoio a criação de mapas e sistemas complexos de navegação.
+		A seleção desta ferramenta é decorrente, além dos motivos apresentados anteriormente, da existência de uma \textit{API} que disponibiliza diversas funcionalidades referentes à navegação dos robôs. A \textit{API} do leJOS NXJ engloba desde funções referentes ao controle de motores, até o apoio a criação de mapas e sistemas complexos de navegação.
 
 		Em paralelo à escolha da linguagem de programação, buscou-se identificar um ambiente de desenvolvimento que disponibilizasse ferramentas de apoio que facilitem o desenvolvimento da solução. Com este objetivo, optou-se pela utilização da \textit{IDE} Eclipse\footnote{https://eclipse.org/}, por possuir um \textit{plugin} da ferramenta leJOS NXJ, como apresenta \cite{legonxj}. O tutorial para instalação e configuração do ambiente utilizado se encontra em \cite[p. 14]{legonxj}.
 
@@ -537,7 +537,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 	\subsubsection{Sensores}
 
-		Cada computador central do kit Mindstorm possui quatro portas para sensores, ou seja, a solução deste trabalho só pode envolver um máximo de quatro sensores, que fazem parte do kit Mindstorm. Para esta prova de conceito, foram utilizados os sensores de \textit{odometria}, a partir dos \textit{encoders} em cada atuador, um sensor ultrasônico, como sensor de distância e um sensor de toque.
+		Cada computador central do kit Mindstorms possui quatro portas para sensores, ou seja, a solução deste trabalho só pode envolver um máximo de quatro sensores, que fazem parte do kit Mindstorm. Para esta prova de conceito, foram utilizados os sensores de \textit{odometria}, a partir dos \textit{encoders} em cada atuador, um sensor ultrasônico, como sensor de distância e um sensor de toque.
 
 		\begin{itemize}
 			\item \textbf{Sensor de toque:}
@@ -551,8 +551,12 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 					\label{img:sensorToque}
 				\end{figure}
 
-				A classe \textit{TouchSensor}, que implementa a interface deste sensor, contém apenas um simples método: \textit{boolean isPressed()}.
+				A classe \textit{TouchSensor}, que implementa a interface deste sensor, contém apenas um simples método: 
 
+				\begin{lstlisting}
+					boolean isPressed();
+				\end{lstlisting}
+			
 			\item \textbf{Sensor ultrasônico:}
 
 				Como apresenta a Figura \ref{img:ultrasonic}, o sensor ultrasônico lembra bastante um par de olhos, apesar de possuir muitas características em comum com um sensor de som, em vez de uma câmera, por exemplo. Isso se dá pela estratégia de funcionamento do sensor, o qual emite um sinal sonoro que reflete em obstáculos à frente, retornando ao sensor. A partir da análise do tempo percorrido pelo sinal sonoro, é possível estimar a distância do objeto analisado, em relação ao robô.

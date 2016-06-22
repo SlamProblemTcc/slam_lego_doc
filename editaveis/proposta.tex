@@ -37,7 +37,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 		
 		De acordo com \cite{vieira}, a arquitetura de robôs móveis pode ser sub-dividida cinco camadas: \textit{percepção}, \textit{decisão}, \textit{planejamento de caminho}, \textit{geração de trajetória} e \textit{sistema de controle}.
 
-		A primeira camada, denominada \textit{camada de percepção}, será o grande foco deste trabalho. Onde a identificação de obstáculos para mapeamento do ambiente é uma atividade essencial para a resolução do problema de SLAM. Esta camada é responsável por adquirir informações sobre o ambiente ao seu redor, viabilizando a navegação e auto-localização no mesmo.
+		A primeira camada, denominada \textit{camada de percepção}, será o grande foco deste trabalho, onde a identificação de obstáculos para mapeamento do ambiente é uma atividade essencial para a resolução do problema de SLAM. Esta camada é responsável por adquirir informações sobre o ambiente ao seu redor, viabilizando a navegação e auto-localização no mesmo.
 
 		Já a segunda camada, \textit{decisão}, que foi o foco de trabalho de \cite{tccCarol}, tem como responsabilidade processar decisões do robô. Nesta camada se encontra o verdadeiro cérebro do robo, como afirma \cite{vieira}.
 
@@ -112,7 +112,7 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 
 A proposta deste trabalho é baseada na identificação e adaptação de técnicas de resolução do problema de SLAM. Para isso foi realizada uma revisão sistemática para encontrar e registrar diferentes técnicas de SLAM utilizadas atualmente. Com a identificação destas técnicas, durante o TCC\_2, o foco do trabalho será adaptar algumas destas técnicas para o contexto simplificado da robótica educacional.
 
-Este contexto simplipicado é baseado no kit de robótica Mindstorm, que, como já foi explicado, possui características bastante limitadas, como diversidade de sensores e capacidade de memória e processamento. A adaptação será implementada utilizando a linguagem Java, a partir da ferramenta \textit{leJOS NXJ}\footnote{http://www.lejos.org/nxj.php}.
+Este contexto simplipicado é baseado no kit de robótica Mindstorms, que, como já foi explicado, possui características bastante limitadas, como diversidade de sensores e capacidade de memória e processamento. A adaptação será implementada utilizando a linguagem Java, a partir da ferramenta \textit{leJOS NXJ}\footnote{http://www.lejos.org/nxj.php}.
 
 Esta solução busca complementar uma sequência de soluções relacionadas à robótica educacional que vêm sendo desenvolvidas na Universidade de Brasília, como \cite{tccCarol} e \cite{tccRodrigo}. O \textit{framework} Traveller, desenvolvido por \cite{tccRodrigo}, será utilizado para navegação em ambientes já mapeados pelo algoritmo desenvolvido durante este trabalho. Desse modo, este trabalho tem como objetivo incorporar um módulo novo do \textit{framework}, possibilitando a construção de mapas e auto-localização nos mesmos.
 

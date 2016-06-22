@@ -1,9 +1,9 @@
 \chapter[Introdução]{Introdução}
 %\addcontentsline{toc}{chapter}{Introdução}
 
-	A robótica é um termo que gera bastante curiosidade para qualquer pessoa, desde uma criança aprendendo a ler, até idosos surpresos com as novidades. Por esse e outros motivos, a robótica vem sendo pesquisada e evoluída em diversos contextos, como a robótica educacional, por exemplo. 
+	A robótica é um termo que gera curiosidade para qualquer pessoa, desde uma criança aprendendo a ler, até idosos surpresos com as novidades. Por esse e outros motivos, a robótica vem sendo pesquisada e evoluída em diversos contextos, como a robótica educacional, por exemplo. 
 
-	Entre as áreas de pesquisa que se enquadram na robótica, uma delas merece atenção especial: a robótica móvel. A mobilidade robótica é um dos grandes desafios para a comunidade devido à complexidade e à imprecisão dos dados obtidos, o qual será apresentado durante este trabalho de conclusão de curso. As próximas seções deste capítulo buscam apresentar a contextualização da pesquisa, a questão de pesquisa a ser investigada, a justificativa para realização da mesma, e os objetivos a serem alcançados. 
+	Entre as áreas de pesquisa que se enquadram na robótica, uma delas merece atenção especial: a robótica móvel. A mobilidade robótica é um dos grandes desafios para a comunidade devido à complexidade e à imprecisão dos dados obtidos, a qual será apresentada durante este trabalho de conclusão de curso. As próximas seções deste capítulo buscam apresentar a contextualização da pesquisa, a questão de pesquisa a ser investigada, a justificativa para realização da mesma, e os objetivos a serem alcançados. 
 
 \section{Contextualização}
 	
@@ -24,13 +24,13 @@
 
 		\item \textbf{Localização Absoluta com GPS}: A partir desta técnica, é fácil obter a posição absoluta do robô em relação à terra. O grande problema desta técnica é a margem de erro presente no sistema de GPS, inviável para navegações internas.
 
-		\item \textbf{Utilização de Bússolas}: É uma técnica interessante para reconhecimento da orientação do robô, o que facilita muito na navegação do mesmo. Entretando, as Bússolaslas são muito frágeis a interferências externas, como por exemplo, a proximidade de materiais ferro-magnéticos ou as fugas magnéticas dos motores presentes no próprio robô.
+		\item \textbf{Utilização de Bússolas}: É uma técnica interessante para reconhecimento da orientação do robô, o que facilita na navegação do mesmo. Entretando, as Bússolaslas são muito suscetíveis a interferências externas, como por exemplo, a proximidade de materiais ferro-magnéticos ou as fugas magnéticas dos motores presentes no próprio robô.
 
-		\item \textbf{Odometria}: Consiste na medição da distância relativa percorrida pelo robô, utilizando sensores presentes nas rodas do mesmo. Necessita do conhecimento do ponto de origem.
+		\item \textbf{Odometria}: Consiste na medição da distância relativa percorrida pelo robô, utilizando sensores presentes nas rodas do mesmo. Necessita do conhecimento do ponto de origem. Apresenta um erro cumulativo que cresce com o decorrer da navegação, ou seja, é proporcional a distância percorrida e ao número de mudanças na orientação do robô.
 		 
 	\end{itemize}
 
-	As formas apresentadas anteriormente, para se trabalhar com auto-localização, possuem características únicas que as adequam para diferentes contextos de navegação. Por exemplo, segundo \cite{roboBulldozerIV}, a Utilização de Mapas é uma técnica bastante útil quando se está trabalhando com um ambiente conhecido e estático, porém, em ambientes mutáveis e não conhecidos, essa estratégia se torna um problema. A Localização Relativa em Grupos é a técnica adequada quando a navegação envolve muitos robôs, a qual não necessita de conhecimento prévio do mapa. A Utilização de Pontos de Referência é uma técnica comumente utilizada, sendo útil quando não se conhece o ambiente de navegação. Entretanto, os pontos de referência, nesse caso, precisam ser conhecidos. 
+	As formas apresentadas anteriormente, para se trabalhar com auto-localização, possuem características únicas que as adequam para diferentes contextos de navegação. Por exemplo, segundo \cite{roboBulldozerIV}, a Utilização de Mapas é uma técnica bastante útil quando se está trabalhando com um ambiente conhecido e estático, porém, em ambientes mutáveis e não conhecidos, essa estratégia se torna um problema. A Localização Relativa em Grupos é a técnica adequada quando a navegação envolve muitos robôs, a qual não necessita de conhecimento prévio do mapa. A Utilização de Pontos de Referência é uma técnica comumente utilizada, sendo útil quando não se conhece o ambiente de navegação. Entretanto, nesse caso, o ambiente deve ser adaptado para instalação destes pontos de referencia. 
 
 	Quando se têm ambientes abertos e amplos, a técnica de Localização Absoluta com GPS é a mais utilizada. Entretanto, sua margem de erro torna a navegação em ambientes pequenos ou fechados inviável, como apresenta \cite{roboBulldozerIV}. A Navegação com utilização de Bússolas garante um apoio muito útil para orientação do robô. Contudo, essa técnica gera problemas relacionados a interferências externas, como materiais eletromagnéticos próximos à bússola \cite{roboBulldozerIV}.
 	
@@ -50,7 +50,7 @@
 
 \section{Justificativa}
 
-	A utilização da Robótica como uma forma de ensinar programação em escolas e faculdades, conhecida como Robótica Educacional \cite{roboticaEducacionalAulasMatematica}, traz alguns benefícios para o aluno. Conforme colocado pelos autores \cite{teachingWithRoboticKit}, \cite{roboticEducationBasedLego}, \cite{roboticaEducacionalAulasMatematica} e \cite{evaluationRoboticEducationScale}, alguns desses benefícios são: 
+	A utilização da Robótica como uma forma de apoio ao aprendizado em escolas e faculdades, conhecida como Robótica Educacional \cite{roboticaEducacionalAulasMatematica}, traz alguns benefícios para o aluno. Conforme colocado pelos autores \cite{teachingWithRoboticKit}, \cite{roboticEducationBasedLego}, \cite{roboticaEducacionalAulasMatematica} e \cite{evaluationRoboticEducationScale}, alguns desses benefícios são: 
 	\begin{itemize}
 		\item maior interesse pelos conteúdos estudados em aula;
 		\item capacidade de trabalhar em grupo;
@@ -58,7 +58,7 @@
 		\item multidisciplinaridade.
 	\end{itemize}
 	 
-	 A Universidade de Brasília utiliza esta abordagem de ensino/aprendizagem durante a disciplina de Introdução à Robótica Educacional, ministrada em 2016, pelo professor Dr. Maurício Serrano. A disciplina utiliza os Kits de robótica Mindstorms, da Lego, para desenvolvimento de soluções dos problemas presentes em um tapete de missões. A organização da disciplina se inspira nos campeonatos de robótica, como o \textit{ciber-rato} \cite{ciber-rato} ou \textit{micro-rato} \cite{roboBulldozerIV}. Neste tipo de campeonato, a navegação é o quesito mais importante \cite{ciber-rato}, a qual deve possuir a menor margem de erro para solucionar as missões.
+	 A Universidade de Brasília utiliza esta abordagem de ensino/aprendizagem durante a disciplina de Princípios de Robótica Educacional, ministrada desde 2013, pelo professor Dr. Maurício Serrano. A disciplina utiliza os Kits de robótica Mindstorms, da Lego, para desenvolvimento de soluções dos problemas presentes em um tapete de missões. A organização da disciplina se inspira nos campeonatos de robótica, como o \textit{ciber-rato} \cite{ciber-rato} ou \textit{micro-rato} \cite{roboBulldozerIV}. Neste tipo de campeonato, a navegação é o quesito mais importante \cite{ciber-rato}, a qual deve possuir a menor margem de erro para solucionar as missões.
 
 	As missões utilizadas durante a disciplina da UnB são referentes a problemas recorrentes no contexto da robótica mundial. A solução dos problemas é uma adaptação das técnicas existentes para o contexto limitado da disciplina, onde são utilizadas apenas ferramentas presentes no kit \textit{Mindstorms} da Lego. Esta adaptação exige um conhecimento específico sobre a técnica, para que o estudante possa identificar características relevantes e adaptá-las de acordo com o \textit{hardware} disponível.
 
