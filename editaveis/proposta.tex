@@ -70,16 +70,12 @@ Este capítulo apresenta detalhes sobre a pesquisa realizada durante o desenvolv
 	\subsection{Ambiente utilizado} % (fold)
 	\label{sub:ambiente_utilizado}
 		
-		O ambiente utilizado para navegação do robô é o tapete de missões \textit{Nature's Fury}, utilizado como um dos desafios do torneio \textit{First Lego League}\footnote{http://www.firstlegoleague.org/}. Como já existem alguns locais pré-definidos para possuírem obstáculos, o tapete será utilizado, ao longo deste trabalho para teste, avaliando a qualidade da geração do mapa por parte do robô. O mapa pode ser visualizado na Figura \ref{img:tapete}.
+		A partir da realização da prova de conceito, durante a primeira etapa deste trabalho, a qual está descrita na seção \ref{sec:desenvolvimento_prático}, optou-se pela utilização de um ambiente com, no mínimo, dois metros quadrados de área disponível para navegação. Serão utilizados, durante a realização da segunda etapa deste trabalho, cômodos como quartos, salas ou escritórios para implementação da solução proposta.
 
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.4]{figuras/tapete.eps}
-			\caption[Ambiente utilizado]{Ambiente utilizado.}
-			\label{img:tapete}
-		\end{figure}
+		Inicialmente o ambiente proposto se baseava no tapete de missões \textit{Nature's Fury}, com uma área pequena o suficiente para que os erros impactassem bastante no resultado do mapeamento. Isto ocorre devido a característica específica do sensor de distância utilizado, que está descrita de forma clara na seção \ref{sub:características_técnicas}.
 
-		Serão adicionados obstáculos neste tapete, os quais deverão ser mapeados pelo robô possibilitando sua auto-localização no ambiente, mesmo que de maneira simplista. A validação será a partir da comparação entre o verdadeiro mapa e o mapa gerado, levando em consideração a margem de erro comum nesse tipo de navegação.
+		Com a utilização de ambientes com uma área maior, espera-se que o impacto destes erros não seja tão problemático quanto em ambientes pequenos, como o utilizado na prova de conceito. Dentro do ambiente serão adicionados obstáculos além das paredes que contornam o ambiente, possibilitando testes com maior qualidade e eficiência.
+
 
 	% subsection ambiente_utilizado (end)
 

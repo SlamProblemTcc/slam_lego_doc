@@ -568,7 +568,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 					\label{img:ultrasonic}
 				\end{figure}
 
-				Este sensor é capaz de identificar distâncias de até dois metros e meio, mais especificamente 255 centímetros. Porém, sua utilização em distâncias tão grandes não é recomendada por \cite{legonxj}, devido a grande margem de erro presentes em medições como esta. De acordo com \cite{legonxj}, este sensor possui, em distâncias de aproximadamente 180 centímetros, uma margem de erro de mais ou menos três centímetros. Sua margem de erro é proporcional à distância entre robô e obstáculo.
+				Este sensor é capaz de identificar distâncias de até dois metros e meio, mais especificamente 255 centímetros. Porém, sua utilização em distâncias tão grandes não é recomendada por \cite{legonxj}, devido a grande margem de erro presentes em medições como esta. De acordo com \cite{legonxj}, este sensor possui, em distâncias de aproximadamente 180 centímetros, uma margem de erro de mais ou menos três centímetros (\textit{+/- 3}). Sua margem de erro é proporcional à distância entre robô e obstáculo.
 
 				Outra característica importante do funcionamento deste sensor é a emissão de sinais no formato de cone, como apresenta a Figura \ref{img:cone2}\footnote{http://arcbotics.com/products/sparki/parts/ultrasonic-range-finder/}.
 
@@ -582,16 +582,27 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 				O cone formado pela emissão do sinal segue uma angulação de 30º, ou seja, em uma distância de 180 centímetros, o cone possui um diâmetro de 90 centímetros. Desse modo, deve-se levar em consideração a incapacidade de identificar pequenas irregularidades em obstáculos, como fendas e buracos.
 
+				Durante o desenvolvimento da prova de conceito, observou-se com mais precisão a característica descrita acima, levando à alteração da proposta do trabalho, em relação ao ambiente utilizado. Inicialmente, o ambiente proposto se baseava no tapete de missões \textit{Nature's Fury}, utilizado como um dos desafios do torneio \textit{First Lego League}\footnote{http://www.firstlegoleague.org/}. Um exemplo deste ambiente pode ser visualizado na Figura \ref{img:tapete}.
+
+				\begin{figure}[H]
+					\centering
+					\includegraphics[scale=0.4]{figuras/tapete.eps}
+					\caption[Ambiente proposto inicialmente]{Ambiente utilizado.}
+					\label{img:tapete}
+				\end{figure}
+
+				Os problemas referentes aos cantos, buracos e fendas encontrados durante a realização da prova de conceito mostraram o grande impacto desta característica do sonar no mapeamento de ambientes pequenos, como o utilizado. Desse modo, optou-se por modificar o ambiente a ser utilizado durante a segunda etapa deste trabalho. O ambiente será baseado em cômodos reais, como quartos, salas ou escritórios. O critério inicial para utilização do ambiente é referente a área de navegação disponivel, devendo ser de, pelo menos, 2 metros quadrados.
+
 		\end{itemize}
 
-		\subsection{Computador central NXT (Brick)} % (fold)
+		\subsubsection{Computador central NXT (Brick)} % (fold)
 		\label{sub:brick}
 
 			O robô utilizado durante esta prova de conceito e durante o desenvolvimento da solução proposta, é da família Mindstorm NXT, da Lego. O computador central, de acordo com \cite{legonxj}, possui uma área de 7,2 x 11,2 centímetros, com um processador \textit{Atmel 32-bit ARM} de 48 MHz de frequência, memória RAM de 64 KB e 256 KB de memória \textit{flash}.
 
 			Estas limitações de memória e processamento foram contornadas a partir da utilização da arquitetura de processamento remoto, como foi definido na seção \ref{sec:adaptação_e_implementação}, já como um resultado da revisão sistemática apresentada na seção \ref{sec:revisão_sistemática}.
 		
-		% subsection subsection_name (end)
+		% subsection  (end)
 
 
 
