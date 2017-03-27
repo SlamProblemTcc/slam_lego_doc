@@ -1,39 +1,5 @@
 \chapter[Cenários de Teste]{Cenários de Teste}
-
+\label{sec:cenarios_teste}
 O principal objetivo dos cenários de teste é apoiar a observação e análise sistemática de todas as técnicas utilizadas durante o trabalho, assim como as diferentes configurações do ambiente e do robô. Após a realização de todos os cenários de teste propostos, deve-se chegar a uma conclusão referente a viabilidade da utilização da técnica do Filtro de Partículas em um contexto simplificado da robótica. 
 
-Os cenários de teste estão divididos em duas grandes áreas: \textit{Auto-localização} e \textit{Auto-localização e mapeamento de ambientes simultâneos}. Sabe-se que as técnicas utilizadas durante a Auto-localização também foram utilizadas durante a resolução do SLAM como um todo. Desse modo, buscou-se analisar separadamente cada técnica de auto-localização, minimizando ao máximo a margem de erros, para que depois as mesmas pudessem ser utilizadas na resolução do SLAM como um todo.
 
-Nas seções abaixo estão apresentados cada cenário de teste, seguido de suas conclusões e de um exemplo de sua utilização em conteúdos educacionais, registrando sua capacidade educacional.
-
-\section{Técnica 1 - Verificação de Perpendicularidade} % (fold)
-\label{sec:tecnica1}
-
-	Este cenário de teste apresenta a utilização de uma técnica simples, porém importante para a localização e, principalmente, para a correção de erros de navegação, advindos dos sensores odométricos e das derrapagens no solo, principalmente. Em um contexto de deslocamento, onde o robô sai do ponto \textit{A} ao ponto {B}, conhecendo suas coordenadas, a partir da utilização da geometria, é possível se orientar utilizando como base a perpendicularidade entre a frente do robô e a parede mais próxima.
-
-	A Figura \ref{img:perpendicularidade} representa a lógica presente nesta técnica, onde o robô compara as distâncias obtidas enquanto rotaciona no próprio eixo. Ao verificar-se que a distância está aumentando, o robô verifica para o sentido oposto até que a distância aumente. Quando o mesmo obtem a menor distância, pode-se afirmar que o robô está perpendicular à parede.
-
-	A partir da utilização desta técnica, é possível corrigir alguns erros, garantindo, por exemplo, que o robô faça um caminho em linha reta em direção a uma parede na sua frente.
-% section section_name (end)
-
-\section{Técnica 2 - Navegação paralela à parede} % (fold)
-\label{sec:técnica_2_navegação_paralela_à_parede}
-	
-	Este cenário de teste tem o objetivo de garantir a navegação paralela à paredes, a qual pode ocorrer diversas vezes durante uma navegação no ambiente. Com o objetivo de possibilitar de maneira a realização desta técnica de maneira eficiente, será utilizado o terceiro motor do kit para controlar a direção do sensor de distância, viabilizando a navegação em linha reta.
-
-	Esta viabilização é feita a partir da comparação das distâncias obtidas durante a navegação. O percurso ideal terá sempre a mesma medida obtida, já que o mesmo estará navegando paralelamente à parede. Caso a distância se altere, o robô identifica a mudança e corrige sua direção retornando ao valor correto. A Figura \ref{img:paralelamente} apresenta de maneira clara o funcionamento desta técnica.
-% section técnica_2_navegação_paralela_à_parede (end)
-
-\section{Técnica 3 - Correção de erros de rotação} % (fold)
-\label{sec:técnica_3_correção_de_erros_de_rotação}
-	
-	Este cenário de teste tem como objetivo verificar a implementação de uma técnica de correção de erros em rotações. Para isso, o robô precisa se encontrar próximo a uma parede. Utilizando a técnica \ref{sec:tecnica1} para encontrar a posição perpendicular à parede, registrando a distância encontrada na posição perpendicular. Após este registro, o robô realiza uma rotação completa, de 360º e uma nova verificação da distância. A partir da diferente entre as distâncias, o robô corrige o erro obtido nas rotações. 
-
-	Esta correção pode ser feita utilizando a variável \textit{fixErrorCount}, a qual é utilizada para ponderar seu valor na angulação de rotação desejada.
-% section técnica_3_correção_de_erros_de_rotação (end)
-
-\section{Técnica 4 - Direcionamento por bússola} % (fold)
-\label{sec:técnica_4_direcionamento_por_bússola}
-	
-	Este cenário de teste tem como objetivo verificar as vantagens da utilização de uma bússola como fonte de informações sobre o direcionamento do robô. Após esta verificação espera-se obter uma comparação entre os resultados obtidos com e sem a utilização de uma bússola, já que os erros também se encontram na mesma.
-% section técnica_4_direcionamento_por_bússola (end)
