@@ -17,7 +17,33 @@ Como o \textit{Simple SLAM} contempla um conjunto de técnicas de auto-localiza�
 
 \section{Montagem do Robô}
 
+	Esta seção tem como objetivo apresentar a forma de montagem do robô utilizado durante a pesquisa. O padrão utilizado foi escolhido após a análise e comparação da margem de erro presente em dois tipos de montagem. Durante a primeira etapa deste trabalho (TCC 1), foi utilizado o robô montado com esteiras para movimentação, seguindo o padrão encontrado em tanques de guerra, por exemplo.
+
+	Porém, após algumas análises e pesquisas, concluiu-se que a utilização de esteiras maximiza a margem de erro durante a navegação, prejudicando a qualidade do movimento. Isto se dá, segundo \cite{esteiras}, devido a área de contato entre a esteira e o chão. Quanto maior a área de contato, mais crítico é o resultado de derrapagens durante a movimentação, inviabilizando sua utilização para este objetivo. Desse modo, a partir da segunda etapa desta pesquisa, passou-se a utilizar um robô do tipo \textit{Carpet} (seguindo a nomenclatura da LEGO), onde estão presentes duas rodas motorizadas e uma terceira roda para equilíbrio do robô.
+
+	Além do padrão relacionado as rodas, deve-se atentar a localização do sensor de distância. Este deve estar localizado exatamente no centro do robô, ou o mais próximo disso. As Figuras \ref{img:montagem_robo}  e \ref{img:montagem_robo_costas} apresentam o robô utilizado durante a segunda etapa desta pesquisa.
+
 \section{Ambiente de Navegação}
+
+	Esta seção tem como objetivo apresentar o ambiente de navegação utilizado durante a realização da pesquisa. Ao longo da pesquisa, diversos ambientes foram utilizados, possibilitando a escolha do melhor ambiente para análise efetiva dos resultados.
+
+	Sabe-se que, independente do piso selecionado, erros estarão presentes, seja devido a deslizes entre as rodas e o piso, ou devido a margem de erro presente nos sensores odométricos. Desse modo, buscou-se selecionar um piso que possibilite uma margem de erro mínima, dentre as opções presentes em um contexto simplificado, de uma escola, por exemplo.
+
+	Deve-se optar sempre por pisos lisos, ou seja, sem irregularidades, as quais podem 'travar' a roda de apoio, que não possui um formato tão adequado quanto as rodas motorizadas. Este formato diferenciado da roda de apoio, o qual pode ser visualizado na Figura \ref{img:roda_apoio}, pode gerar diversas interferências durante a navegação, principalmente em pisos que possuem 'rachaduras', como as presentes em pisos feitos com azulejo, por exemplo.
+
+	Devido a esta característica da roda de apoio, pisos feitos com azulejo devem ser evitados, optando sempre por pisos tão lisos quanto possível. Um exemplo do piso utilizado durante esta pesquisa pode ser visualizado na Figura \ref{img:piso}.
+
+	Com o piso definido, deve-se definir o padrão de obstáculos no ambiente. Como o objetivo desta pesquisa é analisar a viabilidade da utilização de técnicas de auto-localização e mapeamento de ambientes em robôs simples, utilizando apenas um sensor de distância do tipo \textit{sonar}, deve-se adequar o padrão de obstáculos no ambiente, buscando minimizar a margem de erro presente na análise.
+
+	Como o robô utiliza obstáculos para se auto-localizar, tratando os obstáculos como \textit{pontos de referência}, os mesmos precisam se adequar ao máximo as características presentes nos sonares. A principal característica do sonar utilizado é apresentada na Figura \ref{img:cone}, a qual envolve o modelo de emissão do sinal utilizado pelo sonar.
+
+	Para que um sonar funcione, o mesmo emite um sinal que irá refletir no primeiro obstáculo encontrado, retornando ao robô e, a partir da análise do tempo gasto para percorrer este caminho, chega-se a conclusão da distância entre o robô e o objeto que refletiu o sinal. Porém, este sinal não é emitido de forma unidimensional, sua emissão é feita no formato de cone, devido as características físicas relacionadas a tramissão do som no ar. Por esse motivo, alguns erros podem ser adicionados à solução, visto que em determinadas situações, o objeto que refletiu o sinal sonoro não se encontra exatamente à frente do robô.
+
+	Isto significa que o robô pode enxergar obstáculos mesmo quando não existe nenhum obstáculo diretamente à sua frente, enxergando obstáculos presentes nas laterais. Infelizmente não possui uma solução exata para solucionar este problema, enquanto for utilizado um sonar para detecção de distâncias, este problema existirá. Desse modo, buscando minimizar a taxa de ocorrência desse \textit{'engano'}, o ambiente foi pensado e criado utilizando paredes lisas e em formatos uniformes, retilíneos.
+
+	Como o objetivo da pesquisa é analisar a possibilidade da auto-localização dentro de um ambiente, optou-se pela não utilização de obstáculos entre as paredes. Fazendo com que o ambiente seja composto apenas de piso e paredes, como apresenta a Figura \ref{img:ambiente_utilizado}. 
+
+	Como o robô deverá analisar os pontos de referência (paredes) e a partir de determinadas características se auto-localizar em relação ao mapa, o ambiente utilizado não pode ser simétrico. Ou seja, deve-se evitar a utilização de ambientes quadrados ou retangulares, por exemplo, já que o robô não conseguiria identificar características únicas em cada local do ambiente. A Figura \ref{img:ambiente_utilizado} apresenta uma boa opção de ambiente a ser utilizado, já que o mesmo possui características que viabilizam a comparação e conclusão de unicidade.
 
 \section{Configuração e Integração das Tecnologias}
 
