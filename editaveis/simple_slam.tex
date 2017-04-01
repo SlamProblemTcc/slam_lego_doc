@@ -128,7 +128,28 @@ A plataforma leJOS NXJ é multiplataforma, possibilitando sua utilização no \t
 	Feito isto, basta atualizar o \textit{firmware} no seu NXT.
 % subsection instalação_no_linux (end)
 
+\subsection{Instalação no MAC OS} % (fold)
+\label{sub:instalação_no_mac_os}
+	
+	Primeiramente deve-se instalar o JDK no sistema, fazendo download do mesmo \href{http://www.oracle.com/technetwork/java/}{aqui}. Instale o JDK e edite o PATH, adicionando o caminho do /bin do JDK instalado utilizando a variável \textit{$\%java\_home\% \textbackslash$ bin}. Para verificar se a instalação e configuração foram feitas corretamente, execute o comando \textit{java} no terminal e observe se informações de utilização do comando são apresentadas.
 
+	Para instalar o leJOS no MAC OS, deve-se primeiro configurar o ambiente, de acordo com os seguintes passos:
+
+	\begin{enumerate}
+		\item Instale o Software LEGO, o qual irá instalar também os Drivers USB.
+		\item Baixe o instalador \href{www.lejos.org}{aqui}.
+		\item Extraia os arquivos para uma nova localização, como \textit{/Applications/lejos\_nxj}.
+		\item Se você utiliza o login de administrador, você precisa criar (ou editar) o arquivo \textit{.tcshrc} no seu diretório \textit{home}.
+		\item Adicione as seguintes linhas no diretório onde o leJOS foi extraído:
+		\begin{lstlisting}
+			setenv NXJ_HOME /Applications/lejos_nxj
+			setenv PATH ${PATH}:${NXJ_HOME}/bin
+		\end{lstlisting}
+		\item Salve o arquivo em \textit{/users/administrator}.
+		\item Abra um terminal e execute \textit{tcsh}, você verá o tcsh shell.
+		\item Execute \textit{setenv} para ter certeza que as variáveis de ambiente estão setadas corretamente.
+	\end{enumerate}
+% subsection instalação_no_mac_os (end)
 
 \section{Arquitetura da Solução}
 
