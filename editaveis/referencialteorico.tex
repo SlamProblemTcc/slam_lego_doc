@@ -1,8 +1,8 @@
 %\part{Aspectos Gerais}
 
 \chapter[Referencial Teórico]{Referencial teórico}
-	
-	Parte da teoria relacionada à robótica móvel e à robótica educacional será descrita, brevemente, ao longo deste capítulo, visando facilitar o entendimento dos termos utilizados durante a realização desta pesquisa. 
+
+	Parte da teoria relacionada à robótica móvel e à robótica educacional será descrita, brevemente, ao longo deste capítulo, visando facilitar o entendimento dos termos utilizados durante a realização desta pesquisa.
 
 \section{Robótica e a auto-localização}
 
@@ -15,7 +15,7 @@ No contexto da robótica móvel, existem, por exemplo, os robôs de serviço. Es
 	\item Funções economicamente desvantajosas no uso de trabalhadores humanos \cite{roboticaIndustrial};
 	\item Uso humanitário (cadeiras de rodas autônomas, por exemplo);
 	\item Uso educacional \cite{teachingToolsState_Art}.
-\end{itemize} 
+\end{itemize}
 
 Robôs de serviço capazes de se deslocar livremente pelo ambiente, conhecendo-o, poderão realizar suas atividades de forma mais eficiente \cite{theCleaningProject}, o que garante sua autonomia.
 
@@ -55,11 +55,11 @@ Por outro lado, esta técnica possui requisitos que, muitas vezes, são inviáve
 
 Auto-localização e Mapeamento de Ambientes Simultâneos (SLAM) é uma técnica bastante utilizada para navegação em diferentes contextos, como na navegação marítima, por exemplo \cite{slamProblem}. Esta técnica garante a possibilidade do robô navegar em um ambiente desconhecido, construindo um mapa do ambiente e, simultaneamente, utilizar este mapa para se auto-localizar em relação ao ambiente \cite{slamProblem}. Ou seja, a técnica de SLAM, utilizando conceitos de inteligência artificial, garante autonomia móvel à maquina.
 
-Segundo \cite{slamProblem}, uma máquina capaz de partir de um ponto de origem desconhecido em um ambiente desconhecido e, utilizando seus sensores, mapear o ambiente, utilizando este mapa, simultaneamente, para se auto-localizar no ambiente faz juz à palavra \textit{robô}. Desse modo, com a vontade de criar verdadeiros \textit{robôs}, pesquisadores em robótica móvel vêm desenvolvendo e evoluindo diversas soluções para o problema de SLAM, nos mais diferentes contextos \cite{integrationVisionSLAMnonlinear}. Esta busca por uma solução elegante ao problema de SLAM possui o intuito de maximizar a efetividade da navegação autônoma \cite{theCleaningProject}. 
+Segundo \cite{slamProblem}, uma máquina capaz de partir de um ponto de origem desconhecido em um ambiente desconhecido e, utilizando seus sensores, mapear o ambiente, utilizando este mapa, simultaneamente, para se auto-localizar no ambiente faz juz à palavra \textit{robô}. Desse modo, com a vontade de criar verdadeiros \textit{robôs}, pesquisadores em robótica móvel vêm desenvolvendo e evoluindo diversas soluções para o problema de SLAM, nos mais diferentes contextos \cite{integrationVisionSLAMnonlinear}. Esta busca por uma solução elegante ao problema de SLAM possui o intuito de maximizar a efetividade da navegação autônoma \cite{theCleaningProject}.
 
 A possibilidade de se auto-localizar em um ambiente garante façanhas importantes para a robótica, como a resolução do problema do \textit{sequestro do robô}, por exemplo, como mostra \cite{sequestro}. Este é um problema especial de localização global no campo da robótica móvel, onde o desafio deste problema, segundo \cite{sequestroRobo}, é fazer com que o robô seja capaz de se localizar em um mapa após ser sequestrado.
 
-A ocorrência do \textit{sequestro} se dá quando, o robô, enquanto navega em um ambiente, é retirado do seu local e levado a outro totalmente desconhecido \cite{sequestro}. Em uma situação normal, o robô não seria capaz de entender que não está mais no local onde estava, fazendo com que o mesmo se perdesse. Diversas técnicas para solucionar este problema já foram desenvolvidas, geralmente utilizando como apoio o filtro de partículas, que será apresentado mais à frente \cite{sequestroRobo}. 
+A ocorrência do \textit{sequestro} se dá quando, o robô, enquanto navega em um ambiente, é retirado do seu local e levado a outro totalmente desconhecido \cite{sequestro}. Em uma situação normal, o robô não seria capaz de entender que não está mais no local onde estava, fazendo com que o mesmo se perdesse. Diversas técnicas para solucionar este problema já foram desenvolvidas, geralmente utilizando como apoio o filtro de partículas, que será apresentado mais à frente \cite{sequestroRobo}.
 
 De acordo com \cite{circumventingAssociationSLAM}, devido a todas as peculiaridades encontradas na robótica móvel, a mesma se encontra refém da utilização de algoritmos probabilísticos. Desse modo, as diversas soluções desenvolvidas, geralmente, diferem umas das outras pela utilização dos algoritmos probabilísticos. Entre os algoritmos mais utilizados, destacam-se o \textit{filtro de kalman} e o \textit{filtro de partículas}, como mostram as seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}.
 
@@ -93,7 +93,7 @@ Apesar das colocações, a utilização da abordagem do filtro de Kalman, geralm
  \subsection{Filtro de partículas} % (fold)
  \label{sub:filtro_de_partículas}
 
-Outra abordagem bastante utilizada para resolução do problema de SLAM envolve a utilização do filtro de Partículas, que é uma técnica para implementação de um \textit{Filtro Bayesiano} de forma recursiva, utilizando o método de \textit{Monte Carlo} \cite{integrationVisionSLAMnonlinear}. O método de Monte Carlo baseia-se em amostragens aleatórias em grande quantidade, com o objetivo de estabelecer o valor de uma grandeza que não é disponível através de uma expressão matemática \cite{mooney1997monte} e \cite{comparacaoKalmanParticulas}.
+Outra abordagem bastante utilizada para resolução do problema de SLAM envolve a utilização do filtro de Partículas, uma técnica para implementação de um \textit{Filtro Bayesiano} de forma recursiva, utilizando o método de \textit{Monte Carlo} \cite{integrationVisionSLAMnonlinear}. O método de Monte Carlo baseia-se em amostragens aleatórias em grande quantidade, com o objetivo de estabelecer o valor de uma grandeza que não é disponível através de uma expressão matemática \cite{mooney1997monte} e \cite{comparacaoKalmanParticulas}.
 
 O funcionamento desta abordagem baseia-se em subdividir o ambiente em partículas espalhadas uniformemente, que representam o robô munido de seus sensores \cite{comparacaoKalmanParticulas}. Cada partícula é uma hipótese da posição atual do robô \cite{dp-slam}. O robô e as partículas obtêm informações do ambiente; o robô utilizando seus sensores e as partículas utilizando equações matemáticas para geração destes dados \cite{comparacaoKalmanParticulas}. As informações obtidas pelo robô real são comparadas com as informações de cada partícula, excluindo as partículas que não oferecem informações semelhantes às do robô real \cite{comparacaoKalmanParticulas}. Com o passar dos ciclos, as partículas que ainda continuam no ambiente representam a posição atual do robô \cite{comparacaoKalmanParticulas}.
 
@@ -132,7 +132,7 @@ Já, de acordo com a relação da experiência do aluno em trabalhos em grupo, a
 Outra característica importante da utilização da tecnologia como ferramenta de aprendizado é a multidisciplinariedade \cite{analiseFerramentaEnsinoComputacao}, já que conteúdos referentes a diversas disciplinas são trabalhados e adaptados para buscar a solução do problema em investigação. \cite{teachingWithRoboticKit} sugere a utilização de atividades multidisciplinares para aprendizado de conteúdos base, como matemática e física, minimizando o problema do conhecimento parcial de certos conteúdos.
 
 Além de todos os benefícios apresentados acima, uma forte qualidade da abordagem \textit{Hands-on} é referente à construção do conhecimento por parte do aluno \cite{PCsEConstrucionismo}. Esta construção é gerada utilizando conhecimentos básicos de diferentes disciplinas para solucionar um problema que exige a integração de diversos conteúdos, seguindo uma filosofia construcionista, como é apresentado por \cite{construcionismoPapert}.
- 
+
 %\subsection{Construcionismo} % (fold)
 %\label{sub:construcionismo}
 
@@ -150,14 +150,14 @@ Grande parte deste baixo interesse, segundo \cite{oQueEConstrutivismo}, é devid
 
 Atualmente, de acordo com \cite{analiseFerramentaEnsinoComputacao}, no Brasil, o ensino de computação e robótica se restringe aos níveis superiores e técnicos, exceto alguns projetos realizados por universidades em escolas de nível fundamental e médio, como \cite{projetoRoboticaMauricio}. Esta introdução tem como objetivo introduzir noções lógicas e computacionais na Educação Básica, despertando o interesse dos alunos nas ciências exatas e estimulando-os a ingressar na carreira de Engenharia \cite{analiseFerramentaEnsinoComputacao}.
 
-Diversas ferramentas já foram desenvolvidas com o objetivo de apoiar a inserção de alunos da Educação Básica no contexto da computação e robótica. Na seção \ref{sec:robótica_educacional_suporte}, são apresentadas algumas utilizadas por \cite{analiseFerramentaEnsinoComputacao}, \cite{projetoRoboticaMauricio}, \cite{simpleRobotsIntroductionEng}. Ferramentas como essas, são utilizadas em diversos contextos, desde a utilização como apoio ao aprendizado, como mostra \cite{teachingWithRoboticKit}, até a utilização em campeonatos e jogos, como mostra \cite{ciber-rato}. 
+Diversas ferramentas já foram desenvolvidas com o objetivo de apoiar a inserção de alunos da Educação Básica no contexto da computação e robótica. Na seção \ref{sec:robótica_educacional_suporte}, são apresentadas algumas utilizadas por \cite{analiseFerramentaEnsinoComputacao}, \cite{projetoRoboticaMauricio}, \cite{simpleRobotsIntroductionEng}. Ferramentas como essas, são utilizadas em diversos contextos, desde a utilização como apoio ao aprendizado, como mostra \cite{teachingWithRoboticKit}, até a utilização em campeonatos e jogos, como mostra \cite{ciber-rato}.
 
 De acordo com \cite{analiseFerramentaEnsinoComputacao}, algumas abordagens utilizam ferramentas virtuais para facilitar o aprendizado. Por outro lado, segundo \cite{simpleMobile}, a utilização de ferramentas reais, equipadas com sensores e atuadores, garante maior interesse e introdução do aluno no contexto da engenharia do mundo real. Desse modo, a ferramenta utilizada neste trabalho será o kit de robótica educacional Mindstorm, da Lego, que tem suas características especificadas na seção \ref{sub:kit_mindstorm}.
 
 \subsection{Lego Mindstorms NXT} % (fold)
 \label{sub:kit_mindstorm}
 
-Com o passar dos anos, os componentes de \textit{hardware} vêm sendo evoluídos continuamente \cite{teachingWithRoboticKit}. Esta evolução faz com que o preço de componentes simples tenda a diminuir, como é o caso de pequenos processadores poderosos e praticamente descartáveis \cite{teachingWithRoboticKit}. Desse modo, esta evolução dos componentes de \textit{hardware} vem permitindo a utilização dos mesmos em diversos contextos, como educação e entretenimento. 
+Com o passar dos anos, os componentes de \textit{hardware} vêm sendo evoluídos continuamente \cite{teachingWithRoboticKit}. Esta evolução faz com que o preço de componentes simples tenda a diminuir, como é o caso de pequenos processadores poderosos e praticamente descartáveis \cite{teachingWithRoboticKit}. Desse modo, esta evolução dos componentes de \textit{hardware} vem permitindo a utilização dos mesmos em diversos contextos, como educação e entretenimento.
 
 Com o crescimento de demandas relacionadas a estes componentes, nascem os kits de robótica que integram componentes simples, porém, poderosos para utilização no contexto educacional e de entretenimento \cite{teachingWithRoboticKit}. Entre os kits existentes atualmente no mercado, destaca-se o kit de robótica Mindstorms, da Lego, o qual foi desenvolvido na década de 80 por pesquisadores do MIT. O kit utiliza peças de montagem no padrão Lego para construir a estrutura do robô, diversos tipos de sensores e alguns atuadores, para garantir a mobilidade e interação com o ambiente \cite{teachingWithRoboticKit}.
 
@@ -170,14 +170,14 @@ O cérebro do kit pode ser observado na Figura \ref{img:cerebro}, onde se encont
 	\includegraphics[scale=0.4]{figuras/brick.eps}
 	\label{img:cerebro}
 	\caption[Microprocessador central]{Microprocessador central}
-\end{figure}	
+\end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.4]{figuras/sensorLego.eps}
 	\caption[Sensor RGB - Lego]{Sensor RGB - Lego}
 	\label{img:sensorLego}
-\end{figure}	
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -203,7 +203,7 @@ Devido as vantagens de sua utilização, este kit foi selecionado para ser utili
 
 	A utilização da tecnologia como ferramenta de apoio ao aprendizado, como foi apresentado durante o capítulo, garante diversos benefícios ao aluno e, até mesmo, ao professor. Principalmente, quando o contexto trabalhado envolve problemas reais da robótica, como o problema de SLAM, por exemplo. A partir desta linha de pensamento, este capítulo buscou apresentar informações importantes para viabilizar a compreensão da pesquisa realizada, como a apresentação do problema de SLAM, os filtros probabilísticos mais utilizados e a abordagem educacional da Robótica.
 
-	A partir do conteúdo apresentado durante este capítulo, este trabalho irá buscar aplicar técnicas de auto-localização no contexto limitado da robótica educacional, aproximando os estudos de sala de aula aos contextos da robótica mundial.
+	A partir do conteúdo apresentado durante este capítulo, este trabalho busca aplicar técnicas de auto-localização no contexto limitado da robótica educacional, principalmente a técnica do Filtro de Partículas, aproximando os estudos de sala de aula aos contextos da robótica mundial.
 
 % section considerações_parciais (end)
 %Mindstorms NXT é uma linha de robótica da Lego, composta de um microcontrolador ARM7 com entrada para até quatro sensores e três atuadores. Possuindo uma tela LCD e botões, a interação com o usuário é de fácil entendimento.

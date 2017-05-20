@@ -31,6 +31,36 @@ Como o \textit{Simple SLAM} contempla um conjunto de técnicas de auto-localiza�
 
 \section{Arquitetura do Robô}
 
+De acordo com \cite{vieira}, a arquitetura de robôs móveis pode ser sub-dividida em cinco camadas: \textit{percepção}, \textit{decisão}, \textit{planejamento de caminho}, \textit{geração de trajetória} e \textit{sistema de controle}.
+
+A primeira camada, denominada \textit{camada de percepção}, foi o grande foco deste trabalho, onde a identificação de obstáculos como pontos de referência é uma atividade essencial para a possibilidade de auto-localização, utilizando como base o Filtro de Partículas, por exemplo. Esta camada é responsável por adquirir informações sobre o ambiente ao seu redor, viabilizando a navegação e auto-localização no mesmo.
+
+Já a segunda camada, \textit{decisão}, que foi o foco de trabalho de \cite{tccCarol}, tem como responsabilidade processar decisões do robô. Nesta camada se encontra o verdadeiro cérebro do robo, como afirma \cite{vieira}.
+
+Na terceira camada, \textit{planejamento de caminho}, será utilizado, como ferramenta de apoio, o \textit{framework} Traveller, desenvolvido por \cite{tccRodrigo}. Sua utilização se refere ao planejamento da navegação no ambiente após o mapeamento, mesmo que parcial, do ambiente. Ou seja, enquanto o robô navega e mapeia o ambiente, os locais já percorridos (conhecidos e mapeados) possibilitarão a utilização do \textit{framework}. Por outro lado, em locais ainda desconhecidos, o planejamento do caminho será feito de forma aleatória, buscando mapear o ambiente como um todo.
+
+A quarta camada, \textit{geração da trajetória}, utiliza o planejamento realizado na camada anterior para definir quais açoes devem ser realizadas no \textit{hardware} do robô, levando em consideração as características físicas do mesmo. Com isso, a quinta camada, \textit{sistema de controle}, é chamada para verificar o recebimento adequado dos sinais, assim como sua execução nos atuadores.
+
+A figura \ref{img:camadas} apresenta as cinco camadas, onde, no nível mais alto, se encontra a camada de percepção, que é o foco deste trabalho.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.6]{figuras/camadas.eps}
+	\caption[Arquitetura do robô]{Arquitetura do robô. Fonte \cite{vieira}.}
+	\label{img:camadas}
+\end{figure}
+
+\subsection{Montagem do robô} % (fold)
+\label{sub:montagem_do_robô}
+
+A montagem utilizada durante o início deste trabalho, mais especificamente durante a realização da prova de conceito, é baseada em esteiras. O robô é equipado com um sonar, para identificar a distância de obstáculos, e um sensor de toque. Para movimentação, foram utilizados dois motores, A e B, dispostos na direita e esquerda, respectivamente. A Figura \ref{img:fotoRobo} apresenta a montagem utilizada.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.25]{figuras/fotoRobo.eps}
+	\caption[Montagem do robô]{Montagem do robô.}
+	\label{img:fotoRobo}
+\end{figure}
 
 \section{Montagem do Robô}
 
