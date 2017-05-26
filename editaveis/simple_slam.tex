@@ -305,6 +305,14 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 	Nesta seção será apresentada a arquitetura utilizada na solução desenvolvida durante esta pesquisa, a qual envolve a aplicação do Filtro
 	de Partículas como uma forma de se auto-localizar no ambiente, partindo de um ponto desconhecido.
 
+	A solução geral é dividida em duas grandes áreas, a obtenção de informações e execução de comandos, presente no robô, executando localmente, e
+	o processamento do Filtro de Partículas, que é realizado remotamente, em um computador. A comunicação entre os dois projetos é feita a partir
+	da utilização da tecnologia \textit{bluetooth}, utilizando a ferramenta \textit{bluecove}. As seções seguintes apresentam a arquitetura
+	utilizada em cada uma dessas áreas, assim como algumas características de implementação.
+
+	\subsection{Módulo Local - NXT}
+
+
 	Para que o robô possa se localizar no ambiente, o mesmo precisa se locomover buscando identificar pontos de referência no ambiente. Como foi descrito na
 	seção \ref{sub:filtro_de_partículas}, o Filtro de Partículas utiliza a informação de distância de obstáculos em relação ao robô para identificação
 	do local em que o mesmo se encontra. Desse modo, para que o robô identifique um local único, o mesmo precisa se locomover pelo ambiente de maneira
@@ -346,5 +354,10 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 		\caption[Classes Piloto]{Classes que contemplam o Piloto da solução.}
 		\label{img:classes_navegacao}
 	\end{figure}
+
+	\subsection{Módulo Remoto - PC}
+
+
+
 
 \section{Considerações Parciais}
