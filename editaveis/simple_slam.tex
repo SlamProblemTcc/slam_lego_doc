@@ -51,6 +51,7 @@ A figura \ref{img:camadas} apresenta as cinco camadas, onde, no nível mais alto
 \end{figure}
 
 \section{Montagem do Robô}
+\label{sec:montagem_robo}
 
 	Esta seção tem como objetivo apresentar a forma de montagem do robô utilizada durante a pesquisa. O padrão utilizado foi escolhido após a análise e comparação da margem de erro presente em dois tipos de montagem. Durante a primeira etapa deste trabalho (TCC 1), foi utilizado o robô montado com esteiras para movimentação, seguindo o padrão encontrado em tanques de guerra, como pode ser observado na Figura \ref{img:montagem_antiga}.
 
@@ -300,5 +301,50 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 
 % subsection utilizando_ide_eclipse (end)
 \section{Arquitetura da Solução}
+
+	Nesta seção será apresentada a arquitetura utilizada na solução desenvolvida durante esta pesquisa, a qual envolve a aplicação do Filtro
+	de Partículas como uma forma de se auto-localizar no ambiente, partindo de um ponto desconhecido.
+
+	Para que o robô possa se localizar no ambiente, o mesmo precisa se locomover buscando identificar pontos de referência no ambiente. Como foi descrito na
+	seção \ref{sub:filtro_de_partículas}, o Filtro de Partículas utiliza a informação de distância de obstáculos em relação ao robô para identificação
+	do local em que o mesmo se encontra. Desse modo, para que o robô identifique um local único, o mesmo precisa se locomover pelo ambiente de maneira
+	que a margem de erro não inviabilize sua auto-localização.
+
+	Visto isso, buscou-se uma maneira de abstrair a navegação do robô, utilizando o conceito de Piloto, como apresenta \cite{legonxj}. Este conceito
+	faz referência a todas as informações e processamentos referentes a navegação serem integrados em apenas um responsável, o Piloto. Este Piloto
+	deve conhecer algumas informações e funções que garantem a abstração da navegação, como:
+
+	\begin{itemize}
+		\item \textbf{Distância entre Rodas:}
+
+			É necessário o conhecimento da distância ente cada roda, pois a realização de curvas depende da rotação em cada roda e a distância entre
+			as mesmas. Quanto maior a distância entre as rodas, maior deverá ser o número de voltas necessárias em cada roda para contemplar a curva desejada.
+
+			\item \textbf{Diâmetro da Roda:}
+
+			Com a informação do diâmetro da roda é possível calcular a quantidade de giros necessários para contemplar determinadas distâncias, assim
+			como determinadas curvas.
+
+			\item \textbf{Controle de Cada Motor:}
+
+			Com o Piloto possuindo controle de cada roda, o mesmo pode calcular e realizar a navegação de maneira integrada, abstraindo todo o
+			processo de navegação. No caso da solução, foram utilizados os motores B e C, como esquerdo e direito, respectivamente.
+
+			\item \textbf{Dados dos sensores:}
+
+			O Piloto precisa do acesso aos dados dos sensores de distância (sonar) e odométricos para que possa calcular e executar trajetos
+			durante a navegação no ambiente. Nesta solução foi utilizado o sensor de distância (sonar) na porta S1, como foi descrito na seção \ref{sec:montagem_robo}.
+
+	\end{itemize}
+
+	Para implementação desta abstração foram utilizadas as classes \textit{DifferentialPilot}, \textit{RangeFinder} e \textit{Navigator},
+	presentes na API leJOS. A integração destas classes segue o apresentado na Figura \ref{img:classes_navegacao}.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{figuras/classes_nav.eps}
+		\caption[Classes Piloto]{Classes que contemplam o Piloto da solução.}
+		\label{img:classes_navegacao}
+	\end{figure}
 
 \section{Considerações Parciais}
