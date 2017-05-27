@@ -357,6 +357,32 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 
 	\subsection{Módulo Remoto - PC}
 
+		A parte da solução que é executada remotamente envolve o processamento do Filtro de Partículas e a geração e envio de comandos ao robô, seja para navegação
+		ou obtenção de informações dos sensores. A solução possui um mecanismo de conexão \textit{bluetooth} com dispositivos, utilizando a ferramenta
+		\textit{Bluecove}, bastando apenas informar o nome do dispositivo, que, no caso desta pesquisa, é \textbf{GTX}.
+
+		A forma de \textit{input} desta informação é a partir da utilização do componente gráfico presente na API leJOS, o qual possibilita a apresentação do ambiente de navegação,
+		as partículas e o resultado da filtragem, por exemplo, além da possibilidade do contato com o usuário por meio de \textit{inputs} textuais e botões.
+
+		A Figura \ref{img:frame_pc} apresenta um exemplo do componente gráfico utilizado para contato com o usuário durante esta pesquisa.
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.7]{figuras/frame.eps}
+			\caption[Interface Gráfica]{Interface gráfica utilizada durante a pesquisa.}
+			\label{img:frame_pc}
+		\end{figure}
+
+	A arquitetura de comunicação entre os projetos e o usuário segue o padrão apresentado na Figura \ref{img:arq_pc}. Onde o módulo \textit{Localization}
+	faz referência a parte da solução que é executada remotamente, em um computador.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{figuras/arq_pc.eps}
+		\caption[Arquitetura de Comunicação]{Arquitetura de Comunicação entre projetos e usuário.}
+		\label{img:arq_pc}
+	\end{figure}
+
 
 
 
