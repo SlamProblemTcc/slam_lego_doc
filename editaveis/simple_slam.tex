@@ -374,7 +374,7 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 		\end{figure}
 
 	A arquitetura de comunicação entre os projetos e o usuário segue o padrão apresentado na Figura \ref{img:arq_pc}. Onde o módulo \textit{Localization}
-	faz referência a parte da solução que é executada remotamente, em um computador.
+	faz referência a parte da solução que é executada remotamente, em um computador. E o módulo \textit{Navigator} é executado localmente, no NXT.
 
 	\begin{figure}[H]
 		\centering
@@ -383,7 +383,14 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 		\label{img:arq_pc}
 	\end{figure}
 
-
-
+O processamento do Filtro de Partículas é executado utilizando métodos da API leJOS, de acordo com toda a teoria apresentada na seção
+\ref{sub:filtro_de_partículas}. A geração das informações de distância de cada partículas necessita de um processamento bastante elevado,
+quando se tem como referência a capacidade de \textit{hardware} dos robôs NXT. Desse modo, todo esse processamento é feito remotamente,
+executando em um computador. A quantidade de partículas utilizadas foi variável ao longo da pesquisa, buscando estudar o impacto desta variável
+durante a execução dos testes.
 
 \section{Considerações Parciais}
+
+Esta solução foi desenvolvida e melhorada de forma que o principal objetivo foi analisar a viabilidade da utilização de uma técnica
+de auto-localização utilizando o Kit de Robótica Mindstorms da Lego. Por esse motivo, foram utilizadas apenas ferramentas presentes no Kit
+e em sua API, possibilitando a replicação do estudo e sua utilização em um ambiente Educacional por parte de qualquer interessado no assunto.
