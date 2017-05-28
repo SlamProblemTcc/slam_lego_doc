@@ -21,7 +21,7 @@ Os dados obtidos a partir de cada cenário de teste está organizado de acordo c
   \label{tab:org_dados}
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
-  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Erro} \\ \hline
+  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão} \\ \hline
   \end{tabular}
 \end{table}
 
@@ -38,12 +38,11 @@ Onde,
 
   \item \textbf{Movimentos} apresenta o número de movimentos aleatórios que foram necessários para obtenção da localização;
 
-  \item \textbf{Erro} informando qual o erro obtido no teste, ou seja, qual a distância, em centímetros (cm), entre a posição obtida e a posição real do robô.
+  \item \textbf{Precisão} informando qual a precisão obtida no teste, classificada em \textit{Ótima}, \textit{Boa}, \textit{Mediana},
+  \textit{Baixa}, \textit{Baixíssima}
 \end{itemize}
 
-\subsection{Cenário de Teste 1}
-
-Durante este cenário de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, onde todos os
+Durante os cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, onde todos os
 valores se encontram em centímetros (cm).
 
 \begin{figure}[H]
@@ -53,7 +52,13 @@ valores se encontram em centímetros (cm).
 	\label{img:map1}
 \end{figure}
 
-Os resultados obtidos com o cenários estão dispostos na Tabela \ref{tab:cen1}.
+\subsection{Cenário de Teste 1}
+
+Os resultados obtidos com o cenários estão dispostos na Tabela \ref{tab:cen1}. Deve-se atentar que o exemplo 3 possui um agravante, o
+robô teve sua roda direita presa na parede enquanto se locomovia. Desse modo, o robô se perdeu e teve que se encontrar novamente, se comportando
+na maneira esperada em um caso clássico de "sequestro do robô".
+
+Este cenário faz referência a variação da quantidade de partículas.
 
 \begin{table}[H]
   \centering
@@ -61,7 +66,32 @@ Os resultados obtidos com o cenários estão dispostos na Tabela \ref{tab:cen1}.
   \label{tab:cen1}
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
-  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Erro} \\ \hline
-  1                & 200                   & 100             & 100                    & 9                 & 15 \\ \hline
+  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão}\\ \hline
+  1                & 200                   & 100             & 100                    & 9                & Ótima \\ \hline
+  2                & 400                   & 100             & 100                    & 10                & Boa \\ \hline
+  3                & 500                   & 100             & 100                    & 21                & Mediana \\ \hline
+  4                & 100                   & 100             & 100                    & 5                & Baixa \\ \hline
+  5                & 150                   & 100             & 100                    & 3                & Ótima \\ \hline
+  \end{tabular}
+\end{table}
+
+
+\subsection{Cenário de Teste 2}
+
+Os resultados obtidos com o cenários estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência a variação da velocidade de
+rotação do robô.
+
+\begin{table}[H]
+  \centering
+  \caption{Resultados obtidos - Cenário 2}
+  \label{tab:cen2}
+  \begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão}\\ \hline
+  1                & 150                   & 10             & 100                    & 7                & Mediana \\ \hline
+  2                & 150                   & 30             & 100                    & 6                & Boa \\ \hline
+  3                & 150                   & 50             & 100                    & 3                & Mediana \\ \hline
+  4                & 150                   & 70             & 100                    & 5                & pendente \\ \hline
+  5                & 150                   & 90             & 100                    & 3                & pendente \\ \hline
   \end{tabular}
 \end{table}
