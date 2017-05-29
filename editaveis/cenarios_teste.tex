@@ -99,14 +99,14 @@ rotação do robô.
 
 \subsection{Cenário de Teste 3}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência a variação da velocidade de
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen3}. Este cenário faz referência a variação da velocidade de
 deslocamento do robô, em unidades do diâmetro das rodas por segundo. Fixou-se a quantidade de partículas em 150, de acordo com os resultados
 obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 graus por segundo.
 
 \begin{table}[H]
   \centering
   \caption{Resultados obtidos - Cenário 3}
-  \label{tab:cen2}
+  \label{tab:cen3}
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
   \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão}\\ \hline
@@ -115,5 +115,33 @@ obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 gra
   3                & 150                   & 30             & 10                    & 3                & Baixa\\ \hline
   4                & 150                   & 30             & 15                    & 6                & Boa \\ \hline
   5                & 150                   & 30             & 30                    & 5                & Mediana\\ \hline
+  \end{tabular}
+\end{table}
+
+\subsection{Cenário de Teste 4}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen4}. Este cenário faz referência a análise da solução
+utilizando a configuração que obteve os melhores resultados nos cenários anteriores, ou seja:
+
+\begin{itemize}
+  \item \textbf{Partículas:} 150
+  \item \textbf{Rotação:} 30
+  \item \textbf{Deslocamento:} 15
+\end{itemize}
+
+O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando configuração fixa durante os exemplos.
+
+\begin{table}[H]
+  \centering
+  \caption{Resultados obtidos - Cenário 4}
+  \label{tab:cen4}
+  \begin{tabular}{|c|c|c|c|c|c|}
+  \hline
+  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão}\\ \hline
+  1                & 150                   & 30             & 15                    & 8                & Mediana \\ \hline
+  2                & 150                   & 30             & 15                    & 4                & Baixa \\ \hline
+  3                & 150                   & 30             & 15                    & 5                & Baixíssima \\ \hline
+  4                & 150                   & 30             & 15                    & 7                & Mediana \\ \hline
+  5                & 150                   & 30             & 15                    & 8                & Boa \\ \hline
   \end{tabular}
 \end{table}
