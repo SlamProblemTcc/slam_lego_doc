@@ -43,7 +43,25 @@ Onde,
   centímetro como unidade, seguindo o padrão do restante da pesquisa.
 
   \item \textbf{Precisão} informando qual a precisão obtida no teste, classificada em \textit{Ótima}, \textit{Boa}, \textit{Mediana},
-  \textit{Baixa} e \textit{Baixíssima}.
+  \textit{Baixa} e \textit{Baixíssima}. A classificação da precisão é feita a partir da comparação entre a posição estimada e a posição real.
+  Como a posição estimada possui uma margem de erro, destacada como uma elipse no local indicado, a comparação utiliza como referência
+  esta elipse, assim como a partícula definida como sendo a que possui os dados mais próximos aos obtidos pelo robô real. A classificação
+  segue a tabela \ref{tab:class_precisao}.
+
+  \begin{table}[H]
+    \centering
+    \caption{Classificação da Precisão.}
+    \label{tab:class_precisao}
+    \begin{tabular}{|c|c|}
+    \hline
+    \textbf{Precisão} & \textbf{Descrição}                                                                                                                                                                \\ \hline
+    Ótima             & \begin{tabular}[c]{@{}c@{}}Posição real se encontra a menos \\ de 5 centímetros da partícula final.\end{tabular}                                                                  \\ \hline
+    Boa               & \begin{tabular}[c]{@{}c@{}}Posição real se encontra a uma distância entre\\ 6 e 10 centímetros da partícula real, se encontrando,\\ ainda, dentro da elipse de erro.\end{tabular} \\ \hline
+    Mediana           & \begin{tabular}[c]{@{}c@{}}Posição real se encontra próxima as fronteiras da\\ elipse de erro, com mais de 10 centímetros de distância\\ da partícula final.\end{tabular}         \\ \hline
+    Baixa             & \begin{tabular}[c]{@{}c@{}}Posição real se encontra fora da elipse de erro, porém\\ a até 10 centímetros de distância da sua fronteira.\end{tabular}                              \\ \hline
+    Baixíssima        & \begin{tabular}[c]{@{}c@{}}Posição real se encontra fora da elipse de erro, a uma\\ distância de mais de 10 centímetros da fronteira da elipse.\end{tabular}                      \\ \hline
+    \end{tabular}
+  \end{table}
 
 \end{itemize}
 
