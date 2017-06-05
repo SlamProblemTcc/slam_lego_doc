@@ -21,13 +21,13 @@ Os dados obtidos a partir de cada cenário de teste está organizado de acordo c
   \label{tab:org_dados}
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
-  \textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Precisão} \\ \hline
+  \textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Precisão} \\ \hline
   \end{tabular}
 \end{table}
 
 Onde,
 \begin{itemize}
-  \item \textbf{Exemplo} faz referência ao ciclo de teste. Cada cenário foi testado 5 (cinco) vezes, buscando obter a média como resultado
+  \item \textbf{Ex.} faz referência ao ciclo de teste. Cada cenário foi testado 5 (cinco) vezes, buscando obter a média como resultado
   final do cenário;
 
   \item \textbf{Partículas} informa a quantidade de partículas utilizada durante este teste;
@@ -36,7 +36,7 @@ Onde,
 
   \item \textbf{Deslocamento} informa a velocidade de deslocamento em linha reta, em centímetros por segundo;
 
-  \item \textbf{Movimentos} apresenta o número de movimentos aleatórios que foram necessários para obtenção da localização;
+  \item \textbf{Ciclos} apresenta o número de ciclos de filtragem que foram necessários para obtenção da localização;
 
   \item \textbf{Posição} informando qual a posição estimada do robô, informando a margem de erro da posição estimada, tanto no eixo X
   quanto no eixo Y. Basicamente este campo informa de que ponto a que ponto nos eixos X e Y, o robô pode estar localizado, utilizando o
@@ -71,7 +71,7 @@ Este cenário faz referência a variação da quantidade de partículas.
 \label{tab:cen1}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 200                 & 100              & 100                   & 9                   & \begin{tabular}[c]{@{}c@{}}X: 25 a 70\\ Y: 15 a 30\end{tabular} & Ótima             \\ \hline
 2                & 400                 & 100              & 100                   & 10                  & \begin{tabular}[c]{@{}c@{}}X: 17 a 37\\ Y: 39 a 66\end{tabular} & Boa               \\ \hline
 3                & 500                 & 100              & 100                   & 21                  & \begin{tabular}[c]{@{}c@{}}X: 35 a 54\\ Y: 34 a 82\end{tabular} & Mediana           \\ \hline
@@ -92,7 +92,7 @@ rotação do robô.
 \label{tab:cen2}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 10               & 100                   & 7                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 72\\ Y: 47 a 71\end{tabular} & Boa               \\ \hline
 2                & 150                 & 30               & 100                   & 6                   & \begin{tabular}[c]{@{}c@{}}X: 20 a 38\\ Y: 42 a 67\end{tabular} & Ótima             \\ \hline
 3                & 150                 & 50               & 100                   & 3                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 63\\ Y: 30 a 62\end{tabular} & Boa               \\ \hline
@@ -114,7 +114,7 @@ obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 gra
 \label{tab:cen3}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 30               & 2                     & 4                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 70\\ Y: 28 a 62\end{tabular} & Baixa             \\ \hline
 2                & 150                 & 30               & 5                     & 6                   & \begin{tabular}[c]{@{}c@{}}X: 31 a 59\\ Y: 32 a 70\end{tabular} & Mediana           \\ \hline
 3                & 150                 & 30               & 10                    & 3                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 73\\ Y: 20 a 78\end{tabular} & Baixa             \\ \hline
@@ -142,7 +142,7 @@ O objetivo principal deste cenário é verificar a variabilidade dos resultados 
 \label{tab:cen4}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Exemplo} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Movimentos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 30               & 15                    & 8                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 54\\ Y: 28 a 45\end{tabular} & Mediana           \\ \hline
 2                & 150                 & 30               & 15                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 62 a 87\\ Y: 23 a 58\end{tabular} & Baixa             \\ \hline
 3                & 150                 & 30               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 27 a 75\\ Y: 10 a 32\end{tabular} & Baixíssima        \\ \hline
