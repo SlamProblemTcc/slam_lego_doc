@@ -150,3 +150,31 @@ O objetivo principal deste cenário é verificar a variabilidade dos resultados 
 5                & 150                 & 30               & 15                    & 8                   & \begin{tabular}[c]{@{}c@{}}X: 37 a 67\\ Y: 34 a 67\end{tabular} & Boa               \\ \hline
 \end{tabular}
 \end{table}
+
+\subsection{Cenário de Teste 5}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen5}. Este cenário faz referência a análise da solução
+utilizando um mapa sem características únicas, como um retângulo.
+
+\begin{itemize}
+  \item \textbf{Partículas:} 150
+  \item \textbf{Rotação:} 30
+  \item \textbf{Deslocamento:} 15
+\end{itemize}
+
+O objetivo deste cenário é verificar a viabilidade da utilização do Filtro de Partículas em um ambiente sem pontos de referência únicos.
+
+\begin{table}[H]
+\centering
+\caption{Resultados Obtidos - Cenário 5}
+\label{tab:cen5}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+1                & 150                 & 30               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 21 a 63\\ Y: 40 a 84\end{tabular} & Mediana           \\ \hline
+2                & 150                 & 30               & 15                    & 11                   & \begin{tabular}[c]{@{}c@{}}X: 37 a 70\\ Y: 47 a 90\end{tabular} & Mediana             \\ \hline
+3                & 150                 & 30               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 27 a 75\\ Y: 10 a 32\end{tabular} & Pendente        \\ \hline
+4                & 150                 & 30               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 66 a 70\\ Y: 27 a 33\end{tabular} & Pendente           \\ \hline
+5                & 150                 & 30               & 15                    & 8                   & \begin{tabular}[c]{@{}c@{}}X: 37 a 67\\ Y: 34 a 67\end{tabular} & Pendente               \\ \hline
+\end{tabular}
+\end{table}
