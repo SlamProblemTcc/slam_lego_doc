@@ -1,5 +1,5 @@
 
-	A revisão bibiliográfica deste trabalho foi complementada pelo emprego da técnica de revisão sistemática. Nesta seção apresentam-se as três fases básicas da revisão sistemática definidas por \cite{Kitchenham}, \ref{sub:planejamentoRevisao} \textit{planejamento da revisão}, \ref{sub:conducaoRevisao} \textit{condução da revisão} e \ref{sub:publicacaoRevisao} \textit{reporte dos resultados da revisão}, como mostra a Figura \ref{img:processoGeralRevisao}.
+	A revisão bibiliográfica deste trabalho foi complementada pelo emprego da técnica de revisão sistemática. Nesta seção, apresentam-se as três fases básicas da revisão sistemática definidas por \cite{Kitchenham}, \ref{sub:planejamentoRevisao} \textit{planejamento da revisão}, \ref{sub:conducaoRevisao} \textit{condução da revisão} e \ref{sub:publicacaoRevisao} \textit{reporte dos resultados da revisão}, como mostra a Figura \ref{img:processoGeralRevisao}.
 
 	\begin{figure}[H]
 			\centering
@@ -17,9 +17,10 @@
 
 		O objetivo inicial do trabalho é estudar a problemática da auto-localização na robótica, identificando diferentes soluções em diversos contextos. Afirmado isso, foi possível realizar uma pesquisa bibliográfica com o objetivo de identificar diferentes linhas de pesquisa nesta área. Após uma análise superficial de cada linha de pesquisa, foi selecionada a linha de pesquisa que adota, como solução para a auto-localização, a utilização da técnica de SLAM, o que pode ser considerado como o marco teórico do trabalho.
 
-		Com a identificação do marco teórico do trabalho, a definição do foco da pesquisa torna-se uma tarefa menos árdua. Como o marco teórico deste trabalho baseia-se nas linhas de pesquisa que buscam utilizar a técnica de SLAM para realizar navegação autônoma, esta revisão sistemática teve como objetivo identificar diferentes técnicas utilizadas atualmente para solucionar o problema de SLAM em diferentes contextos, desde contextos simplificados até contextos altamente complexos.
+		Com a identificação do marco teórico do trabalho, a definição do foco da pesquisa torna-se uma tarefa menos árdua. Como o marco teórico deste trabalho baseia-se nas linhas de pesquisa que buscam utilizar a técnica de SLAM para realizar navegação autônoma, esta revisão sistemática teve como objetivo identificar diferentes técnicas utilizadas atualmente para solucionar o problema de SLAM em diferentes contextos,
+		desde contextos marcados pelo uso de recursos limitados, precisando, portanto, serem mais simplificados, até mesmo contextos altamente complexos.
 
-		A definição deste objetivo da revisão dá-se pela necessidade de conhecimento amplo em relação a diferentes técnicas para solucionar o problema de SLAM. Como este trabalho buscará adaptar técnicas para um contexto simplificado, ou educacional, adicionou-se aos objetivos da revisão itens relacionados à Robótica Educacional e robôs simples.
+		A definição deste objetivo da revisão dá-se pela necessidade de conhecimento amplo em relação a diferentes técnicas para solucionar o problema de SLAM. Como este trabalho buscou adaptar técnicas para um contexto da Robótica Educacional, cujos recursos são mais escassos e limitados, adicionou-se aos objetivos da revisão itens relacionados à Robótica Educacional e robôs simples.
 
 		Segundo \cite{Kitchenham}, o primeiro passo para se realizar uma revisão sistemática é definir a sua questão de pesquisa. Desse modo, a partir da realização de uma pesquisa bibliográfica inicial, foram identificadas as seguintes questões de pesquisa:
 
@@ -33,9 +34,9 @@
 		\begin{itemize}
 			\item \textbf{População}: comunidade acadêmica e de robótica.
 			\item \textbf{Intervenção}: adaptação de técnicas para um contexto de robótica simplificado (educacional).
-			\item \textbf{Controle}: utilização do \textit{Quasi-gold standard} \cite{Kitchenham}, que sera explicado mais à frente.
-			\item \textbf{Resultados}: obtenção de técnicas adaptáveis ao contexto simplificado.
-			\item \textbf{Aplicação}: servir de base para a implementação da segunda etapa deste trabalho de conclusão de curso, onde técnicas serão adaptadas buscando solucionar, de maneira simplificada, o problema de SLAM.
+			\item \textbf{Controle}: utilização do \textit{Quasi-gold standard} \cite{Kitchenham}, que será explicado mais à frente.
+			\item \textbf{Resultados}: obtenção de técnicas adaptáveis ao contexto simplificado (Robótica Educacional).
+			\item \textbf{Aplicação}: servir de base para implementação da proposta desse trabalho de conclusão de curso, na qual técnicas foram adaptadas, buscando solucionar, com recursos limitados/escassos - típico cenário da Robótica Educacional -  o problema de SLAM.
 
 		\end{itemize}
 
@@ -57,7 +58,9 @@
 			\item $sensitividade = \frac{ERO}{TER}$
 		\end{itemize}
 
-		onde \textit{ERO} = número de estudos relevantes obtidos,
+		onde:
+
+		\textit{ERO} = número de estudos relevantes obtidos,
 
 		\textit{EO} = número de estudos obtidos e
 
@@ -76,7 +79,7 @@
 		A partir da definição da questão de pesquisa e dos objetivos da revisão, assim como a definição dos critérios de inclusão e exclusão, foi possível desenvolver uma \textit{string} de busca inicial. O idioma escolhido para a \textit{string} de busca foi o inglês, devido a sua ampla utilização nas bases de conhecimento selecionadas. Buscou-se utilizar a mesma \textit{string} de busca em todas as bases de dados pesquisadas, exceto em alguns casos em que houve a necessidade da adaptação da \textit{string} de acordo com os padrões adotados pela base.
 
 
-			Com o objetivo de identificar pesquisas relacionadas à auto-localização utilizando mapeamento de ambientes simultaneamente, a \textit{string} de busca definida foi: \textit{auto-localization AND environment mapping}. Na Tabela \ref{tab:string_inicial} são apresentados os resultados obtidos a partir desta busca.
+			Com o objetivo de identificar pesquisas relacionadas à auto-localização utilizando mapeamento de ambientes simultaneamente, a \textit{string} de busca definida foi: \textit{auto-localization AND environment mapping}. Na Tabela \ref{tab:string_inicial}, são apresentados os resultados obtidos a partir desta busca.
 
 			\begin{table}[H]
 			\centering
@@ -172,7 +175,7 @@
 			\item \textit{Visual simultaneous localization and mapping: a survey} \cite{surveyLocalization}.
 		\end{itemize}
 
-		Como é possível observar, os artigos selecionados para adição no \textit{quasi-gold standard} não envolviam temas referentes a robôs simples, apesar da afirmação de que esta mudança havia modificado a visão da pesquisa. Artigos referentes a este tema não foram adicionados ao \textit{quasi-gold standard} devido ao fato dos mesmos serem \textit{barrados} pelo critério de exclusão \textit{"CE 2 - Artigos que não possuam o problema de SLAM como foco principal"}.
+		Como é possível observar, os artigos selecionados para adição no \textit{quasi-gold standard} não envolviam temas referentes a robôs simples, apesar da afirmação de que esta mudança havia modificado a visão da pesquisa. Artigos referentes a este tema não foram adicionados ao \textit{quasi-gold standard} devido ao fato dos mesmos não atenderem ao critério de exclusão \textit{"CE 2 - Artigos que não possuam o problema de SLAM como foco principal"}.
 
 		Em contrapartida, este ciclo possibilitou o conhecimento de novos termos, viabilizando um refinamento eficiente para o próximo ciclo de busca.
 
@@ -235,7 +238,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 		\subsubsection{Arquitetura da Solução}
 		\label{sub:arquitetura_solucao}
 
-			A arquitetura da solução, na grande maioria dos estudos, foi definida a partir do requisito computacional. Ou seja, a limitação computacional presente nos robôs simples levou os autores a buscarem arquiteturas que contornassem esse problema, como mostra \cite{redeComunicacaoIndustria}. Entre as diversas arquiteturas, as mais comumente utilizadas são as que buscam processar as informações em um computador, utilizando o robô apenas para obtenção das informações, como ilustra a Figura \ref{img:arquitetura_mais_utilizada}.
+			A arquitetura da solução, na grande maioria dos estudos, foi definida a partir do requisito computacional. Ou seja, a limitação computacional presente nos robôs simples levou os autores a buscarem arquiteturas que contornassem esse problema, como mostra \cite{redeComunicacaoIndustria}. Entre as diversas arquiteturas, as mais comumente utilizadas são as que buscam processar as informações em um computador, considerando o robô apenas para obtenção das informações, como ilustra a Figura \ref{img:arquitetura_mais_utilizada}.
 
 			\begin{figure}[H]
 				\centering
@@ -250,7 +253,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			As decisões referentes à navegação são geradas a partir da análise do mapa remoto, já que o mapa local é incompleto e inconsistente, como afirma \cite{redeComunicacaoIndustria}. A utilização desta arquitetura de mapeamento remoto e local torna prática a realização de navegações com múltiplos robôs, como apresenta, \cite{redeComunicacaoIndustria}, em seu trabalho sobre rede de comunicação sem fio para navegação de múltiplos robôs.
 
-			Seguindo esta arquitetura, \cite{neuralNetwork} e \cite{multiRobots} também desenvolveram sistemas de resolução do problema de SLAM com a utilização de múltiplos robôs, mostrando a viabilidade da sua utilização. Neste tipo de trabalho, os robôs colaboram entre si, pois, como a informação obtida é centralizada em um computador único, as decisões referentes à navegação de um determinado robô são resultados do processamento das informações obtidas por todos os robôs, maximizando a vizão global de cada robô \cite{redeComunicacaoIndustria}.
+			Seguindo esta arquitetura, \cite{neuralNetwork} e \cite{multiRobots} também desenvolveram sistemas de resolução do problema de SLAM com a utilização de múltiplos robôs, mostrando a viabilidade da sua utilização. Neste tipo de trabalho, os robôs colaboram entre si, pois, como a informação obtida é centralizada em um computador único, as decisões referentes à navegação de um determinado robô são resultados do processamento das informações obtidas por todos os robôs, maximizando a visão global de cada robô \cite{redeComunicacaoIndustria}.
 
 			De qualquer forma, independente da arquitetura da solução utilizada, os erros advindos dos sensores sempre serão um problema sério a ser resolvido \cite{circumventingAssociationSLAM}. Com o objetivo de solucionar este problema, a comunidade de robótica vê-se presa à utilização de estruturas matemáticas probabilísticas, como afirma \cite{circumventingAssociationSLAM}. As seções \ref{sub:kalman}, \ref{sub:filtro_de_partículas} e \ref{sub:prob_usada} apresentam as estruturas probabilísticas mais utilizadas atualmente, assim como suas vantagens e desvantagens.
 
@@ -286,7 +289,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Já a utilização de câmeras de vídeo, segundo \cite{agenteExploratorioKalman}, além de necessitar de \textit{landmarks} verificáveis através do processamento de imagens, as mesmas exigem requisitos computacionais que, muitas vezes, acabam por inviabilizar sua utilização.
 
-			O sensor ultrasônico, que será utilizado durante a segunda etapa deste trabalho, diferentemente das câmeras de vídeo, são simples, rápidos e baratos, de acordo com \cite{agenteExploratorioKalman}. Entretanto, sua utilização acaba por limitar o contexto de navegação, devido ao seu limite de alcance. Ou seja, em um ambiente aberto, o sensor ultrasônico não será capaz de identificar obstáculo algum. Além da sua limitação de alcance, \cite{agenteExploratorioKalman} apresenta algumas características que podem problematizar sua utilização:
+			O sensor ultrasônico, que foi utilizado durante a segunda etapa deste trabalho, diferentemente das câmeras de vídeo, são simples, rápidos e baratos, de acordo com \cite{agenteExploratorioKalman}. Entretanto, sua utilização acaba por limitar o contexto de navegação, devido ao seu limite de alcance. Ou seja, em um ambiente aberto, o sensor ultrasônico não será capaz de identificar obstáculo algum. Além da sua limitação de alcance, \cite{agenteExploratorioKalman} apresenta algumas características que podem problematizar sua utilização:
 
 			\begin{enumerate}
 				\item \textit{pobre direcionalidade}: não são capazes de identificar a direção do obstáculo identificado, apenas sua distância;
@@ -296,12 +299,11 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			Com foi definido por \cite{agenteExploratorioKalman}, umas das características importantes da utilização do sonar é a reflexão especular, devido a sua emissão em formato de cone, como é apresentado de forma clara na Figura \ref{img:cone}.
 
-			\begin{figure}[H]
-				\centering
-				\includegraphics[scale=0.5]{figuras/cone.eps}
-				\caption[Emissão do Sinal Sonoro - Sonar]{Emissão do sinal sonoro - sonar}
-				\label{img:cone}
-			\end{figure}
+			{\centering
+			\includegraphics[scale=0.4]{figuras/cone.eps}
+			\captionof{figure}{Emissão do Sinal Sonoro - Sonar}
+			\label{img:cone}
+			\par}
 
 			Outro detalhe importante a ser analisado, segundo \cite{agenteExploratorioKalman}, é a velocidade de emissão do sinal. Esta deve ser relacionada a necessidade de obtenção das informações, ou seja, dependendo da velocidade de navegação atual do robô, a velocidade de emissão deve ser atualizada. Desse modo, se o robô se movimenta rapidamente, devem ser gerados sinais a uma frequência alta, possibilitando a reação do robô a eventos inesperados \cite{agenteExploratorioKalman}.
 
