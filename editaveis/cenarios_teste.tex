@@ -1,17 +1,17 @@
 \chapter[Cenários de Teste]{Cenários de Teste}
 \label{sec:cenarios_teste}
-O principal objetivo dos cenários de teste é apoiar a observação e análise sistemática da técnica de auto-localização utilizada durante o trabalho, assim como as diferentes configurações do ambiente e
+O principal objetivo dos cenários de teste é apoiar a observação e a análise sistemática da técnica de auto-localização utilizada durante o trabalho, assim como as diferentes configurações do ambiente e
 do filtro utilizado.
 
-Após a realização de todos os cenários de teste propostos, deve-se chegar a uma conclusão referente a viabilidade da utilização da técnica do Filtro de Partículas em um contexto simplificado da robótica.
+Após a realização de todos os cenários de teste propostos, foi possível chegar a uma conclusão quanto à viabilidade da utilização da técnica do Filtro de Partículas em um contexto típico da Robótica Educacional.
 
-Os cenários de teste consistem em 5 situações onde a solução foi analisada, variando entre elas o ambiente e a configuração do filtro. Buscando
+Os cenários de teste consistem em cinco situações, nas quais a solução foi analisada, variando entre elas o ambiente e a configuração do filtro. Buscando
 analisar a exatidão da auto-localização obtida em cada contexto, reiterando que o objetivo da pesquisa é analisar a viabilidade da utilização
-de uma técnica de SLAM em um contexto simplificado.
+de uma técnica de SLAM em um contexto típico da Robótica Educacional.
 
 O Filtro de Partículas é uma das duas principais técnicas que buscam solucionar o problema
-de SLAM, por este motivo, os cenários de teste desta pesquisa buscam analisar o Filtro de Partículas sendo executado no contexto da Robótica
-Educacional, o que viabilizaria, em parte, a aplicação da solução de SLAM no contexto simplificado.
+de SLAM. Por este motivo, os cenários de teste desta pesquisa buscam analisar o Filtro de Partículas, sendo esse executado no contexto da Robótica Educacional.
+A intenção é viabilizar, em parte, a aplicação da solução de SLAM nesse contexto.
 
 Os dados obtidos a partir de cada cenário de teste está organizado de acordo com a Tabela \ref{tab:org_dados}.
 
@@ -39,7 +39,7 @@ Onde,
   \item \textbf{Ciclos} apresenta o número de ciclos de filtragem que foram necessários para obtenção da localização;
 
   \item \textbf{Posição} informando qual a posição estimada do robô, informando a margem de erro da posição estimada, tanto no eixo X
-  quanto no eixo Y. Basicamente este campo informa de que ponto a que ponto nos eixos X e Y, o robô pode estar localizado, utilizando o
+  quanto no eixo Y. Basicamente, este campo informa de que ponto a que ponto nos eixos X e Y, o robô pode estar localizado, utilizando o
   centímetro como unidade, seguindo o padrão do restante da pesquisa.
 
   \item \textbf{Precisão} informando qual a precisão obtida no teste, classificada em \textit{Ótima}, \textit{Boa}, \textit{Mediana},
@@ -65,7 +65,7 @@ Onde,
 
 \end{itemize}
 
-Durante os cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, onde todos os
+Durante os cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, na qual todos os
 valores se encontram em centímetros (cm).
 
 \begin{figure}[H]
@@ -78,10 +78,10 @@ valores se encontram em centímetros (cm).
 \subsection{Cenário de Teste 1}
 
 Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen1}. Deve-se atentar que o exemplo 3 possui um agravante, o
-robô teve sua roda direita presa na parede enquanto se locomovia. Desse modo, o robô se perdeu e teve que se encontrar novamente, se comportando
+robô teve sua roda direita presa na parede, enquanto se locomovia. Desse modo, o robô perdeu-se e teve que se encontrar novamente, comportando-se
 da maneira esperada em um caso básico de "sequestro do robô".
 
-Este cenário faz referência a variação da quantidade de partículas.
+Este cenário faz referência à variação da quantidade de partículas.
 
 \begin{table}[H]
 \centering
@@ -101,7 +101,7 @@ Este cenário faz referência a variação da quantidade de partículas.
 
 \subsection{Cenário de Teste 2}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência a variação da velocidade de
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência à variação da velocidade de
 rotação do robô.
 
 \begin{table}[H]
@@ -122,7 +122,7 @@ rotação do robô.
 
 \subsection{Cenário de Teste 3}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen3}. Este cenário faz referência a variação da velocidade de
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen3}. Este cenário faz referência à variação da velocidade de
 deslocamento do robô, em unidades do diâmetro das rodas por segundo. Fixou-se a quantidade de partículas em 150, de acordo com os resultados
 obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 graus por segundo.
 
@@ -143,7 +143,7 @@ obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 gra
 
 \subsection{Cenário de Teste 4}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen4}. Este cenário faz referência a análise da solução
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen4}. Este cenário faz referência à análise da solução
 utilizando a configuração que obteve os melhores resultados nos cenários anteriores, ou seja:
 
 \begin{itemize}
