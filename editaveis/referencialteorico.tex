@@ -1,10 +1,10 @@
 %\part{Aspectos Gerais}
 
-\chapter[Referencial Teórico]{Referencial teórico}
+\chapter[Referencial Teórico]{Referencial Teórico}
 
 	Parte da teoria relacionada à robótica móvel e à robótica educacional será descrita, brevemente, ao longo deste capítulo, visando facilitar o entendimento dos termos utilizados durante a realização desta pesquisa.
 
-\section{Robótica e a auto-localização}
+\section{Robótica e a Auto-Localização}
 
 O nascimento da robótica se deu no contexto industrial, onde a automação de atividades repetitivas garantiu maior eficiência e, consequentemente, maior lucro \cite{roboticaIndustrial}. Porém, com o passar dos anos, a robótica vem se expandindo e fazendo parte da vida cotidiana de muitos \cite{teachingWithRoboticKit}. A robótica é uma importante ferramenta que apóia o trabalho humano em diversos contextos, seja para a limpeza de uma casa \cite{melhoramentoServicoLimpeza} ou até para explorar novos planetas, por exemplo \sloppy \cite{explore_marte}.
 
@@ -50,7 +50,7 @@ Para que a navegação ocorra sem colisões em obstáculos, o robô precisa, al�
 Por outro lado, esta técnica possui requisitos que, muitas vezes, são inviáveis, como o conhecimento prévio do mapa do ambiente. Caso o objetivo seja navegar em um ambiente desconhecido, onde não há mapa nem pontos de referência já conhecidos, deve-se buscar formas de se auto-localizar e navegar utilizando apenas as informações obtidas pelos sensores. Para isso, vem sendo discutida na comunidade de pesquisadores em robótica móvel, a resolução do problema de SLAM (Auto-Localização e Mapeamento de Ambientes Simultâneos). Segundo \cite{slamProblem}, SLAM é considerado, pela comunidade, como o \textit{Santo Graal} da robótica móvel.
 
 %----------------------------O PROBLEMA DE SLAM-------------------------------------
-\section{O problema de SLAM} % (fold)
+\section{O Problema de SLAM} % (fold)
 \label{sec:section_name}
 
 Auto-localização e Mapeamento de Ambientes Simultâneos (SLAM) é uma técnica bastante utilizada para navegação em diferentes contextos, como na navegação marítima, por exemplo \cite{slamProblem}. Esta técnica garante a possibilidade do robô navegar em um ambiente desconhecido, construindo um mapa do ambiente e, simultaneamente, utilizar este mapa para se auto-localizar em relação ao ambiente \cite{slamProblem}. Ou seja, a técnica de SLAM, utilizando conceitos de inteligência artificial, garante autonomia móvel à maquina.
@@ -90,7 +90,7 @@ Apesar das colocações, a utilização da abordagem do filtro de Kalman, geralm
 
  % subsection subsection_name (end)
 
- \subsection{Filtro de partículas} % (fold)
+ \subsection{Filtro de Partículas} % (fold)
  \label{sub:filtro_de_partículas}
 
 Outra abordagem bastante utilizada para resolução do problema de SLAM envolve a utilização do filtro de Partículas, uma técnica para implementação de um \textit{Filtro Bayesiano} de forma recursiva, utilizando o método de \textit{Monte Carlo} \cite{integrationVisionSLAMnonlinear}. O método de Monte Carlo baseia-se em amostragens aleatórias em grande quantidade, com o objetivo de estabelecer o valor de uma grandeza que não é disponível através de uma expressão matemática \cite{mooney1997monte} e \cite{comparacaoKalmanParticulas}.
@@ -107,7 +107,7 @@ As duas abordagens apresentadas anteriormente são amplamente utilizadas em dive
 % section section_name (end)
 
 %---------------------------------ROBÓTICA EDUCACIONAL------------------------------------
-\section{Robótica educacional} % (fold)
+\section{Robótica Educacional} % (fold)
 \label{sec:robótica_educacional}
 
 A utilização da robótica como uma ferramenta de apoio ao aprendizado vem sendo ampliada com o passar dos anos \cite{teachingWithRoboticKit}. Principalmente, graças ao reconhecimento, por muitos autores, dos benefícios da utilização destas tecnologias como abordagem de ensino, onde os alunos são inseridos no problema real e instigados a solucioná-lo \cite{teachingWithRoboticKit}, \cite{construcionismoPapert}, \cite{roboticaEducativaEnsinoMedio}.
@@ -198,7 +198,7 @@ Além da obtenção do kit completo, como mostra na Figura \ref{img:kit}, é pos
 Devido as vantagens de sua utilização, este kit foi selecionado para ser utilizado durante a realização deste trabalho de conclusão de curso. Possibilitando uma implementação prática da solução proposta ao longo do trabalho.
 
 
-\section{Considerações parciais} % (fold)
+\section{Considerações Parciais} % (fold)
 \label{sec:considerações_parciais}
 
 	A utilização da tecnologia como ferramenta de apoio ao aprendizado, como foi apresentado durante o capítulo, garante diversos benefícios ao aluno e, até mesmo, ao professor. Principalmente, quando o contexto trabalhado envolve problemas reais da robótica, como o problema de SLAM, por exemplo. A partir desta linha de pensamento, este capítulo buscou apresentar informações importantes para viabilizar a compreensão da pesquisa realizada, como a apresentação do problema de SLAM, os filtros probabilísticos mais utilizados e a abordagem educacional da Robótica.

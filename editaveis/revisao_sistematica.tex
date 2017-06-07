@@ -8,12 +8,12 @@
 			\label{img:processoGeralRevisao}
 		\end{figure}
 
-	\subsection{Planejamento da revisão} % (fold)
+	\subsection{Planejamento da Revisão} % (fold)
 	\label{sub:planejamentoRevisao}
 
 		A revisão sistemática foi realizada entre os meses de março e junho de 2016, utilizando como fonte de busca as bases \textit{IEEE}, \textit{CAPES} e \textit{Springer}. A partir dos modelos de revisão sistemática apresentados por \cite{Kitchenham}, foi desenvolvido um protocolo de revisão, o qual possibilita, a outros pesquisadores, a repetição da pesquisa.
 
-		\subsubsection{Objetivos e questão de pesquisa}
+		\subsubsection{Objetivos e Questão de Pesquisa}
 
 		O objetivo inicial do trabalho é estudar a problemática da auto-localização na robótica, identificando diferentes soluções em diversos contextos. Afirmado isso, foi possível realizar uma pesquisa bibliográfica com o objetivo de identificar diferentes linhas de pesquisa nesta área. Após uma análise superficial de cada linha de pesquisa, foi selecionada a linha de pesquisa que adota, como solução para a auto-localização, a utilização da técnica de SLAM, o que pode ser considerado como o marco teórico do trabalho.
 
@@ -41,7 +41,7 @@
 
 		A partir da definição das questões de pesquisa e dos objetivos da revisão, buscou-se definir a estratégia de pesquisa, apresentada no tópico \ref{sub:estrategias_pesquisa}.
 
-		\subsubsection{Estratégia de pesquisa}
+		\subsubsection{Estratégia de Pesquisa}
 		\label{sub:estrategias_pesquisa}
 
 		A estratégia de pesquisa adotada para esta revisão segue recomendações de diversos autores, como \cite{Kitchenham} e \cite{systematicReviewEngSoft}, utilizando o conceito de \textit{quasi-gold standard}.
@@ -95,14 +95,14 @@
 
 		% subsection subsection_name (end)
 
-		\subsubsection{Procedimento de seleção}
+		\subsubsection{Procedimento de Seleção}
 
 			As buscas foram realizadas com a mesma \textit{string} de busca (na maioria dos casos, como já foi explicado anteriormente) nas três bases de conhecimento científico utilizadas. A cada busca realizada, os artigos foram registrados, para que, posteriormente, os mesmos pudessem ser submetidos à avaliação da qualidade e, se comprovada a relevância do mesmo, à extração de dados.
 
 			A seleção dos artigos deu-se a partir da leitura dos títulos, resumos e palavras-chave, classificando o artigo como relevante ou não, em um primeiro momento. Caso fosse confirmada a relevância do mesmo, o artigo passaria por uma avaliação mais profunda, a \textit{avaliação da qualidade}, como mostra o tópico \ref{sub:avaliacao_qualidade}.
 
 
-		\subsubsection{Avaliação da qualidade}
+		\subsubsection{Avaliação da Qualidade}
 		\label{sub:avaliacao_qualidade}
 
 			A avaliação da qualidade do artigo deu-se a partir da análise do conteúdo do mesmo, focando principalmente na introdução, nos resultados e conclusões dos artigos. A avaliação positiva do artigo significa uma resposta positiva para as seguintes perguntas:
@@ -116,7 +116,7 @@
 
 			Com a confirmação da qualidade do material, o mesmo foi exposto à extração de dados, ou seja, à leitura completa e detalhada do artigo.
 
-		\subsubsection{Extração de dados}
+		\subsubsection{Extração de Dados}
 
 			Com o objetivo de organizar os dados obtidos, facilitando o manuseio das informações, os dados extraídos de cada artigo foram registrados conforme o modelo apresentado na Tabela \ref{tab:padrao_dados_extraidos}.
 
@@ -134,7 +134,7 @@
 
 	% subsection planejamento_da_revisão (end)
 
-	\subsection{Condução da revisão} % (fold)
+	\subsection{Condução da Revisão} % (fold)
 	\label{sub:conducaoRevisao}
 
 		Durante a condução da revisão, a busca efetiva dos materiais é realizada, os ciclos de busca são documentados e a \textit{string} de busca é refinada, como afirma \cite{estudoPrimarioSecundario}.
@@ -222,7 +222,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 		% subsection condução_da_revisão (end)
 
-	\subsection{Publicação dos resultados} % (fold)
+	\subsection{Publicação dos Resultados} % (fold)
 	\label{sub:publicacaoRevisao}
 
 		A primeira etapa deste trabalho de conclusão de curso pode ser vista como o resultado geral desta revisão sistemática, onde conceitos, termos, abordagens e qualquer informação utilizada no trabalho é fruto, seja direta ou indiretamente, desta revisão sistemática.
@@ -232,7 +232,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 		Com a realização desta revisão, foi possível identificar \textit{áreas} mutáveis nas diferentes soluções do problema de SLAM. As áreas identificadas são \textit{"arquitetura da solução"} \ref{sub:arquitetura_solucao}, \textit{"técnica probabilística utilizada"} \ref{sub:prob_usada} e \textit{"informações disponíveis"} \ref{sub:infos_disponiveis}. Em cada solução, os autores buscaram se adequar ao contexto trabalhado, seja a partir da disponibilidade de sensores específicos ou da capacidade computacional disponível.
 
 
-		\subsubsection{Arquitetura da solução}
+		\subsubsection{Arquitetura da Solução}
 		\label{sub:arquitetura_solucao}
 
 			A arquitetura da solução, na grande maioria dos estudos, foi definida a partir do requisito computacional. Ou seja, a limitação computacional presente nos robôs simples levou os autores a buscarem arquiteturas que contornassem esse problema, como mostra \cite{redeComunicacaoIndustria}. Entre as diversas arquiteturas, as mais comumente utilizadas são as que buscam processar as informações em um computador, utilizando o robô apenas para obtenção das informações, como ilustra a Figura \ref{img:arquitetura_mais_utilizada}.
@@ -254,7 +254,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			De qualquer forma, independente da arquitetura da solução utilizada, os erros advindos dos sensores sempre serão um problema sério a ser resolvido \cite{circumventingAssociationSLAM}. Com o objetivo de solucionar este problema, a comunidade de robótica vê-se presa à utilização de estruturas matemáticas probabilísticas, como afirma \cite{circumventingAssociationSLAM}. As seções \ref{sub:kalman}, \ref{sub:filtro_de_partículas} e \ref{sub:prob_usada} apresentam as estruturas probabilísticas mais utilizadas atualmente, assim como suas vantagens e desvantagens.
 
-		\subsubsection{Técnica probabilistica utilizada}
+		\subsubsection{Técnica Probabilistica Utilizada}
 		\label{sub:prob_usada}
 
 			Para a realização de uma navegação específica, primeiramente, o robô deverá obter informações sobre o ambiente \cite{roboticaIndustrial}. Para isso, é necessária a utilização de sensores que captem estas informações, seja a partir de odometria, infra-vermelho ou vídeo. Entretanto, estes sensores são munidos de uma margem de erro que, muitas vezes, prejudica a navegação e a auto-localização como um todo \cite{interacaoRoboAmbiente}. De acordo com \cite{circumventingAssociationSLAM}:
@@ -269,7 +269,7 @@ Durante a realização de cada ciclo, os artigos foram analisados, avaliados e s
 
 			O estudo de \cite{comparacaoKalmanParticulas} exemplifica, com clareza, as comparações entre os filtros de partícula e de Kalman, ao utilizar as duas técnicas para solucionar o problema de SLAM com um robô móvel munido de sensores a laser. De acordo com a relatividade do termo \textit{"melhor"}, nesta ocasião, o autor buscou apresentar apenas algumas vantagens e desvantagens dos dois filtros, como pode-se observar nas seções \ref{sub:kalman} e \ref{sub:filtro_de_partículas}.
 
-		\subsubsection{Informações disponíveis}
+		\subsubsection{Informações Disponíveis}
 		\label{sub:infos_disponiveis}
 
 			Na robótica móvel, existem diversas maneiras de se obter informações sobre o ambiente, a partir da utilização de sensores específicos para informações específicas \cite{interacaoRoboAmbiente}. Entre os sensores mais utilizados, encontram-se os \textit{sonares, sensores infra-vermelho, câmeras de vídeo, sensores de distância, sensores RGB e sensores odométricos}. A partir do ambiente em que se deseja navegar, faz-se necessária a seleção dos sensores adequados para o mesmo.
