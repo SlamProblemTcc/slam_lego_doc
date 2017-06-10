@@ -1,9 +1,9 @@
-\chapter[Cenários de Teste]{Cenários de Teste}
-\label{sec:cenarios_teste}
+
 O principal objetivo dos cenários de teste é apoiar a observação e a análise sistemática da técnica de auto-localização utilizada durante o trabalho, assim como as diferentes configurações do ambiente e
 do filtro utilizado.
 
-Após a realização de todos os cenários de teste propostos, foi possível chegar a uma conclusão quanto à viabilidade da utilização da técnica do Filtro de Partículas em um contexto típico da Robótica Educacional.
+Após a realização de todos os cenários de teste propostos, foi possível chegar a uma conclusão quanto à viabilidade da utilização da técnica do Filtro de Partículas em um contexto típico da Robótica Educacional, a qual
+será apresentada na seção \ref{sec:viabilidade}.
 
 Os cenários de teste consistem em cinco situações, nas quais a solução foi analisada, variando entre elas o ambiente e a configuração do filtro. Buscando
 analisar a exatidão da auto-localização obtida em cada contexto, reiterando que o objetivo da pesquisa é analisar a viabilidade da utilização
@@ -65,8 +65,9 @@ Onde,
 
 \end{itemize}
 
-Durante os cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, na qual todos os
-valores se encontram em centímetros (cm).
+Durante os quatro primeiros cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, na qual todos os
+valores se encontram em centímetros (cm). O quinto cenário, \ref{sub:cen5}, utilizou um ambiente sem características específicas, como o apresentado
+na Figura \ref{img:mapa_quadrado}, buscando analisar o comportamento do algorítmo em mapas quadrados ou retangulares.
 
 \begin{figure}[H]
 	\centering
@@ -75,7 +76,48 @@ valores se encontram em centímetros (cm).
 	\label{img:map1}
 \end{figure}
 
+%Figura mapa quadrado aqui
+
+Cada cenário de teste tem como objetivo observar o comportamento do Filtro de Partículas, levando em consideração o erro obtido
+durante o processo de auto-localização. A variação entre cada cenário se dá pela alteração de três variáveis do processo de auto-localização:
+
+\begin{itemize}
+  \item Quantidade de partículas:
+
+    Como o contexto trabalhado envolve recursos de \textit{hardware} limitados, o buscou-se selecionar uma quantidade relativamente
+    baixa de partículas para execução do filtro, garantindo uma a ausência de grandes "furos" no mapa. A partir da execução do primeiro
+    cenário de teste, com resultados disponíveis na Tabela \ref{tab:cen1}, foi fixado o valor de 150 (cento e cinquenta) partículas
+    distribuídas aleatoriamente pelo mapa.
+
+    Esta escolha se deu a partir de análise empírica, utilizando como parâmetros comparativos o processamento necessário para execução
+    do Filtro de Partículas, a uniformidade da distribuição das partículas pelo mapa, a quantidade de ciclos necessários para conclusão
+    da posição atual do robô e o erro final do processo.
+
+  \item Velocidade de Rotação
+
+    A seção \ref{sec:fontes_de_erros} apresenta como uma das principais fontes de erros o deslize entre a roda e o piso ao se movimentar.
+    Desse modo, a escolha da velocidade se deu, principalmente, buscando minimizar o erro final. A velocidade de rotação foi fixada,
+    a partir do cenário \ref{sub:cen3} no valor de 30 graus por segundo, a qual apresentou o menor erro final nos cenários anteriores.
+
+  \item Velocidade de Deslocamento
+
+    Assim como o parâmetro discutido anteriormente, este envolve a potencialização de uma fonte de erros para o processo
+    de auto-localização, o deslize entre as rodas e o piso, como é apresentado na seção \ref{sec:fontes_de_erros}. O valor deste parâmetro
+    não foi fixado durante os cenários com o mapa \ref{img:map1}, foi apenas reutilizado o valor de 30 diâmetros de roda por segundo,
+    o que significa forçar a maior velocidade do robô.
+
+    Utilizar a maior velocidade possível se torna possível devido a estratégia utilizada para minimizar esta fonte de erro, como é
+    apresentado na seção \ref{sec:fontes_de_erros}.
+
+
+  Estas informações podem ser obtidas na seção \ref{sub:cen1} e no apendice \ref{sec:dados_cenarios_teste}.
+\end{itemize}
+
+As seções \ref{sub:cen1}, \ref{sub:cen2}, \ref{sub:cen3}, \ref{sub:cen4} e \ref{sub:cen5} apresentam os cenários de teste com a variação dos parâmetros, possibilitando a análise do comportamento do robô
+com determinadas configurações de parâmetros.
+
 \subsection{Cenário de Teste 1}
+\label{sub:cen1}
 
 Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen1}. Deve-se atentar que o exemplo 3 possui um agravante, o
 robô teve sua roda direita presa na parede, enquanto se locomovia. Desse modo, o robô perdeu-se e teve que se encontrar novamente, comportando-se
@@ -98,11 +140,18 @@ Este cenário faz referência à variação da quantidade de partículas.
 \end{tabular}
 \end{table}
 
+A partir da análise empírica deste cenário de teste, foi possível identificar que o número de partículas necessárias para realização, com
+qualidade, do processo de auto-localização seria de 150 partículas. Isto se dá devido à relação entre o processamento necessário para execução
+do filtro e a uniformidade da distribuição das partículas pelo mapa.
+
+A partir do cenário \ref{sec:cen2}, a quantidade de partículas utilizadas foi fixada em 150 partículas, devido ao apresentado anteriormente.
+Os dados que levaram a esta escolha podem ser observados em \ref{sec:cenario1}.
 
 \subsection{Cenário de Teste 2}
+\label{sub:cen2}
 
 Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência à variação da velocidade de
-rotação do robô.
+rotação do robô, a qual é mensurada em graus por segundo.
 
 \begin{table}[H]
 \centering
@@ -119,12 +168,18 @@ rotação do robô.
 \end{tabular}
 \end{table}
 
+A partir da análise empírica destes resultados, fixou-se o valor da velocidade de rotação em 30 graus por segundo. Esta definição
+se deu devido a comparação dos resultados obtidos, utilizando o erro final como variável comparativa. Desse modo, a partir do cenário
+\ref{sub:cen3}, a velocidade de rotação foi fixada no valor de 30 graus por segundo.
+
+Estes registros podem ser visualizados na seção \ref{sec:cenario2}.
+
 
 \subsection{Cenário de Teste 3}
+\label{sub:cen3}
 
 Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen3}. Este cenário faz referência à variação da velocidade de
-deslocamento do robô, em unidades do diâmetro das rodas por segundo. Fixou-se a quantidade de partículas em 150, de acordo com os resultados
-obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 graus por segundo.
+deslocamento do robô, em unidades do diâmetro das rodas por segundo.
 
 \begin{table}[H]
 \centering
@@ -141,15 +196,24 @@ obtidos nos cenários anteriores, assim como a velocidade de rotação em 30 gra
 \end{tabular}
 \end{table}
 
+Durante a execução dos exemplos dispostos na Tabela \ref{tab:cen3}, foi possível identificar uma solução simples para a fonte de erro
+\ref{sub:deslizes}, a qual possibilitou a fixação da velocidade como 15 diâmetros por segundo. Este valor significa, assim como o valor de 30 diâmetros por segundo, a máxima
+velocidade do kit, dado que é um valocidade inalcançável, por parte do kit Mindstorm NXT.
+
+Esta solução envolve, como é descrito na seção \ref{sec:fontes_de_erros}, a utilização de um processo de aceleração, até alcançar a velocidade
+definida. Desse modo, foi possível obter melhores resultados durante o processo de auto-localização, de acordo com análises empíricas do
+processo como um todo.
+
 \subsection{Cenário de Teste 4}
+\label{sub:cen4}
 
 Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen4}. Este cenário faz referência à análise da solução
 utilizando a configuração que obteve os melhores resultados nos cenários anteriores, ou seja:
 
 \begin{itemize}
   \item \textbf{Partículas:} 150
-  \item \textbf{Rotação:} 30
-  \item \textbf{Deslocamento:} 15
+  \item \textbf{Rotação:} 30 graus por segundo
+  \item \textbf{Deslocamento:} 15 diâmetros por segundo (velocidade máxima)
 \end{itemize}
 
 O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando configuração fixa durante os exemplos.
@@ -169,10 +233,13 @@ O objetivo principal deste cenário é verificar a variabilidade dos resultados 
 \end{tabular}
 \end{table}
 
-\subsection{Cenário de Teste 5}
+O cenário de teste \ref{sub:cen5} apresenta o processo de auto-localização em um mapa retangular, buscando analisar o comportamento do
+algoritmo em um ambiente com referenciais de baixa unicidade.
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen5}. Este cenário faz referência a análise da solução
-utilizando um mapa sem características únicas, como um retângulo.
+\subsection{Cenário de Teste 5}
+\label{sub:cen5}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen5}.
 
 \begin{itemize}
   \item \textbf{Partículas:} 150
@@ -196,3 +263,12 @@ O objetivo deste cenário é verificar a viabilidade da utilização do Filtro d
 5                & 150                 & 30               & 15                    & 11                   & \begin{tabular}[c]{@{}c@{}}X: 37 a 67\\ Y: 34 a 67\end{tabular} & Mediana               \\ \hline
 \end{tabular}
 \end{table}
+
+De acordo com o resultado obtido durante a execução dos exemplos apresentados na Tabela \ref{tab:cen5}, a qual possui seus registros
+dispostos na seção \ref{sec:cenario5}, o robô é capaz de se alto-localizar no ambiente retangular. A análise deste resultado se encontra
+na seção \ref{sec:viabilidade}.
+
+A partir da observação e análise empírica durante a realização dos cenários apresentados anteriormente, foi possível identificar
+fontes específicas de erros. Assim como obter uma conclusão sobre a viabilidade da resolução parcial do problema de SLAM em um contexto
+limitado da Robótica Educacional. As seções \ref{sec:fontes_de_erros} e \ref{sec:viabilidade} registram estes resultados obtidos durante
+a pesquisa.
