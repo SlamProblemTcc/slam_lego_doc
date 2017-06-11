@@ -13,25 +13,113 @@ em três seções: \ref{sec:cenarios_teste}, \ref{sec:fontes_de_erros} e \ref{se
 \label{sec:fontes_de_erros}
 
 Como foi apresentado ao longo do trabalho, o mundo da robótica está envolto em erros. Desse modo, deve-se identificar o motivo do erro
-para o mesmo possa ser minimizado ao máximo, buscando garantir uma navegação adequada, no caso da robótica móvel.
+para que o mesmo possa ser minimizado ao máximo, buscando garantir uma navegação adequada.
 Por este motivo, durante a realização desta pesquisa, buscou-se identificar o maior número de fontes de erros possível para que as mesmas fossem
 atacadas, minimizando a margem de erro durante o processo de auto-localização.
 
 Cada fonte de erro identificada foi listada, com o objetivo de descrevê-la e apresentar uma possível solução que minimize o erro
-advindo desta fonte. Esta listagem se encontra nas sub-seções dispostas abaixo.
+advindo desta fonte. Esta listagem se encontra nas sub-seções \ref{sub:distancia_rodas}, \ref{sub:diametro}, \ref{sub:deslizes}, \ref{sub:precisao_sensores},
+\ref{sub:caracteristica_sensor} e \ref{sub:colisao}.
 
 \subsection{Distância entre Rodas}
+\label{sub:distancia_rodas}
+
+De acordo com o apresentado na seção \ref{sec:montagem_robo}, o robô utilizado é composto de duas rodas motorizadas que controlam
+a movimentação do robô, e uma roda solta para apoio. Utilizando esta arquitetura de montagem, é possível realizar rotações sobre seu
+próprio eixo, fazendo com que uma roda gire para frente e outra para tras. Esta técnica é utilizada a todo momento para movimentação
+no ambiente, já que uma rotação sobre o próprio eixo possibilita o acompanhamento da direção em que o robô se locomove com maior clareza.
+
+Utilizando a rotação sobre o próprio eixo, toda a navegação pode ser feita com base em cálculos trigonométricos, o que possibilita
+a sua utilização no contexto educacional, seja no ensino superior, médio ou até fundamental. Desse modo, durante a realização desta pesquisa, busco-se
+ a utilização de rotações sobre o próprio eixo para realização de curvas. A Figura \ref{img:rotacao_proprio_eixo} apresenta de forma
+ clara o funcionamento da rotação.
+
+ {\centering
+ \includegraphics[scale=1.2]{figuras/rotacao_eixo.eps}
+ \captionof{figure}{Rotação sobre o Próprio Eixo.}
+ \label{img:rotacao_proprio_eixo}
+ \par}
+
+ Visto que que a solução utilizada envolve rotações sobre o próprio eixo, buscou-se minimizar ao máximo a margem de erro presente nesta
+ técnica. Para que a rotação funcione da maneira desejada, deve-se conhecer, com o máximo de precisão, a distância entre cada roda,
+ ou o eixo do robô (como pode ser observado na Figura \ref{img:rotacao_proprio_eixo}) e o diâmetro de cada roda, representado por "D" na
+ Figura \ref{img:rotacao_proprio_eixo}.
+
+ A distância entre cada roda é necessária pois quanto maior a distância, maior o número de giros em cada roda para que a mesma angulação
+ seja alcançada. Dado que a distância entre cada roda é representada pela variável "eixo", o diâmetro de cada roda é representado pela
+ variável "d" e a angulação, pela variável "a", a rotação é uma função que segue a assinatura \textit{f(a, eixo, d)}. Desse modo, cada um
+ desses parâmetros é essencial para a garantia da precisão das rotações durante a movimentação do robô pelo mapa.
+
+ A partir da experiência obtida durante a realização da pesquisa, pôde ser observado que a melhor forma de definir a distância entre as rodas
+ e o diâmetro das mesmas, como descreve a seção \ref{sub:diametro}, é a definição por e calibração a partir de testes. Estas variáveis podem
+ ser utilizadas como calibradores, que possibilitam a minimização de erros advindos de deslizes, como apresenta a seção \ref{sub:deslizes}.
+ Desse modo, é possível esconder erros a partir da configuração destas variáveis. O sugerido é a configuração destas variáveis obervando
+ resultados simples, como a realização de rotações completas e o erro final obtido.
 
 \subsection{Diâmetro da Roda}
+\label{sub:diametro}
+
+  Assim como a comunidade de robótica mundial, esta pesquisa se baseia na utilização de sensores odométricos durante a navegação. Ou seja,
+  as rotações de cada roda são registradas buscando calcular a distância e o sentido percorrido por cada roda. Esta informação possibilita
+  que o robô saiba o quanto andou, para onde andou e, desse modo, possa concluir onde se encontra atualmente.
+
+  A odometria se baseia na matemática básica, mais especificamente, na trigonometria. Possuindo a informação do tamanho de cada roda
+  é possível saber a distância do pneu ao centro da roda, ou ponto de ligação ao eixo. Esta distância, ou raio da roda, possibilita o
+   calculo da quantidade de rotação necessária para percorrer determinada distância por parte da roda. A Figura \ref{img:odometria_grafico}
+   apresenta o fundamento da odometria, o que justifica a necessidade precisa do raio de cada roda.
+
+   {\centering
+   \includegraphics[scale=1]{figuras/odometria_grafico.eps}
+   \captionof{figure}{Representação da Estratégia Odométrica.}
+   \label{img:odometria_grafico}
+   \par}
+
+   A utilização da Odometria se baseia em um cálculo bastante simples, como apresenta a Figura \ref{img:odometria_grafico}. A distância percorrida
+   na margem da circunferência destacada como primeiro quadrante faz referencia à distância percorrida pela roda em relação ao piso. A obtenção desta distância se torna fácil
+   com o conhecimento do raio e da rotação feita pela roda.
+
+   Deste modo, deve-se registrar o tamanho de cada roda com precisão, levando em consideração a distância entre cada margem da roda,
+   com a reta passando pelo centro. Assim como apresentado na seção \ref{sub:distancia_rodas}, a obtenção desta variável deve ser feita
+   a partir da realização de diversos testes, buscando minimizar ao máximo o erro final obtido.
 
 \subsection{Deslizes entre a Roda e o Piso}
 \label{sub:deslizes}
 
+  Durante a pesquisa, diferentes materiais foram utilizados como piso do ambiente de navegação, como azulejo, madeira e cimento. Cada
+  material possui suas características específicas, porém todos geram erros advindos de deslizes ou fixações em buracos e rachaduras.
+
+  Devido, principalmente, à característica da roda solta utilizada pela pesquisa, a qual é feita a partir de uma engrenagem da
+  LEGO, como foi apresentado na Figura \ref{img:montagem_robo_costas}, o principal problema ao qual deve-se estar atento é a fixação da mesma
+  em buracos ou rachaduras pelo mapa. Esta situação se torna bastante crítica pois não possui uma uniformidade e, muito menos,
+  uma previsibilidade, o que inviabiliza a utilização de técnicas que minimizem esta fonte de erro.
+
+  Visto isso, buscou-se a utilização de mapas com pisos lisos e uniformes, minimizando a ocorrência de fixações da roda traseira.
+  Entretanto, como foi argumentado anteriormente, mapas lisos ainda incluem a possibilidade de erros advindos de deslizes entre as
+  rodas e o piso. Este erro se dá, principalmente, nos momentos de arranque e frenagem, devido a brusca mudança de estado da roda,
+  como descreve a Primeira Lei de Newton.
+
+  A partir de análises empíricas, obteve-se a conclusão de que a utilização de uma aceleração progressiva no início e término da movimentação
+  minimiza consideravelmente a margem de erro final na navegação. Desse modo, os cenários de teste apresentados anteriormente foram realizados
+  utilzando a técnica de acelaração progressiva, fazendo parte da solução final da pesquisa.
+
+
 \subsection{Precisão dos Sensores Odométricos}
+\label{sub:precisao_sensores}
+
+  Como foi descrito na seção \ref{sub:diametro}, o funcionamento da Odometria se dá com base na contagem de rotações de cada roda.
+  Visto que esta rotação pode ser parcial, possuindo uma unidade mínima específica, como de 1 grau, no caso do kit Mindstom. Desse modo,
+  os cálculos odométricos são baseados na precisão inicial de 1 grau para cada medição. Porém, cálculos odométricos envolvem centenas e até
+  milhares de medições e manipulações de variáveis derivadas, o que pode gerar um grande erro ao final da navegação.
+
+  Esta fonte de erro, infelizmente, não possui soluções diretas, já que é derivada da característica do \textit{hardware} utilizado
+  na pesquisa. A mesma faz referência a uma das características que compõem o contexto limitado da Robótica Educacional,
+  como foi descrito ao longo de toda a pesquisa.
 
 \subsection{Característica do Sensor de Distância}
+\label{sub:caracteristica_sensor}
 
 \subsection{Colisões em Obstáculos}
+\label{sub:colisao}
 
 \section{Análise de Viabilidade}
 \label{sec:viabilidade}

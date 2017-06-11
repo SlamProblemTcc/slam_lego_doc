@@ -76,7 +76,12 @@ na Figura \ref{img:mapa_quadrado}, buscando analisar o comportamento do algorít
 	\label{img:map1}
 \end{figure}
 
-%Figura mapa quadrado aqui
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.9]{figuras/mapa_quadrado.eps}
+	\caption{Mapa Utilizado Durante Quinto Cenário de Teste.}
+	\label{img:mapa_quadrado}
+\end{figure}
 
 Cada cenário de teste tem como objetivo observar o comportamento do Filtro de Partículas, levando em consideração o erro obtido
 durante o processo de auto-localização. A variação entre cada cenário se dá pela alteração de três variáveis do processo de auto-localização:
@@ -123,7 +128,28 @@ Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen1}. 
 robô teve sua roda direita presa na parede, enquanto se locomovia. Desse modo, o robô perdeu-se e teve que se encontrar novamente, comportando-se
 da maneira esperada em um caso básico de "sequestro do robô".
 
-Este cenário faz referência à variação da quantidade de partículas.
+Este cenário faz referência à variação da quantidade de partículas. Com o objetivo de apresentar a forma de registro dos cenários de teste,
+o primeiro exemplo do cenário de teste 1 é apresentado nas Figuras \ref{img:1cen1_ex1} e \ref{img:1real_cen1_ex1}.
+
+{\centering
+\includegraphics[scale=0.4]{figuras/cen1_ex1.eps}
+\captionof{figure}{Cenário 1 - Exemplo 1.}
+\label{img:1cen1_ex1}
+\par}
+
+{\centering
+\includegraphics[scale=0.2]{figuras/real_cen1_ex1.eps}
+\captionof{figure}{Posição Real do Cenário 1 - Exemplo 1.}
+\label{img:1real_cen1_ex1}
+\par}
+
+Como pode ser observado nas Figuras \ref{img:1cen1_ex1} e \ref{img:1real_cen1_ex1}, o erro final obtido foi pequeno, o robô foi capaz
+de se auto-localizar com precisão.
+
+Para evitar poluição de imagens no registro dos resultados de cada exemplo dos cenários de teste, os exemplos e cenários a seguir
+possuem seus registros disponívels apenas no Apêndice \ref{sec:dados_cenarios_teste}. A compilação final dos resultados se encontra nas Tabelas
+\ref{tab:cen1}, \ref{tab:cen2}, \ref{tab:cen3}, \ref{tab:cen4} e \ref{tab:cen5}.
+
 
 \begin{table}[H]
 \centering
@@ -265,7 +291,7 @@ O objetivo deste cenário é verificar a viabilidade da utilização do Filtro d
 \end{table}
 
 De acordo com o resultado obtido durante a execução dos exemplos apresentados na Tabela \ref{tab:cen5}, a qual possui seus registros
-dispostos na seção \ref{sec:cenario5}, o robô é capaz de se alto-localizar no ambiente retangular. A análise deste resultado se encontra
+dispostos na seção \ref{sec:cenario5}, o robô é capaz de se auto-localizar no ambiente retangular. A análise deste resultado se encontra
 na seção \ref{sec:viabilidade}.
 
 A partir da observação e análise empírica durante a realização dos cenários apresentados anteriormente, foi possível identificar
