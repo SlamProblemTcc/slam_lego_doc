@@ -118,6 +118,57 @@ a sua utilização no contexto educacional, seja no ensino superior, médio ou a
 \subsection{Característica do Sensor de Distância}
 \label{sub:caracteristica_sensor}
 
+  Durante a pesquisa foi utilizado um sensor de distância do tipo sonar, o qual possui algumas características específicas, que podem
+  prejudicar a precisão de navegação e auto-localização. A seção \ref{sub:características_técnicas} apresenta algumas características
+  técnicas do Kit utilizado, apresentando algumas informações úteis em relação ao sensor de distância.
+
+  O funcionamento de um sonar ocorre a partir da utilização da emissão e recepção de sinais sonoros para cálculo de distância entre
+  o emissor/receptor e o obstáculo mais próximo a sua frente. Como o sinal enviado é um sinal sonoro, o mesmo se locomove no ambiente (ar)
+  de forma tridimensional, seguindo, mais especificamente, o formato de um cone, como apresenta a Figura \ref{img:conee}. Esta característica
+  envolve grande parte dos problemas advindos da utilização de um sensor desta categoria.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{figuras/cone2.eps}
+    \caption{Emissão do Sinal Ultrasônico.}
+    \label{img:conee}
+  \end{figure}
+
+  A partir da observação da Figura \ref{img:conee}, é possível identificar possíveis problemas gerados por esta característica. Basicamente,
+  o sonar observa o ambiente de maneira unidimensional, em relação aos \textit{inputs} obtidos pelo mesmo. \textit{Inputs}, estes,
+  que são compostos apenas da distância entre o robô e um objeto a sua frente. Entretando, estes \textit{inputs} são gerados a partir
+  da iteração tridimensional do som com o ambiente, incluindo no resultado uma margem de erro importante, que não deve ser ignorada.
+
+  Para analisar o impacto desta característica, deve-se compreender os detalhes técnicos do sonar utilizado, mais especificamente,
+  a distância máxima de alcance do sonar e a angulação de emissão do sinal sonoro. Durante esta pesquisa, o
+  sonar utilizado, presente no Kit Mindstorm NXT, possui uma angulação de emissão do sinal de 30 (trinta) graus e uma distância máxima de
+  255 (duzentos e cinquenta e cinco) centímetros. Com estas informações é possível padronizar o ambiente e o contexto de utilização do sonar
+  de uma forma que os resultados obtidos possuam uma margem de erro aceitável, de acordo com o contexto trabalhado.
+
+  Com a emissão do sinal a uma angulação de 30 graus, por exemplo, obstáculos identificados a 180 centímetros podem possuir até 90
+  centímetros de margem de erro, gerando um resultado pouco confiável para o contexto da Robótica Móvel. Desse modo, deve-se evitar
+  a identificação de obstáculos a distâncias longas, as quais foram fixadas, durante esta pesquisa, em aproximadamente um metro de distância.
+
+  Devido às características do sonar, a identificação de pontos de referência não se baseia em características físicas dos obstáculos,
+  utilizando a relação de distância entre robô e obstáculo como forma de identificação de pontos de referência. A ideia não é
+  identificar locais específicos que possuem pontos de referência, como a técnica da utilização de postes emissores de infra-vermelho,
+  e sim a identificação da posição atual do robô em relação aos obstáculos, a qual viabiliza o processo de auto-localização do robô.
+
+  Buscando a minimização da margem de erro, alguns detalhes do ambiente precisaram ser fixados, limitados e bem definidos. Foi fixado
+  um tamanho máximo de 1,5 metros quadrados para o ambiente de navegação, assim como a utilização de obstáculos lisos e uniformes como
+  pontos de referência. Basicamente, estes obstáculos se resumem a utilização de paredes na margem do ambiente de navegação, sem a utilização
+  de obstáculos internos ao mapa.
+
+  O sensor utilizado é o sonar original do Kit, o qual pode ser observado na Figura \ref{img:sonar_utilizado}.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{figuras/ultrasonic.eps}
+    \caption{Sensor de Distância Ultrasônico.}
+    \label{img:sonar_utilizado}
+  \end{figure}
+
+
 \subsection{Colisões em Obstáculos}
 \label{sub:colisao}
 
