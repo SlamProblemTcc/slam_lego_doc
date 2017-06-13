@@ -172,5 +172,44 @@ a sua utilização no contexto educacional, seja no ensino superior, médio ou a
 \subsection{Colisões em Obstáculos}
 \label{sub:colisao}
 
+A característica presente nos sensores de distância e odométricos, apresentadas na seção \ref{sub:caracteristica_sensor} e
+\ref{sub:precisao_sensores}, pode gerar o acontecimento de uma colisão. Colisões podem ser ocorrer de forma frontal ou lateral,
+incluindo erros de grande proporção na navegação, principalmente no primeiro caso. A colisão frontal envolve o caso em que o robô
+tenta "empurrar" um obstáculo, ou seja, há uma colisão e o robô continua girando seus atuadores, sem sair do lugar. Neste caso,
+o qual pode ser considerado o pior caso, faz-se referência ao caso do \textit{sequesto do robô}, onde o mesmo se encontra perdido
+após uma colisão. A Figura \ref{img:colisao_frontal} apresenta, de forma clara, a situação levantada.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{figuras/colisao_frontal.eps}
+  \caption{Modelagem da situação de colisão frontal.}
+  \label{img:colisao_frontal}
+\end{figure}
+
+A colisão lateral, apesar de não gerar um resultado tão crítico, deve ser analisada com atenção. Neste caso, o robô encosta paralelamente em algum
+obstáculo, esbarrando uma de suas rodas no mesmo. O robô continua navegando, porem com adição de erros, geralmente inclinando
+o robô em direção ao obstáculo, podendo gerar, ainda, uma colisão frontal derivada da colisão lateral. A Figura \ref{img:colisao_lateral}
+apresenta a situação discutida.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{figuras/colisao_lateral.eps}
+  \caption{Modelagem da situação de colisão lateral.}
+  \label{img:colisao_lateral}
+\end{figure}
+
+O problema de colisões em obstáculos é crítico e não possui técnicas simples para resolução mesmo. Entretanto, a técnica de Filtro
+de Partículas, escolhida para possibilitar a auto-localização do robô, durante esta pesquisa,
+possibilita a resolução do problema do \textit{sequestro do robô}, como apresentado na seção \ref{sub:filtro_de_partículas}. A situação
+de colisões, seja frontal ou lateral, pode ser trabalhada como uma situação de sequestro do robô, possibilitando, a partir da utilização
+do Filtro de Partículas, a resolução, mesmo que parcial, do problema de colisões. Um exemplo claro desta situação pode ser observado
+na seção \ref{sub:cen1}, exemplo 3. Neste caso, o robô sofreu uma colisão lateral com a parede enquanto se locomovia pelo ambiente,
+ainda buscando se auto-localizar. A partir de análises empíricas, observou-se que o ocorrimento de uma colisão frontal ou lateral durante
+o processo de auto-localização é tolerável.
+
+Em casos de colisão, de acordo com os testes executados, o processo de auto-localização é capaz de ser concluído com sucesso, porém
+com margem de erro razoavelmente superior a média geral apresentada e um número de ciclos de filtragem muito superior a média de ciclos. Desse modo,
+vê-se que a utilização do Filtro de Partículas se torna essencial em um contexto limitado, como o da Robótica Educacional.
+
 \section{Análise de Viabilidade}
 \label{sec:viabilidade}
