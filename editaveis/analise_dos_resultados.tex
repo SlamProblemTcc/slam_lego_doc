@@ -224,15 +224,29 @@ vê-se que a utilização do Filtro de Partículas se torna essencial em um cont
 \section{Análise de Viabilidade}
 \label{sec:viabilidade}
 
-Durante o desenvolvimento deste trabalho, análises empíricas foram realizadas com o intuito de levantar a viabilidade da utilização
-de técnicas de auto-localização no contexto limitado da Robótica Educacional. Desse modo, buscou-se utilizar ferramentas simples,
-presentes no kit de robótica Mindstorm NXT e disponíveis em ambientes educacionais, derivados de baixo investimento.
-
 Apesar da utilização de ferramentas simples e baratas, a técnica analisada durante esta pesquisa, o Filtro de Partículas, está comumente
 presente em projetos de alto custo da robótica mundial. Visto isto, foram necessárias diversas adaptações, tanto no robô, quanto no ambiente
 no qual o mesmo se locomove. Estas adaptações são resultado da identificação de fontes de erro, como descreve a seção \ref{sec:fontes_de_erros},
 assim como a identificação de soluções que possam minimizar o erro advindo de cada fonte.
 
-Após a identificação das fontes de erro e adaptações no robô e ambiente, foram executados os cenários de teste. Estes tiveram como objetivo
+Após a identificação das fontes de erro e adaptações necessárias para o robô e o ambiente, foram executados os cenários de teste. Estes tiveram como objetivo
 principal, a identificação da variabilidade do resultado de acordo com a alteração de alguns parâmetros, como o número de partículas,
 a velocidade de deslocamento, a velocidade de rotação e o mapa utilizado.
+
+A configuração dos parâmetros que gerou os melhores resultados foi:
+
+\begin{itemize}
+  \item Numero de Partículas: 150;
+  \item Velocidade de Rotação: 20 graus por segundo;
+  \item Velocidade de Deslocamento: 10 diâmetros por segundo.
+\end{itemize}
+
+Com esta configuração, 60\% dos resultados foram considerados bons, e apenas 20\% foram considerados ruins. Com esta proporção, é possível
+chegar a uma conclusão positiva em relação a utilização do Filtro de Partículas no contexto limitado da Robótica Educacional.
+Embora estes resultados tenham sido obtidos a partir de diversas adaptações no robô e ambiente, o que poderia inviabilizar sua
+utilização no ensino, o contexto educacional possibilita e até se beneficia do processo de adaptação e melhorias no robô e ambiente.
+
+Este processo de adaptação do robô e ambiente, trabalhando de maneira empírica, pode envolver a imaginação e o trabalho em equipe
+de uma turma inteira de robótica, o que só favorece a utilização de temas como este no contexto educacional. Desse modo, pode-se concluir
+que a utilização da técnica do Filtro de Partículas no contexto limitado da Robótica Educacional gera resultados positivos, tanto
+na aplicação quanto no processo educacional dos participantes.
