@@ -294,6 +294,144 @@ De acordo com o resultado obtido durante a execução dos exemplos apresentados 
 dispostos na seção \ref{sec:cenario5}, o robô é capaz de se auto-localizar no ambiente retangular. A análise deste resultado se encontra
 na seção \ref{sec:viabilidade}.
 
+Após a identificação dos melhores resultados obtidos com a variação de cada parâmetro, deve-se executar alguns cenários que variam
+cada parâmetro deixando os demais fixos em seus melhores resultados. Dessa forma, a análise da melhor combinação de parâmetros se torna
+mais correta. Os cenários \ref{sub:cen6}, \ref{sub:cen7}, \ref{sub:cen8} e \ref{sub:cen9} apresentam a execução de cada combinação
+de parâmetros faltante.
+
+\subsection{Cenário de Teste 6}
+\label{sub:cen6}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen6}. Este cenário faz referência à análise da solução
+utilizando a configuração apresentada a seguir:
+
+\begin{itemize}
+  \item \textbf{Partículas:} Número de partículas variado.
+  \item \textbf{Rotação:} 30 graus por segundo.
+  \item \textbf{Deslocamento:} 15 diâmetros por segundo.
+\end{itemize}
+
+O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a configuração das velocidades fixa, variando
+apenas a quantidade de partículas usadas.
+
+\begin{table}[H]
+\centering
+\caption{Resultados Obtidos - Cenário 6}
+\label{tab:cen6}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+1                & 100                 & 30               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 34 a 52\\ Y: 20 a 35\end{tabular} & Baixa           \\ \hline
+2                & 150                 & 30               & 15                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 40 a 47\\ Y: 34 a 59\end{tabular} & Boa             \\ \hline
+3                & 200                 & 30               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 24 a 61\\ Y: 10 a 46\end{tabular} & Mediana        \\ \hline
+4                & 250                 & 30               & 15                    & 9                   & \begin{tabular}[c]{@{}c@{}}X: 31 a 70\\ Y: 22 a 62\end{tabular} & Mediana           \\ \hline
+5                & 300                 & 30               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 28 a 60\\ Y: 29 a 68\end{tabular} & Boa               \\ \hline
+\end{tabular}
+\end{table}
+
+A partir dos resultados obtidos durante a execução do cenário \ref{sub:cen6}, foi possível identificar que a quantidade de partículas
+impacta o resultado obtido, principalmente em relação a quantidade de ciclos de filtragem necessários e o tempo de processamento de cada
+ciclo. A utilização de 300 partículas se viu desnecessária, já que o processamento é pesado e o resultado não trás grandes ganhos em relação
+a utilização de menos partículas. Desse modo, optou-se por fixar a quantidade de partículas em 150, a qual apresentou o melhor resultado
+do cenário, envolvendo, ainda, baixo processamento, se comparado com a utilização de 300 partículas.
+
+\subsection{Cenário de Teste 7}
+\label{sub:cen7}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen7}. Este cenário faz referência à análise da solução
+utilizando a configuração apresentada a seguir:
+
+\begin{itemize}
+  \item \textbf{Partículas:} 150.
+  \item \textbf{Rotação:} Velocidade de rotação variada (de 10 a 50 graus por segundo).
+  \item \textbf{Deslocamento:} 15 diâmetros por segundo (velocidade máxima).
+\end{itemize}
+
+O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
+acordo com o resultado obtido no cenário \ref{sub:cen6}, e a velocidade de deslocamento fixas. Variando, dessa forma, apenas
+o parâmetro relacionado a velocidade de rotação.
+
+\begin{table}[H]
+\centering
+\caption{Resultados Obtidos - Cenário 7}
+\label{tab:cen7}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+1                & 150                 & 10               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 32 a 50\\ Y: 40 a 85\end{tabular} & Baixa           \\ \hline
+2                & 150                 & 20               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 44 a 69\\ Y: 22 a 48\end{tabular} & Ótima             \\ \hline
+3                & 150                 & 30               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 55 a 80\\ Y: 26 a 50\end{tabular} & Mediana        \\ \hline
+4                & 150                 & 40               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 35 a 72\\ Y: 82 a 109\end{tabular} & Baixíssima           \\ \hline
+5                & 150                 & 50               & 15                    & 10                   & \begin{tabular}[c]{@{}c@{}}X: 72 a 75\\ Y: 41 a 43\end{tabular} & Baixíssima               \\ \hline
+\end{tabular}
+\end{table}
+
+A partir dos resultados obtidos ao longo da execução do cenário \ref{sub:cen7}, observou-se que velocidades de rotação elevadas podem
+prejudicar a precisão da navegação do robô. Isto se dá, principalmente, devido aos deslizes entre o piso e as rodas. Observou-se que
+a utilização de 20 graus por segundo gerou o melhor resultado do cenário, desse modo, fixou-se a velocidade de rotação em 20 graus por segundo.
+
+\subsection{Cenário de Teste 8}
+\label{sub:cen8}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen8}. Este cenário faz referência à análise da solução
+utilizando a configuração apresentada a seguir:
+
+\begin{itemize}
+  \item \textbf{Partículas:} 150.
+  \item \textbf{Rotação:} 20 graus por segundo.
+  \item \textbf{Deslocamento:} Velocidade de deslocamento variada.
+\end{itemize}
+
+O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
+acordo com o resultado obtido no cenário \ref{sub:cen6}, e a velocidade de rotação fixas. Variando, dessa forma, apenas
+o parâmetro relacionado a velocidade de deslocamento.
+
+\begin{table}[H]
+\centering
+\caption{Resultados Obtidos - Cenário 8}
+\label{tab:cen8}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+1                & 150                 & 20               & 5                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 40 a 60\\ Y: 46 a 52\end{tabular} & Boa           \\ \hline
+2                & 150                 & 20               & 10                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 32 a 48\\ Y: 42 a 68\end{tabular} & Ótima             \\ \hline
+3                & 150                 & 20               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 71\\ Y: 25 a 59\end{tabular} & Baixa        \\ \hline
+4                & 150                 & 20               & 20                    & 9                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 74\\ Y: 37 a 58\end{tabular} & Mediana           \\ \hline
+5                & 150                 & 20               & 25                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 61 a 77\\ Y: 42 a 55\end{tabular} & Baixíssima               \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Cenário de Teste 9}
+\label{sub:cen9}
+
+Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen9}. Este cenário faz referência à análise da solução
+utilizando a configuração apresentada a seguir:
+
+\begin{itemize}
+  \item \textbf{Partículas:} 150.
+  \item \textbf{Rotação:} 20 graus por segundo.
+  \item \textbf{Deslocamento:} 10 diâmetros por segundo.
+\end{itemize}
+
+O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, a velocidade de
+deslocamento e a velocidade de rotação fixas, de acordo com o resultado obtido nos cenários anteriores. Este conjunto de parâmetros
+contempla a melhor configuração obtida com os cenários.
+
+\begin{table}[H]
+\centering
+\caption{Resultados Obtidos - Cenário 9}
+\label{tab:cen9}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+1                & 150                 & 20               & 10                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 41 a 79\\ Y: 20 a 53\end{tabular} & Boa           \\ \hline
+2                & 150                 & 20               & 10                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 64\\ Y: 32 a 78\end{tabular} & Boa             \\ \hline
+3                & 150                 & 20               & 10                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 28 a 30\\ Y: 42 a 45\end{tabular} & Baixíssima        \\ \hline
+4                & 150                 & 20               & 10                    & 3                   & \begin{tabular}[c]{@{}c@{}}X: 21 a 60\\ Y: 35 a 75\end{tabular} & Boa           \\ \hline
+5                & 150                 & 20               & 10                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 64\\ Y: 31 a 71\end{tabular} & Mediana               \\ \hline
+\end{tabular}
+\end{table}
+
 A partir da observação e análise empírica durante a realização dos cenários apresentados anteriormente, foi possível identificar
 fontes específicas de erros. Assim como obter uma conclusão sobre a viabilidade da resolução parcial do problema de SLAM em um contexto
 limitado da Robótica Educacional. As seções \ref{sec:fontes_de_erros} e \ref{sec:viabilidade} registram estes resultados obtidos durante

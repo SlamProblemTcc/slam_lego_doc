@@ -107,9 +107,19 @@ a sua utilização no contexto educacional, seja no ensino superior, médio ou a
 \label{sub:precisao_sensores}
 
   Como foi descrito na seção \ref{sub:diametro}, o funcionamento da Odometria se dá com base na contagem de rotações de cada roda.
-  Visto que esta rotação pode ser parcial, possuindo uma unidade mínima específica, como de 1 grau, no caso do kit Mindstom. Desse modo,
+  Visto que esta rotação pode ser parcial, possuindo uma unidade mínima específica, de 1 grau, no caso do kit Mindstom. Desse modo,
   os cálculos odométricos são baseados na precisão inicial de 1 grau para cada medição. Porém, cálculos odométricos envolvem centenas e até
   milhares de medições e manipulações de variáveis derivadas, o que pode gerar um grande erro ao final da navegação.
+
+  O funcionamento deste tipo de sensor segue o apresentado na Figura \ref{img:sensor_odometria}. De acordo com o apresentado, o sensor
+   alterna o sinal de saída entre alto e baixo (1 e 0, por exemplo), de acordo com o processo de rotação. A variação de tempo entre
+   uma mudança de sinal para a próxima mudança viabiliza a obtenção da distância percorrida, de acordo com \cite{odometria}.
+
+   {\centering
+   \includegraphics[scale=0.9]{figuras/sensor_odometria.eps}
+   \captionof{figure}{Funcionamento da Odometria.}
+   \label{img:sensor_odometria}
+   \par}
 
   Esta fonte de erro, infelizmente, não possui soluções diretas, já que é derivada da característica do \textit{hardware} utilizado
   na pesquisa. A mesma faz referência a uma das características que compõem o contexto limitado da Robótica Educacional,
@@ -213,3 +223,16 @@ vê-se que a utilização do Filtro de Partículas se torna essencial em um cont
 
 \section{Análise de Viabilidade}
 \label{sec:viabilidade}
+
+Durante o desenvolvimento deste trabalho, análises empíricas foram realizadas com o intuito de levantar a viabilidade da utilização
+de técnicas de auto-localização no contexto limitado da Robótica Educacional. Desse modo, buscou-se utilizar ferramentas simples,
+presentes no kit de robótica Mindstorm NXT e disponíveis em ambientes educacionais, derivados de baixo investimento.
+
+Apesar da utilização de ferramentas simples e baratas, a técnica analisada durante esta pesquisa, o Filtro de Partículas, está comumente
+presente em projetos de alto custo da robótica mundial. Visto isto, foram necessárias diversas adaptações, tanto no robô, quanto no ambiente
+no qual o mesmo se locomove. Estas adaptações são resultado da identificação de fontes de erro, como descreve a seção \ref{sec:fontes_de_erros},
+assim como a identificação de soluções que possam minimizar o erro advindo de cada fonte.
+
+Após a identificação das fontes de erro e adaptações no robô e ambiente, foram executados os cenários de teste. Estes tiveram como objetivo
+principal, a identificação da variabilidade do resultado de acordo com a alteração de alguns parâmetros, como o número de partículas,
+a velocidade de deslocamento, a velocidade de rotação e o mapa utilizado.
