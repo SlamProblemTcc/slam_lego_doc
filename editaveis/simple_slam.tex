@@ -405,6 +405,16 @@ Para solucionar este problema, pode-se simplesmente desinstalar o \textit{softwa
 		\label{img:arq_pc}
 	\end{figure}
 
+	O Fluxo de informações entre os módulos está de acordo com o apresentado na Figura \ref{img:sequencia}, a qual apresenta
+	os três módulos participantes, o PC, o usuário (pesquisador) e o robô.
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[scale=0.8]{figuras/sequencia.eps}
+		\caption[Diagrama de Sequencia da Solução]{Diagrama de Sequencia da Solução.}
+		\label{img:sequencia}
+	\end{figure}
+
 O processamento do Filtro de Partículas é executado utilizando métodos da API leJOS, de acordo com toda a teoria apresentada na seção
 \ref{sub:filtro_de_partículas}. A geração das informações de distância de cada partícula necessita de um processamento bastante elevado,
 quando se tem como referência a capacidade de \textit{hardware} dos robôs NXT. Desse modo, todo esse processamento é feito remotamente,
