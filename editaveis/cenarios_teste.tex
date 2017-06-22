@@ -5,7 +5,7 @@ do filtro utilizado.
 Após a realização de todos os cenários de teste propostos, foi possível chegar a uma conclusão quanto à viabilidade da utilização da técnica do Filtro de Partículas em um contexto típico da Robótica Educacional, a qual
 será apresentada na seção \ref{sec:viabilidade}.
 
-Os cenários de teste consistem em cinco situações, nas quais a solução foi analisada, variando entre elas o ambiente e a configuração do filtro. Buscando
+Os cenários de teste fazem parte de 9 conjuntos, chamados de casos de teste, nas quais a solução foi analisada, variando entre elas o ambiente e a configuração do filtro. Buscando
 analisar a exatidão da auto-localização obtida em cada contexto, reiterando que o objetivo da pesquisa é analisar a viabilidade da utilização
 de uma técnica de SLAM em um contexto típico da Robótica Educacional.
 
@@ -21,14 +21,14 @@ Os dados obtidos a partir de cada cenário de teste está organizado de acordo c
   \label{tab:org_dados}
   \begin{tabular}{|c|c|c|c|c|c|}
   \hline
-  \textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Precisão} \\ \hline
+  \textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Precisão} \\ \hline
   \end{tabular}
 \end{table}
 
 Onde,
 \begin{itemize}
-  \item \textbf{Ex.} faz referência ao ciclo de teste. Cada cenário foi testado 5 (cinco) vezes, buscando obter a média como resultado
-  final do cenário;
+  \item \textbf{Cenário} faz referência ao cenário de teste. Cada caso de teste possui 5 (cinco) cenários, registrando a variabilidade
+  dos resultados de acordo com a variabilidade dos parâmetros.
 
   \item \textbf{Partículas} informa a quantidade de partículas utilizada durante este teste;
 
@@ -65,21 +65,21 @@ Onde,
 
 \end{itemize}
 
-Durante os quatro primeiros cenários de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, na qual todos os
-valores se encontram em centímetros (cm). O quinto cenário, \ref{sub:cen5}, utilizou um ambiente sem características específicas, como o apresentado
+Durante os quatro primeiros e quatro últimos casos de teste, o ambiente utilizado foi o apresentado na Figura \ref{img:map1}, na qual todos os
+valores se encontram em centímetros (cm). O quinto caso, \ref{sub:cen5}, utilizou um ambiente sem características específicas, como o apresentado
 na Figura \ref{img:mapa_quadrado}, buscando analisar o comportamento do algorítmo em mapas quadrados ou retangulares.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1.3]{figuras/map1.eps}
-	\caption[Primeiro Cenário de Teste]{Mapa utilizado durante primeiro cenário de teste.}
+	\caption[Primeiro Caso de Teste]{Mapa Utilizado Durante Primeiro Caso de Teste.}
 	\label{img:map1}
 \end{figure}
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.9]{figuras/mapa_quadrado.eps}
-	\caption{Mapa Utilizado Durante Quinto Cenário de Teste.}
+	\caption{Mapa Utilizado Durante Quinto Caso de Teste.}
 	\label{img:mapa_quadrado}
 \end{figure}
 
@@ -118,46 +118,46 @@ durante o processo de auto-localização. A variação entre cada cenário se d�
   Estas informações podem ser obtidas na seção \ref{sub:cen1} e no apendice \ref{sec:dados_cenarios_teste}.
 \end{itemize}
 
-As seções \ref{sub:cen1}, \ref{sub:cen2}, \ref{sub:cen3}, \ref{sub:cen4} e \ref{sub:cen5} apresentam os cenários de teste com a variação dos parâmetros, possibilitando a análise do comportamento do robô
+As seções \ref{sub:cen1}, \ref{sub:cen2}, \ref{sub:cen3}, \ref{sub:cen4} e \ref{sub:cen5} apresentam os casos de teste com a variação dos parâmetros, possibilitando a análise do comportamento do robô
 com determinadas configurações de parâmetros.
 
-\subsection{Cenário de Teste 1}
+\subsection{Caso de Teste 1}
 \label{sub:cen1}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen1}. Deve-se atentar que o exemplo 3 possui um agravante, o
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen1}. Deve-se atentar que o exemplo 3 possui um agravante, o
 robô teve sua roda direita presa na parede, enquanto se locomovia. Desse modo, o robô perdeu-se e teve que se encontrar novamente, comportando-se
 da maneira esperada em um caso básico de "sequestro do robô".
 
-Este cenário faz referência à variação da quantidade de partículas. Com o objetivo de apresentar a forma de registro dos cenários de teste,
-o primeiro exemplo do cenário de teste 1 é apresentado nas Figuras \ref{img:1cen1_ex1} e \ref{img:1real_cen1_ex1}.
+Este caso de teste faz referência à variação da quantidade de partículas. Com o objetivo de apresentar a forma de registro dos casos de teste,
+o primeiro cenário do caso de teste 1 é apresentado nas Figuras \ref{img:1cen1_ex1} e \ref{img:1real_cen1_ex1}.
 
 {\centering
 \includegraphics[scale=0.4]{figuras/cen1_ex1.eps}
-\captionof{figure}{Cenário 1 - Exemplo 1.}
+\captionof{figure}{Caso de Teste 1 - Cenário 1.}
 \label{img:1cen1_ex1}
 \par}
 
 {\centering
 \includegraphics[scale=0.2]{figuras/real_cen1_ex1.eps}
-\captionof{figure}{Posição Real do Cenário 1 - Exemplo 1.}
+\captionof{figure}{Posição Real do Caso de Teste 1 - Cenário 1.}
 \label{img:1real_cen1_ex1}
 \par}
 
 Como pode ser observado nas Figuras \ref{img:1cen1_ex1} e \ref{img:1real_cen1_ex1}, o erro final obtido foi pequeno, o robô foi capaz
 de se auto-localizar com precisão.
 
-Para evitar poluição de imagens no registro dos resultados de cada exemplo dos cenários de teste, os exemplos e cenários a seguir
+Para evitar poluição de imagens no registro dos resultados de cada cenário dos casos de teste, os cenários e casos a seguir
 possuem seus registros disponívels apenas no Apêndice \ref{sec:dados_cenarios_teste}. A compilação final dos resultados se encontra nas Tabelas
 \ref{tab:cen1}, \ref{tab:cen2}, \ref{tab:cen3}, \ref{tab:cen4} e \ref{tab:cen5}.
 
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 1}
+\caption{Resultados Obtidos - Caso de Teste 1}
 \label{tab:cen1}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 200                 & 100              & 100                   & 9                   & \begin{tabular}[c]{@{}c@{}}X: 25 a 70\\ Y: 15 a 30\end{tabular} & Ótima             \\ \hline
 2                & 400                 & 100              & 100                   & 10                  & \begin{tabular}[c]{@{}c@{}}X: 17 a 37\\ Y: 39 a 66\end{tabular} & Boa               \\ \hline
 3                & 500                 & 100              & 100                   & 21                  & \begin{tabular}[c]{@{}c@{}}X: 35 a 54\\ Y: 34 a 82\end{tabular} & Mediana           \\ \hline
@@ -166,26 +166,26 @@ possuem seus registros disponívels apenas no Apêndice \ref{sec:dados_cenarios_
 \end{tabular}
 \end{table}
 
-A partir da análise empírica deste cenário de teste, foi possível identificar que o número de partículas necessárias para realização, com
+A partir da análise empírica deste caso de teste, foi possível identificar que o número de partículas necessárias para realização, com maior
 qualidade, do processo de auto-localização seria de 150 partículas. Isto se dá devido à relação entre o processamento necessário para execução
 do filtro e a uniformidade da distribuição das partículas pelo mapa.
 
-A partir do cenário \ref{sub:cen2}, a quantidade de partículas utilizadas foi fixada em 150 partículas, devido ao apresentado anteriormente.
+A partir do caso de teste \ref{sub:cen2}, a quantidade de partículas utilizadas foi fixada em 150 partículas, devido ao apresentado anteriormente.
 Os dados que levaram a esta escolha podem ser observados em \ref{sec:cenario1}.
 
-\subsection{Cenário de Teste 2}
+\subsection{Caso de Teste 2}
 \label{sub:cen2}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen2}. Este cenário faz referência à variação da velocidade de
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen2}. Este caso de teste faz referência à variação da velocidade de
 rotação do robô, a qual é mensurada em graus por segundo.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 2}
+\caption{Resultados Obtidos - Caso de Teste 2}
 \label{tab:cen2}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 10               & 100                   & 7                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 72\\ Y: 47 a 71\end{tabular} & Boa               \\ \hline
 2                & 150                 & 30               & 100                   & 6                   & \begin{tabular}[c]{@{}c@{}}X: 20 a 38\\ Y: 42 a 67\end{tabular} & Ótima             \\ \hline
 3                & 150                 & 50               & 100                   & 3                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 63\\ Y: 30 a 62\end{tabular} & Boa               \\ \hline
@@ -195,25 +195,25 @@ rotação do robô, a qual é mensurada em graus por segundo.
 \end{table}
 
 A partir da análise empírica destes resultados, fixou-se o valor da velocidade de rotação em 30 graus por segundo. Esta definição
-se deu devido a comparação dos resultados obtidos, utilizando o erro final como variável comparativa. Desse modo, a partir do cenário
+se deu devido a comparação dos resultados obtidos, utilizando o erro final como variável comparativa. Desse modo, a partir do caso de teste
 \ref{sub:cen3}, a velocidade de rotação foi fixada no valor de 30 graus por segundo.
 
 Estes registros podem ser visualizados na seção \ref{sec:cenario2}.
 
 
-\subsection{Cenário de Teste 3}
+\subsection{Caso de Teste 3}
 \label{sub:cen3}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen3}. Este cenário faz referência à variação da velocidade de
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen3}. Este caso de teste faz referência à variação da velocidade de
 deslocamento do robô, em unidades do diâmetro das rodas por segundo.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 3}
+\caption{Resultados Obtidos - Caso de Teste 3}
 \label{tab:cen3}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 30               & 2                     & 4                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 70\\ Y: 28 a 62\end{tabular} & Baixa             \\ \hline
 2                & 150                 & 30               & 5                     & 6                   & \begin{tabular}[c]{@{}c@{}}X: 31 a 59\\ Y: 32 a 70\end{tabular} & Mediana           \\ \hline
 3                & 150                 & 30               & 10                    & 3                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 73\\ Y: 20 a 78\end{tabular} & Baixa             \\ \hline
@@ -222,18 +222,18 @@ deslocamento do robô, em unidades do diâmetro das rodas por segundo.
 \end{tabular}
 \end{table}
 
-Durante a execução dos exemplos dispostos na Tabela \ref{tab:cen3}, foi possível identificar uma solução simples para a fonte de erro
+Durante a execução dos cenários dispostos na Tabela \ref{tab:cen3}, foi possível identificar uma solução simples para a fonte de erro
 \ref{sub:deslizes}, a qual possibilitou a fixação da velocidade como 15 diâmetros por segundo. Este valor significa, assim como o valor de 30 diâmetros por segundo, a máxima
-velocidade do kit, dado que é um valocidade inalcançável, por parte do kit Mindstorm NXT.
+velocidade do kit, dado que é uma velocidade inalcançável por parte do kit Mindstorm NXT.
 
 Esta solução envolve, como é descrito na seção \ref{sec:fontes_de_erros}, a utilização de um processo de aceleração, até alcançar a velocidade
 definida. Desse modo, foi possível obter melhores resultados durante o processo de auto-localização, de acordo com análises empíricas do
 processo como um todo.
 
-\subsection{Cenário de Teste 4}
+\subsection{Caso de Teste 4}
 \label{sub:cen4}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen4}. Este cenário faz referência à análise da solução
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen4}. Este caso de teste faz referência à análise da solução
 utilizando a configuração que obteve os melhores resultados nos cenários anteriores, ou seja:
 
 \begin{itemize}
@@ -242,15 +242,15 @@ utilizando a configuração que obteve os melhores resultados nos cenários ante
   \item \textbf{Deslocamento:} 15 diâmetros por segundo (velocidade máxima)
 \end{itemize}
 
-O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando configuração fixa durante os exemplos.
+O objetivo principal deste caso de teste é verificar a variabilidade dos resultados utilizando configuração fixa durante os exemplos.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 4}
+\caption{Resultados Obtidos - Caso de Teste 4}
 \label{tab:cen4}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 30               & 15                    & 8                   & \begin{tabular}[c]{@{}c@{}}X: 30 a 54\\ Y: 28 a 45\end{tabular} & Mediana           \\ \hline
 2                & 150                 & 30               & 15                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 62 a 87\\ Y: 23 a 58\end{tabular} & Baixa             \\ \hline
 3                & 150                 & 30               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 27 a 75\\ Y: 10 a 32\end{tabular} & Baixíssima        \\ \hline
@@ -259,13 +259,13 @@ O objetivo principal deste cenário é verificar a variabilidade dos resultados 
 \end{tabular}
 \end{table}
 
-O cenário de teste \ref{sub:cen5} apresenta o processo de auto-localização em um mapa retangular, buscando analisar o comportamento do
+O caso de teste \ref{sub:cen5} apresenta o processo de auto-localização em um mapa retangular, buscando analisar o comportamento do
 algoritmo em um ambiente com referenciais de baixa unicidade.
 
-\subsection{Cenário de Teste 5}
+\subsection{Caso de Teste 5}
 \label{sub:cen5}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen5}.
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen5}.
 
 \begin{itemize}
   \item \textbf{Partículas:} 150
@@ -273,15 +273,15 @@ Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen5}.
   \item \textbf{Deslocamento:} 15
 \end{itemize}
 
-O objetivo deste cenário é verificar a viabilidade da utilização do Filtro de Partículas em um ambiente sem pontos de referência únicos.
+O objetivo deste caso de teste é verificar a viabilidade da utilização do Filtro de Partículas em um ambiente sem pontos de referência únicos.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 5}
+\caption{Resultados Obtidos - Caso de Teste 5}
 \label{tab:cen5}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 30               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 21 a 63\\ Y: 40 a 84\end{tabular} & Mediana           \\ \hline
 2                & 150                 & 30               & 15                    & 11                   & \begin{tabular}[c]{@{}c@{}}X: 37 a 70\\ Y: 47 a 90\end{tabular} & Mediana             \\ \hline
 3                & 150                 & 30               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 27 a 75\\ Y: 10 a 32\end{tabular} & Mediana        \\ \hline
@@ -290,19 +290,19 @@ O objetivo deste cenário é verificar a viabilidade da utilização do Filtro d
 \end{tabular}
 \end{table}
 
-De acordo com o resultado obtido durante a execução dos exemplos apresentados na Tabela \ref{tab:cen5}, a qual possui seus registros
+De acordo com o resultado obtido durante a execução dos cenários apresentados na Tabela \ref{tab:cen5}, a qual possui seus registros
 dispostos na seção \ref{sec:cenario5}, o robô é capaz de se auto-localizar no ambiente retangular. A análise deste resultado se encontra
 na seção \ref{sec:viabilidade}.
 
 Após a identificação dos melhores resultados obtidos com a variação de cada parâmetro, deve-se executar alguns cenários que variam
 cada parâmetro deixando os demais fixos em seus melhores resultados. Dessa forma, a análise da melhor combinação de parâmetros se torna
-mais correta. Os cenários \ref{sub:cen6}, \ref{sub:cen7}, \ref{sub:cen8} e \ref{sub:cen9} apresentam a execução de cada combinação
+mais correta. Os casos de teste \ref{sub:cen6}, \ref{sub:cen7}, \ref{sub:cen8} e \ref{sub:cen9} apresentam a execução de cada combinação
 de parâmetros faltante.
 
-\subsection{Cenário de Teste 6}
+\subsection{Caso de Teste 6}
 \label{sub:cen6}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen6}. Este cenário faz referência à análise da solução
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen6}. Este caso de teste faz referência à análise da solução
 utilizando a configuração apresentada a seguir:
 
 \begin{itemize}
@@ -311,16 +311,16 @@ utilizando a configuração apresentada a seguir:
   \item \textbf{Deslocamento:} 15 diâmetros por segundo.
 \end{itemize}
 
-O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a configuração das velocidades fixa, variando
+O objetivo principal deste caso de teste é verificar a variabilidade dos resultados utilizando a configuração das velocidades fixa, variando
 apenas a quantidade de partículas usadas.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 6}
+\caption{Resultados Obtidos - Caso de Teste 6}
 \label{tab:cen6}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 100                 & 30               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 34 a 52\\ Y: 20 a 35\end{tabular} & Baixa           \\ \hline
 2                & 150                 & 30               & 15                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 40 a 47\\ Y: 34 a 59\end{tabular} & Boa             \\ \hline
 3                & 200                 & 30               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 24 a 61\\ Y: 10 a 46\end{tabular} & Mediana        \\ \hline
@@ -329,16 +329,16 @@ apenas a quantidade de partículas usadas.
 \end{tabular}
 \end{table}
 
-A partir dos resultados obtidos durante a execução do cenário \ref{sub:cen6}, foi possível identificar que a quantidade de partículas
+A partir dos resultados obtidos durante a execução do caso de teste \ref{sub:cen6}, foi possível identificar que a quantidade de partículas
 impacta o resultado obtido, principalmente em relação a quantidade de ciclos de filtragem necessários e o tempo de processamento de cada
 ciclo. A utilização de 300 partículas se viu desnecessária, já que o processamento é pesado e o resultado não trás grandes ganhos em relação
 a utilização de menos partículas. Desse modo, optou-se por fixar a quantidade de partículas em 150, a qual apresentou o melhor resultado
 do cenário, envolvendo, ainda, baixo processamento, se comparado com a utilização de 300 partículas.
 
-\subsection{Cenário de Teste 7}
+\subsection{Caso de Teste 7}
 \label{sub:cen7}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen7}. Este cenário faz referência à análise da solução
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen7}. Este caso de teste faz referência à análise da solução
 utilizando a configuração apresentada a seguir:
 
 \begin{itemize}
@@ -347,17 +347,17 @@ utilizando a configuração apresentada a seguir:
   \item \textbf{Deslocamento:} 15 diâmetros por segundo (velocidade máxima).
 \end{itemize}
 
-O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
-acordo com o resultado obtido no cenário \ref{sub:cen6}, e a velocidade de deslocamento fixas. Variando, dessa forma, apenas
+O objetivo principal deste caso de teste é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
+acordo com o resultado obtido no caso de teste \ref{sub:cen6}, e a velocidade de deslocamento fixas. Variando, dessa forma, apenas
 o parâmetro relacionado a velocidade de rotação.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 7}
+\caption{Resultados Obtidos - Caso de Teste 7}
 \label{tab:cen7}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 10               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 32 a 50\\ Y: 40 a 85\end{tabular} & Baixa           \\ \hline
 2                & 150                 & 20               & 15                    & 6                   & \begin{tabular}[c]{@{}c@{}}X: 44 a 69\\ Y: 22 a 48\end{tabular} & Ótima             \\ \hline
 3                & 150                 & 30               & 15                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 55 a 80\\ Y: 26 a 50\end{tabular} & Mediana        \\ \hline
@@ -366,14 +366,14 @@ o parâmetro relacionado a velocidade de rotação.
 \end{tabular}
 \end{table}
 
-A partir dos resultados obtidos ao longo da execução do cenário \ref{sub:cen7}, observou-se que velocidades de rotação elevadas podem
+A partir dos resultados obtidos ao longo da execução do caso de teste \ref{sub:cen7}, observou-se que velocidades de rotação elevadas podem
 prejudicar a precisão da navegação do robô. Isto se dá, principalmente, devido aos deslizes entre o piso e as rodas. Observou-se que
 a utilização de 20 graus por segundo gerou o melhor resultado do cenário, desse modo, fixou-se a velocidade de rotação em 20 graus por segundo.
 
-\subsection{Cenário de Teste 8}
+\subsection{Caso de Teste 8}
 \label{sub:cen8}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen8}. Este cenário faz referência à análise da solução
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen8}. Este caso de teste faz referência à análise da solução
 utilizando a configuração apresentada a seguir:
 
 \begin{itemize}
@@ -382,17 +382,17 @@ utilizando a configuração apresentada a seguir:
   \item \textbf{Deslocamento:} Velocidade de deslocamento variada.
 \end{itemize}
 
-O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
+O objetivo principal deste caso de teste é verificar a variabilidade dos resultados utilizando a quantidade de partículas, de
 acordo com o resultado obtido no cenário \ref{sub:cen6}, e a velocidade de rotação fixas. Variando, dessa forma, apenas
 o parâmetro relacionado a velocidade de deslocamento.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 8}
+\caption{Resultados Obtidos - Caso de Teste 8}
 \label{tab:cen8}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 20               & 5                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 40 a 60\\ Y: 46 a 52\end{tabular} & Boa           \\ \hline
 2                & 150                 & 20               & 10                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 32 a 48\\ Y: 42 a 68\end{tabular} & Ótima             \\ \hline
 3                & 150                 & 20               & 15                    & 5                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 71\\ Y: 25 a 59\end{tabular} & Baixa        \\ \hline
@@ -401,15 +401,15 @@ o parâmetro relacionado a velocidade de deslocamento.
 \end{tabular}
 \end{table}
 
-A partir dos resultados obtidos com o cenário \ref{sub:cen8}, fixou-se a velocidade de deslocamento em 10 diâmetros por segundo, já que
-foi obtido o melhor resultado com esta configuração. O cenário \ref{sub:cen9} apresenta o comportamento do robô utilizando a melhor
-configuração obtida, de acordo com os 8 primeiro cenários de teste.
+A partir dos resultados obtidos com o caso de teste \ref{sub:cen8}, fixou-se a velocidade de deslocamento em 10 diâmetros por segundo, já que
+foi obtido o melhor resultado com esta configuração. O caso de teste \ref{sub:cen9} apresenta o comportamento do robô utilizando a melhor
+configuração obtida, de acordo com os 8 primeiro casos de teste.
 
 
-\subsection{Cenário de Teste 9}
+\subsection{Caso de Teste 9}
 \label{sub:cen9}
 
-Os resultados obtidos com o cenário estão dispostos na Tabela \ref{tab:cen9}. Este cenário faz referência à análise da solução
+Os resultados obtidos com o caso de teste estão dispostos na Tabela \ref{tab:cen9}. Este caso de teste faz referência à análise da solução
 utilizando a configuração apresentada a seguir:
 
 \begin{itemize}
@@ -418,17 +418,17 @@ utilizando a configuração apresentada a seguir:
   \item \textbf{Deslocamento:} 10 diâmetros por segundo.
 \end{itemize}
 
-O objetivo principal deste cenário é verificar a variabilidade dos resultados utilizando a quantidade de partículas, a velocidade de
-deslocamento e a velocidade de rotação fixas, de acordo com o resultado obtido nos cenários anteriores. Este conjunto de parâmetros
-contempla a melhor configuração obtida com os cenários.
+O objetivo principal deste caso de teste é verificar a variabilidade dos resultados utilizando a quantidade de partículas, a velocidade de
+deslocamento e a velocidade de rotação fixas, de acordo com o resultado obtido nos casos de teste anteriores. Este conjunto de parâmetros
+contempla a melhor configuração obtida com os casos de teste.
 
 \begin{table}[H]
 \centering
-\caption{Resultados Obtidos - Cenário 9}
+\caption{Resultados Obtidos - Caso de Teste 9}
 \label{tab:cen9}
 \begin{tabular}{|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ex.} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
+\textbf{Cenário} & \textbf{Partículas} & \textbf{Rotação} & \textbf{Deslocamento} & \textbf{Ciclos} & \textbf{Posição}                                            & \textbf{Precisão} \\ \hline
 1                & 150                 & 20               & 10                    & 4                   & \begin{tabular}[c]{@{}c@{}}X: 41 a 79\\ Y: 20 a 53\end{tabular} & Boa           \\ \hline
 2                & 150                 & 20               & 10                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 29 a 64\\ Y: 32 a 78\end{tabular} & Boa             \\ \hline
 3                & 150                 & 20               & 10                    & 7                   & \begin{tabular}[c]{@{}c@{}}X: 28 a 30\\ Y: 42 a 45\end{tabular} & Baixíssima        \\ \hline
@@ -437,7 +437,7 @@ contempla a melhor configuração obtida com os cenários.
 \end{tabular}
 \end{table}
 
-A partir da observação e análise empírica durante a realização dos cenários apresentados anteriormente, foi possível identificar
+A partir da observação e análise empírica durante a realização dos casos de teste apresentados anteriormente, foi possível identificar
 fontes específicas de erros. Assim como obter uma conclusão sobre a viabilidade da resolução parcial do problema de SLAM em um contexto
 limitado da Robótica Educacional. As seções \ref{sec:fontes_de_erros} e \ref{sec:viabilidade} registram estes resultados obtidos durante
 a pesquisa.
